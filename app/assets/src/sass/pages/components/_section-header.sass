@@ -1,0 +1,40 @@
+.section-header
+  +ta(center)
+  +r()
+  z-index: 1
+  +mb(30px)
+  +min(md)
+    +mb(45px)
+  &__background
+    +a(-15px, null, null, 50%)
+    transform: translateX(-50%)
+    z-index: -1
+    +tt(uppercase)
+    +ff('bl')
+    +c(#f2f3f7)
+    +fs(40px)
+    +lh(1)
+    +min(sm)
+      +fs(75px)
+    +min(md)
+      +fs(90px)
+  &__title
+    +r()
+    +c($color-brand-2)
+    +pb(25px)
+    +fs(25px)
+    +ff('b')
+    +min(md)
+      +fs(30px)
+    &:before
+      content: ''
+      +a(100%, null, null, 50%)
+      transform: translateX(-50%)
+      +size(40px, 2px)
+      +bgc($color-brand-1)
+      +min(md)
+        +size(80px, 3px)
+  &__subtitle
+    +mt(20px)
+    +min(sm)
+      +fs(20px)

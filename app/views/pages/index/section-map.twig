@@ -1,0 +1,14 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="section map">
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: '',
+            background: 'весь мир',
+            title: 'Ты можешь увидеть весь<br>мир своими глазами',
+            subtitle: 'и построить бизнес на круизных путешествиях'
+        } %}
+        {% include 'components/common/next-button.twig' with {
+            class: 'next-button_offset'
+        } %}
+    </div>
+</section>

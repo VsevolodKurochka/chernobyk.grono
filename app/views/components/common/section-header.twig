@@ -1,0 +1,11 @@
+<div class="section-header {{ class }}">
+    {% if background %}
+        <p class="section-header__background">{{ background|raw }}</p>
+    {% endif %}
+    {% if title %}
+        <p class="section-header__title">{{ title|raw }}</p>
+    {% endif %}
+    {% if subtitle %}
+        <p class="section-header__subtitle">{{ subtitle|raw }}</p>
+    {% endif %}
+</div>

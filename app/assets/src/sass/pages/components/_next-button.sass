@@ -1,12 +1,11 @@
 .next-button
-  +a(null, null, 25px, 50%)
+  +r()
+  +d(inline-block)
   +size(70px)
   border-radius: 100%
-  +bgc(lighten($color-brand-1, 10%))
-  transform: translateX(-50%)
   +tr()
   &:hover
-    transform: translateX(-50%) scale(1.05)
+    transform: scale(1.05)
   &:before,
   &:after
     content: ''
@@ -20,6 +19,7 @@
     transform: rotate(45deg)
     z-index: 1
   &_brand-1
+    +bgc(lighten($color-brand-1, 10%))
     &:hover
       +bgc($color-brand-1)
     &:after
@@ -32,3 +32,7 @@
       border-radius: 100%
       border: 1px solid $color-white
       opacity: 0.2
+  &__wrapper
+    +w(100%)
+    +mt(30px)
+    +ta(center)
