@@ -1,0 +1,43 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="section about">
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: 'about__header',
+            background: 'Grono',
+            title: 'Кто мы?'
+        } %}
+        <div class="row about__row">
+            <div class="col-12 col-sm-6 col-md-5">
+                <div class="content about__content">
+                    <p>GRONO — сообщество единомышленников-предпринимателей из 151 страны мира.</p>
+                    <p>Мы работаем с первым в мире Круизным клубом, основанном на членстве.</p>
+                    <p>Его участники имеют возможность путешествовать в круизах по всему миру по цене ниже рыночной.</p>
+                </div>
+                <div class="content about__content">
+                    <p><strong>Мы строим свой бизнес на<br> партнерской программе Клуба<br>
+                            и путешествуем за счет компании.</strong></p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                {{ landing.image({
+                    src: 'img/about-man-woman.png',
+                    alt: 'GRONO — сообщество единомышленников-предпринимателей из 151 страны мира.',
+                    class: 'about__image'
+                }) }}
+            </div>
+        </div>
+        {% include 'components/common/next-button.twig' with {
+            buttonClass: 'next-button_arrow-white'
+        } %}
+    </div>
+    {{ landing.image({
+        src: 'img/rectangle-top-section.png',
+        alt: 'Мы строим',
+        class: 'rectangle rectangle_top'
+    }) }}
+    {{ landing.image({
+        src: 'img/wave.png',
+        alt: 'wave',
+        class: 'wave wave_bottom'
+    }) }}
+</section>

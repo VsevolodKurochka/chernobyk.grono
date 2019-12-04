@@ -32,7 +32,15 @@
       border-radius: 100%
       border: 1px solid $color-white
       opacity: 0.2
+  &_arrow-white
+    &:after
+      border-color: $color-white
+    &:hover
+      &:after
+        border-color: $color-brand-1
   &__wrapper
+    +r()
+    z-index: 1
     +w(100%)
     +mt(30px)
     +ta(center)

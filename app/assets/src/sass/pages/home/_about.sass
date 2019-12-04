@@ -1,0 +1,43 @@
+.about
+  +py(90px)
+  +c($color-white)
+  +bgi('../img/about-bg.jpg')
+  z-index: 1
+  overflow: hidden
+  +min(sm)
+    +py(200px, 130px)
+  &:after
+    content: ''
+    +a(null, null, 0, 0)
+    +size(100%, 200px)
+    +bgc($color-brand-2)
+    z-index: -1
+    filter: blur(25px)
+    opacity: 0.5
+  &:before
+    content: ''
+    +a(0, 0)
+    +size(100%)
+    +bgc($color-brand-2)
+    opacity: 0.7
+    z-index: -3
+  &__row
+    +min(sm)
+      flex-direction: row-reverse
+      +jc(space-between)
+      +ai(center)
+  &__header
+    .section-header
+      &__background
+        opacity: 0.1
+      &__title
+        +c($color-white)
+  &__content
+    +offset('b', 30px)
+    +min(sm)
+      +offset('b', 60px)
+  &__image
+    +r()
+    z-index: -2
+    +min(sm)
+      top: 130px
