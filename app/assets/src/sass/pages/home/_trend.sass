@@ -1,0 +1,35 @@
+.trend
+  z-index: 2
+  overflow: hidden
+  +mt(0)
+  +pt(45px)
+  &__row
+    +min(sm)
+      +jc(center)
+      flex-direction: row-reverse
+  &__title
+    +ff('b')
+    +mb(30px)
+    +min(md)
+      +mb(60px)
+  &__image
+    &-column
+      +min(sm)
+        +a(0, null, null, -15%)
+      +min(lg)
+        left: -280px
+      +min(xlg)
+        left: -40%
+  &__list
+    +c(#939ea4)
+    +min(md)
+      +pl(90px)
+  &__glasses
+    +min(sm)
+      +mt(60px)
+      +mb(-120px)
+      justify-content: flex-end
+  &__bag
+    +a(0, -150px)
+    +min(md)
+      right: -170px
