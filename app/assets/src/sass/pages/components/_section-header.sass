@@ -7,6 +7,7 @@
     +mb(45px)
   &__background
     +a(null, null, calc(100% - 45px), 50%)
+    +w(100%)
     transform: translateX(-50%)
     z-index: -1
     +tt(uppercase)
@@ -25,7 +26,7 @@
     +c($color-brand-2)
     +pb(25px)
     +fs(20px)
-    +ff('b')
+    +ff('bl')
     +max(sm)
       br
         +d(none)
@@ -45,3 +46,9 @@
     +mt(20px)
     +min(sm)
       +fs(20px)
+
+  &_white &
+    &__background
+      opacity: 0.1
+    &__title
+      +c($color-white)
