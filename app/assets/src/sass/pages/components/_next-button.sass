@@ -1,0 +1,34 @@
+.next-button
+  +a(null, null, 25px, 50%)
+  +size(70px)
+  border-radius: 100%
+  +bgc(lighten($color-brand-1, 10%))
+  transform: translateX(-50%)
+  +tr()
+  &:hover
+    transform: translateX(-50%) scale(1.05)
+  &:before,
+  &:after
+    content: ''
+    +tr()
+  &:after
+    +a(25px, null, null, 27px)
+    +d(inline-block)
+    border: solid $color-brand-1
+    border-width: 0 3px 3px 0
+    padding: 7px
+    transform: rotate(45deg)
+    z-index: 1
+  &_brand-1
+    &:hover
+      +bgc($color-brand-1)
+    &:after
+      border-color: $color-white
+    &:before
+      +a(50%, null, null, 50%)
+      transform: translate(-50%, -50%)
+      +size(90%)
+      +bgc($color-brand-1)
+      border-radius: 100%
+      border: 1px solid $color-white
+      opacity: 0.2

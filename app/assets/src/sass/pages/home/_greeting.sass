@@ -29,34 +29,3 @@
   &__social
     +min(sm)
       align-self: flex-end
-
-  &__next
-    +a(null, null, 25px, 50%)
-    +size(70px)
-    border-radius: 100%
-    +bgc(lighten($color-brand-1, 10%))
-    transform: translateX(-50%)
-    +tr()
-    &:hover
-      transform: translateX(-50%) scale(1.05)
-      +bgc($color-brand-1)
-    &:before,
-    &:after
-      content: ''
-      +tr()
-    &:before
-      +a(50%, null, null, 50%)
-      transform: translate(-50%, -50%)
-      +size(90%)
-      +bgc($color-brand-1)
-      border-radius: 100%
-      border: 1px solid $color-white
-      opacity: 0.2
-    &:after
-      +a(25px, null, null, 27px)
-      +d(inline-block)
-      border: solid $color-white
-      border-width: 0 3px 3px 0
-      padding: 7px
-      transform: rotate(45deg)
-      z-index: 1
