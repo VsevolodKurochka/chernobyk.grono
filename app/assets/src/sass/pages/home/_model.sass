@@ -1,0 +1,91 @@
+.model
+  +r()
+  +pt(45px)
+  overflow: hidden
+  &__header
+    +min(sm)
+      +jc(center)
+  &-item
+    +r()
+    &:before
+      content: ''
+      +a()
+      +size(100px, 30px)
+      +bgi('../img/model-arrow.png')
+      +min(md)
+        +size(143px, 57px)
+    &_1
+      &:before
+        right: -25%
+        top: 20%
+    &_2
+      &:before
+        left: -30%
+        top: -15%
+        transform: scaleX(-1)
+    &__header
+      display: flex
+      align-items: center
+      +r()
+    &__title
+      +fs(20px)
+      +ff('bl')
+      +ml(-20px)
+    &__number
+      +c(#f2f3f7)
+      +ff('bl')
+      +lh(1)
+      +fs(100px)
+      +ml(-15px)
+      +min(md)
+        +fs(150px)
+        +ml(-25px)
+    &__body
+      +c(#939ea4)
+
+  &-row-1
+    +min(sm)
+      +mb(450px)
+    &__image
+      +min(md)
+        max-width: none
+    &__image-column
+      +min(sm)
+        +a(0, 0)
+    &__content
+      +r()
+      +min(md)
+        +ml(15%)
+  &-row-2
+    +r()
+    &__image
+      +min(sm)
+        +a(-25%, null, null, 0)
+      +min(md)
+        max-width: none
+        left: -320px
+    &__body
+      +min(md)
+        +ml(15%)
+    &__images
+      +my(30px, 60px)
+    &__footer
+      +c(#939ea4)
+
+  &__next
+    +mt(100px)
+    +min(md)
+      +mt(150px)
+
+  &-row
+    &__title
+      +a(null, null, 0, 0)
+      +c(#f2f3f7)
+      +ff('bl')
+      +lh(1)
+      transform: rotate(-90deg)
+      +tt(uppercase)
+      +min(md)
+        +fs(90px)
+        bottom: -260px
+        left: -130px

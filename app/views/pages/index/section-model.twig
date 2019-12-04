@@ -1,0 +1,71 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="model">
+    <div class="container">
+        <div class="row model__header">
+            {% include 'components/common/section-header.twig' with {
+                class: 'col-12 col-sm-10 col-md-10',
+                background: 'готовая модель',
+                title: 'У нас есть уже готовая модель бизнеса, которую ты можешь легко внедрить в свой проект'
+            } %}
+        </div>
+        <div class="model__content">
+            <div class="row model-row model-row-1">
+                <div class="col-12 col-sm-6 col-md-5 model-row-1__image-column">
+                    {{ landing.image({
+                        src: 'img/model-1.png',
+                        alt: 'Мы строим',
+                        class: 'model-row-1__image'
+                    }) }}
+                </div>
+                <div class="col-12 col-sm-6 col-md-5 model-row-1__content">
+                    {% include 'pages/index/components/model-item.twig' with {
+                        class: 'model-item_1',
+                        number: '1',
+                        title: 'Стратегия развития <br>бизнеса',
+                        body: 'Даже если ты только присоединился к сообществу и не знаешь с чего начать, поддержка команды поможет тебе построить свой бизнес на партнерской программе Клуба и вскоре отправиться в круизное путешествие бесплатно.'
+                    } %}
+                    <p class="model-row__title">grono</p>
+                </div>
+            </div>
+            <div class="row model-row model-row-2">
+                <div class="col-12 col-sm-4 model-row-2__image-column">
+                    {{ landing.image({
+                        src: 'img/model-2.png',
+                        alt: 'Мы строим',
+                        class: 'model-row-2__image'
+                    }) }}
+                </div>
+                <div class="col-12 col-sm-8 model-row-2__content">
+                    <div class="model-row-2__body">
+                        {% include 'pages/index/components/model-item.twig' with {
+                            class: 'model-item_2',
+                            number: '2',
+                            title: 'Автоматизация <br>процессов',
+                            body: 'У нас есть своя собственная IT-платформа Grono, с помощью которой мы создаем инструменты для привлечения клиентов и автоматизируем десятки бизнес-процессов.'
+                        } %}
+                        <div class="row model-row-2__images">
+                            <div class="col-6">
+                                {{ landing.image({
+                                    src: 'img/calendar.jpg',
+                                    alt: 'Calendar'
+                                }) }}
+                            </div>
+                            <div class="col-6">
+                                {{ landing.image({
+                                    src: 'img/scrum-task.jpg',
+                                    alt: 'Scrum task'
+                                }) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-row-2__footer">
+                        <p>Это удобная CRM, шаблоны автоворонок, конструктор лендингов, корпоративная соц.сеть, скрипты продаж, вебинарная комната, чат-бот. Это позволяет вести бизнес даже удаленно и привлекать клиентов через современные онлайн-технологии.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include 'components/common/next-button.twig' with {
+            class: 'model__next'
+        } %}
+    </div>
+</section>
