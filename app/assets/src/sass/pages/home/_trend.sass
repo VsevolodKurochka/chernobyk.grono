@@ -1,7 +1,7 @@
 .trend
   z-index: 2
   overflow: hidden
-  +mt(0)
+  +my(0)
   +pt(45px)
   &__row
     +min(sm)
@@ -27,15 +27,6 @@
     +c(#939ea4)
     +min(md)
       +pl(90px)
-  &__glasses
-    z-index: -1
-    +min(sm)
-      +mt(60px)
-      +mb(-120px)
-      justify-content: flex-end
-    &-image
-      +max(md)
-        max-width: 250px
   &__bag
     +a(10%, 0)
     z-index: -1
@@ -49,3 +40,7 @@
     +min(md)
       max-width: none
       right: -170px
+  &__next
+    +mt(60px)
+    +min(md)
+      +mt(190px)

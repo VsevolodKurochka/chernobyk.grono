@@ -32,14 +32,8 @@
                 }) }}
             </div>
         </div>
-        <div class="row trend__glasses">
-            {{ landing.image({
-                src: 'img/trand-3.png',
-                alt: 'glasses',
-                class: 'trend__glasses-image'
-            }) }}
-        </div>
         {% include 'components/common/next-button.twig' with {
+            class: 'trend__next',
             buttonClass: ''
         } %}
     </div>

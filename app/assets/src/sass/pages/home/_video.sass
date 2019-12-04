@@ -1,5 +1,6 @@
 .video
-  +py(90px)
+  +py(90px, 45px)
+  +mt(0)
   +bgi('../img/video-bg.jpg')
   +min(sm)
     +pt(150px)
@@ -15,5 +16,20 @@
     +min(md)
       +size(800px, 500px)
   &__next
+    +mt(120px)
     +min(sm)
       +my(250px, 80px)
+  &__glasses
+    +a(-5%, null, null, 15px)
+    z-index: 1
+    max-width: 120px
+    +min(sm)
+      left: auto
+      right: 15px
+      top: -5%
+      max-width: 250px
+    +min(md)
+      top: -10%
+      max-width: 350px
+    +min(lg)
+      max-width: none
