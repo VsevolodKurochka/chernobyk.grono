@@ -14,8 +14,11 @@
       +mb(60px)
   &__image
     &-column
+      z-index: -1
+      +max(sm)
+        +d(none)
       +min(sm)
-        +a(0, null, null, -15%)
+        +a(0, null, null, -25%)
       +min(lg)
         left: -280px
       +min(xlg)
@@ -25,11 +28,24 @@
     +min(md)
       +pl(90px)
   &__glasses
+    z-index: -1
     +min(sm)
       +mt(60px)
       +mb(-120px)
       justify-content: flex-end
+    &-image
+      +max(md)
+        max-width: 250px
   &__bag
-    +a(0, -150px)
+    +a(10%, 0)
+    z-index: -1
+    max-width: 150px
+    +max(sm)
+      opacity: 0.5
+    +min(sm)
+      right: -50px
+      top: 0
+      max-width: 300px
     +min(md)
+      max-width: none
       right: -170px

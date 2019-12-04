@@ -1,12 +1,14 @@
 .greeting
   +r()
-  +bgi('../img/first-bg.jpg')
+  +bgi('../img/first-bg.jpg', 50% 0)
   +c($color-white)
   +min(sm)
     +d(flex)
     +ai(center)
     +h(100vh)
     min-height: 600px
+  +min(md)
+    background-position-x: 0
   &__row
     +min(sm)
       +jc(flex-end)
