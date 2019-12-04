@@ -1,0 +1,20 @@
+.hidden
+  @extend %visible
+
+@each $br-name, $br-value in $breakpoints
+  .visible-#{$br-name}
+    @extend %visible
+
++min(lg)
+  +visibility(lg)
+
++min(md)
+  +max(lg)
+    +visibility(md)
+
++min(sm)
+  +max(md)
+    +visibility(sm)
+
++max(sm)
+  +visibility(xs)

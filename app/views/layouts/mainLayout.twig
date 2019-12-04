@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block meta %}{% endblock %}
+  {% block css %}{% endblock %}
+  {% block js %}{% endblock %}
+</head>
+<body>
+  {% block nav %}
+    {% include 'components/navigation/navigation.twig' %}
+  {% endblock %}
+  <main class="site">
+    {% block content %}
+      Sorry, no content
+    {% endblock %}
+  </main>
+  {% block footer %}
+    {% include 'components/footer/footer.twig' %}
+  {% endblock %}
+</body>
+</html>

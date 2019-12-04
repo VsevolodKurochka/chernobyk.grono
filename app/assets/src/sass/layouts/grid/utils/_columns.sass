@@ -1,0 +1,16 @@
+$themeColumn: "col"
+
+=flexColumnWidth($value)
+  flex-basis: $value
+  max-width: $value
+
+=make-column($class: null)
+  @for $i from 1 through getComp(columns)
+    $defaultValue: getComp(width) / getComp(columns) * $i
+
+    @if $class != null
+      .#{unquote($themeColumn) - $class - $i}
+        +flexColumnWidth($defaultValue)
+    @else
+      .#{unquote($themeColumn) - $i}
+        +flexColumnWidth($defaultValue)

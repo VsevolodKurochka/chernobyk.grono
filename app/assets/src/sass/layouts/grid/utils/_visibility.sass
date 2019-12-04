@@ -1,0 +1,9 @@
+=visibility($visibility)
+  .#{'hidden-' + $visibility}
+    display: none !important
+
+  .#{'visible-' + $visibility}
+    display: block !important
+
+%visible
+  display: none !important
