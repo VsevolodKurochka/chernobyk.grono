@@ -5,10 +5,21 @@
     +d(flex)
     +ai(center)
 
-  &-content
+  &-inner
     +d(inline-block)
-
-  img
+    padding: 10px
+    +r()
+    &:before
+      content: ''
+      +a(0, 0)
+      +size(100%)
+      +bgc($color-white)
+      border-radius: 0 0 10px 10px
+      +min(md)
+        +h(90px)
+  &-img
+    +r()
+    z-index: 1
     vertical-align: middle
 
     +max(md)

@@ -1,6 +1,6 @@
 // Button default
-$btn-padding: 10px 16px
-$btn-font-size: 14px
+$btn-padding: 16px 25px
+$btn-font-size: 15px
 
 // Button large
 $btn-large-padding: 15px 25px
@@ -25,6 +25,10 @@ $btn-border: ("brand-1": ($color-brand-1, $color-brand-1))
 .btn
   +btn()
   +btn-size($btn-padding, $btn-font-size)
+  +ff('b')
+
+  +min(sm)
+    +px(30px)
 
   &-group &
     margin: 5px
@@ -32,13 +36,7 @@ $btn-border: ("brand-1": ($color-brand-1, $color-brand-1))
   &_lg
     +btn-size($btn-large-padding, $btn-large-font-size)
 
-  &_shadow
-    &-brand-1
-      +bs("0 3px 8px 1px transparentize($color-brand-1, 0.5)")
-
-    &:hover
-      +bs("none")
-
-  +btn-static-iteration()
-
-  +btn-border-iteration()
+  &_brand
+    &-1
+      background-image: linear-gradient( -147deg, $color-brand-1 0%, lighten($color-brand-1, 15%) 100%)
+      +c($color-white)

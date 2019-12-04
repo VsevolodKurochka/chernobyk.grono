@@ -13,7 +13,9 @@
   {% import _self as macros %}
   <div class="nav__logo {{options.class}}">
     {{ macros.hamburger() }}
-    <img class="nav__logo-img" src="{{options.logo}}" alt="{{options.alt}}"/>
+    <div class="nav__logo-inner">
+      <img class="nav__logo-img" src="{{options.logo}}" alt="{{options.alt}}"/>
+    </div>
   </div>
 {% endmacro %}
 

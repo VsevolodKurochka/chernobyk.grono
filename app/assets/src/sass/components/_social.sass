@@ -1,0 +1,21 @@
+.social
+  list-style: none
+  +fs(0)
+  &__item
+    +d(inline-block)
+    +offset('r', 15px)
+  &__link
+    +d(inline-flex)
+    +jc(center)
+    +ai(center)
+    +size(35px)
+    border-radius: 100%
+    +bgc($color-white)
+    +tr()
+    &:hover
+      +bgc($color-brand-1)
+  &_block &
+    &__item
+      +min(sm)
+        +d(block)
+        +offset('b', 20px)

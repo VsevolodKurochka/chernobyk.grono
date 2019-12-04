@@ -18,14 +18,15 @@
         white-space: nowrap
 
     &-link
-      +d('inline-block')
-      +mr(15px)
       text-decoration: none
       +c($color-white)
       +fs(14px)
+      padding: 10px
+      +ff('r')
+      +bgc($color-white)
 
       +min(md)
         +d('block')
         +mr(0)
-        +c($color-black)
-        +fs(18px)
+        +px(20px)
+        +c($color-general)

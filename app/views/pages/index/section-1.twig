@@ -1,2 +1,37 @@
 {% import 'macros/landing.twig' as landing %}
-<section class="section"></section>
+<section class="greeting">
+    <div class="container">
+        <div class="row greeting__row">
+            <div class="col-12 col-sm-6 greeting__content">
+                <h1 class="greeting__title">Мы строим <br>сообщество людей,</h1>
+                <h2 class="greeting__subtitle">которые мечтают путешествовать <br>и зарабатывать на этом</h2>
+                <button class="btn btn_brand-1 greeting__button">Присоединяться к сообществу</button>
+            </div>
+            <div class="col-12 col-sm-6 greeting__social">
+                {% include 'components/common/social.twig' with {
+                    class: 'social_block',
+                    items: [
+                        {
+                            link: '#',
+                            image: 'img/youtube-icon.png'
+                        },
+                        {
+                            link: '#',
+                            image: 'img/facebook-icon.png'
+                        },
+                        {
+                            link: '#',
+                            image: 'img/instagram-icon.png'
+                        }
+                    ]
+                } %}
+            </div>
+        </div>
+    </div>
+    {{ landing.image({
+        src: 'img/rectangle-bottom-section.png',
+        alt: 'Мы строим',
+        class: 'rectangle rectangle_bottom'
+    }) }}
+    <a href="#section-map" class="anchor greeting__next"></a>
+</section>
