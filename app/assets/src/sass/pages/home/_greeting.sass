@@ -2,6 +2,8 @@
   +r()
   +bgi('../img/first-bg.jpg', 50% 0)
   +c($color-white)
+  +max(sm)
+    +py(45px, 80px)
   +min(sm)
     +d(flex)
     +ai(center)
@@ -10,20 +12,26 @@
   +min(md)
     background-position-x: 0
   &__row
+    +jc(flex-end)
     +min(sm)
-      +jc(flex-end)
       flex-direction: row-reverse
   &__title
     +ff('bl')
     +lh(1.1)
-    +fs(30px)
+    +fs(20px)
     +mb(15px)
+    +min(xs)
+      +fs(25px)
+    +min(sm)
+      +fs(30px)
     +min(md)
       +fs(50px)
 
   &__subtitle
     +mb(15px)
-    +fs(22px)
+    +fs(14px)
+    +min(sm)
+      +fs(22px)
     +min(md)
       +fs(30px)
       +mb(30px)
@@ -33,4 +41,10 @@
       align-self: flex-end
 
   &__next
-    +a(null, null, 25px, null)
+    +a(null, null, -15px, null)
+    +min(sm)
+      bottom: 25px
+
+  &__content
+    +max(sm)
+      +mb(30px)

@@ -1,6 +1,9 @@
 // Button default
-$btn-padding: 16px 25px
-$btn-font-size: 15px
+$btn-padding: 14px
+$btn-font-size: 13px
+
+$btn-sm-padding: 16px 25px
+$btn-sm-font-size: 15px
 
 // Button large
 $btn-large-padding: 15px 25px
@@ -28,7 +31,7 @@ $btn-border: ("brand-1": ($color-brand-1, $color-brand-1))
   +ff('b')
 
   +min(sm)
-    +px(30px)
+    +btn-size($btn-sm-padding, $btn-sm-font-size)
 
   &-group &
     margin: 5px

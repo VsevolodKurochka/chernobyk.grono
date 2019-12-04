@@ -1,9 +1,11 @@
 .next-button
   +r()
   +d(inline-block)
-  +size(70px)
+  +size(50px)
   border-radius: 100%
   +tr()
+  +min(sm)
+    +size(70px)
   &:hover
     transform: scale(1.05)
   &:before,
@@ -11,13 +13,18 @@
     content: ''
     +tr()
   &:after
-    +a(25px, null, null, 27px)
+    +a(17px, null, null, 19px)
     +d(inline-block)
     border: solid $color-brand-1
-    border-width: 0 3px 3px 0
-    padding: 7px
+    border-width: 0 2px 2px 0
+    padding: 5px
     transform: rotate(45deg)
     z-index: 1
+    +min(sm)
+      top: 25px
+      left: 27px
+      padding: 7px
+      border-width: 0 3px 3px 0
   &_brand-1
     +bgc(lighten($color-brand-1, 10%))
     &:hover
