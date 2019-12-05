@@ -3,7 +3,7 @@
     <div class="container mission__content">
             <div class="row mission__row">
                 <div class="col-12 col-sm-5">
-                    <div class="slider-for mission-slider-for">
+                    <div class="slider-for mission-slider-for mission-slider-for_desktop">
                         {% include 'pages/index/components/mission-slider.twig' %}
                     </div>
                 </div>
@@ -15,6 +15,9 @@
                         Миссия GRONO — объединять тех, кто имеет смелость и решимость жить жизнью мечты.
                         Путешествовать, развиваться, зарабатывать, открывать новые горизонты и стирать все шаблоны и границы.
                     </div>
+                    <div class="slider-for mission-slider-for mission-slider-for_mobile">
+                        {% include 'pages/index/components/mission-slider.twig' %}
+                    </div>
                     <div class="slider-nav mission-slider-nav">
                         {% include 'pages/index/components/mission-slider.twig' %}
                     </div>
@@ -25,24 +28,24 @@
         {% include 'components/common/section-header.twig' with {
             class: 'section-header_white',
             background: 'знать больше',
-            title: 'Узнай больше о возможностях<br>бизнеса на путешествиях в<br>сообществе Grono'
+            title: 'Узнай больше о возможностях<br> бизнеса на путешествиях в<br>сообществе Grono'
         } %}
         <div class="row mission__body-row">
             <div class="col-12 col-md-8">
                 <form action="#" method="POST" class="mission-form">
                     <div class="row mission-form__row">
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-6 mission-form__column">
                             <input type="text" name="name" placeholder="Имя" class="mission-form__input">
                         </div>
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-6 mission-form__column">
                             <input type="text" name="surname" placeholder="Фамилия" class="mission-form__input">
                         </div>
                     </div>
                     <div class="row mission-form__row">
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-6 mission-form__column">
                             <input type="tel" name="phone" placeholder="Телефон" class="mission-form__input">
                         </div>
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-6 mission-form__column">
                             <input type="email" name="email" placeholder="Email" class="mission-form__input">
                         </div>
                     </div>

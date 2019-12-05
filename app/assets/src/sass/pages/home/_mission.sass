@@ -19,8 +19,8 @@ $common-border-radius: 10px
 
   &__title
     +ff('bl')
-    +fs(30px)
-    +my(30px, 15px)
+    +fs(60px)
+    +my(15px)
     +lh(1)
     +min(md)
       +mt(45px)
@@ -42,9 +42,17 @@ $common-border-radius: 10px
       border-radius: $common-border-radius
       +min(sm)
         +h(600px)
+    &_desktop
+      display: none !important
+      +min(sm)
+        +d(block)
+    &_mobile
+      +mb(15px)
+      +min(sm)
+        +d(none)
 
   &-slider-nav
-    +pb(100px)
+    +pb(80px)
     +min(sm)
       +ml(-45px)
     .slick
@@ -86,11 +94,11 @@ $common-border-radius: 10px
       border-radius: $common-border-radius
       cursor: pointer
       +tr()
+      +mr(15px)
       &:hover
         transform: scale(1.05)
       +min(sm)
         +h(150px)
-        +mr(15px)
       +min(md)
         +h(200px)
 
@@ -101,7 +109,12 @@ $common-border-radius: 10px
 
   &-form
     &__row
-      +offset('b', 30px)
+      +offset('b', 15px)
+      +min(sm)
+        +offset('b', 30px)
+    &__column
+      +max(sm)
+        +offset('b', 15px)
     &__footer
       +ta(center)
       +mt(45px)

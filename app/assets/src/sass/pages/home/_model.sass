@@ -10,19 +10,27 @@
     &:before
       content: ''
       +a()
-      +size(100px, 30px)
+      +size(143px, 57px)
       +bgi('../img/model-arrow.png')
-      +min(md)
-        +size(143px, 57px)
     &_1
       &:before
-        right: -25%
-        top: 20%
+        +max(sm)
+          top: -100px
+          left: -30px
+          transform: rotate(90deg) scaleY(-1)
+        +min(sm)
+          right: -25%
+          top: 20%
     &_2
       &:before
-        left: -30%
-        top: -15%
-        transform: scaleX(-1)
+        +max(sm)
+          top: -100px
+          left: 100px
+          transform: rotate(90deg)
+        +min(sm)
+          left: -30%
+          top: -15%
+          transform: scaleX(-1)
     &__header
       display: flex
       align-items: center
@@ -42,14 +50,21 @@
         +ml(-25px)
     &__body
       +c(#939ea4)
-
+  &-row
+    +max(sm)
+      +offset('b', 60px)
   &-row-1
     +min(sm)
       +mb(450px)
     &__image
+      +max(sm)
+        max-width: 250px
       +min(md)
         max-width: none
     &__image-column
+      +max(sm)
+        +pr(0)
+        +ta(right)
       +min(sm)
         +a(0, 0)
     &__content
@@ -59,21 +74,28 @@
   &-row-2
     +r()
     &__image
+      +max(sm)
+        max-width: 250px
       +min(sm)
         +a(-25%, null, null, 0)
       +min(md)
         max-width: none
         left: -320px
+      &-column
+        +max(sm)
+          +pl(0)
     &__body
       +min(md)
         +ml(15%)
     &__images
-      +my(30px, 60px)
+      +my(30px)
+      +min(sm)
+        +mb(60px)
     &__footer
       +c(#939ea4)
 
   &__next
-    +mt(100px)
+    +mt(30px)
     +min(md)
       +mt(150px)
 

@@ -14,6 +14,7 @@ $(document).ready(function(){
 	$('.nav__menu-item-link').click(function(e){
 		e.preventDefault();
 		scroll($( $(this).attr('href') ), 1500);
+		$('#js-navigation-menu').removeClass('nav__menu_active');
 	});
 
 	var $navigationLinks = $('#js-navigation-menu li > a');
@@ -92,6 +93,11 @@ $(document).ready(function(){
 		checkScrollY();
 	});
 
+	$('#js-nav-hamburger').click(function () {
+		$(this).toggleClass('active');
+		$('#js-navigation-menu').toggleClass('nav__menu_active');
+	});
+
 	$('.slider-for').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -105,6 +111,14 @@ $(document).ready(function(){
 		asNavFor: '.slider-for',
 		dots: false,
 		centerMode: false,
-		focusOnSelect: true
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+		]
 	});
 });	
