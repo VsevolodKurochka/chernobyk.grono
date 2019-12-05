@@ -9,7 +9,7 @@
   &__speakers
     +max(sm)
       +my(30px)
-    +min(sm)
+    +min(md)
       display: flex
       +mx(-15px)
       .education-item
@@ -23,6 +23,13 @@
     &_reverse
       +min(sm)
         flex-direction: column-reverse
+    &_oles
+      +min(sm)
+        +max(md)
+          flex-direction: column-reverse
+          margin-left: -255px
+          .education-item__header
+            +mb(15px)
     &__header
       +c(#419bd7)
     &_reverse &__header
@@ -36,7 +43,8 @@
     &__subtitle
       +fs(14px)
     &__image
-      max-width: 250px
+      +max(sm)
+        max-width: 250px
   &-number
     &__title
       +ff('bl')

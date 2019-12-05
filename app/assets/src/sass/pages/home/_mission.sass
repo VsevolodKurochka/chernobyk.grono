@@ -1,0 +1,128 @@
+$common-border-radius: 10px
+
+.mission
+  +r()
+  +py(60px)
+  +bgi('../img/last-bg.jpg')
+  +c($color-white)
+  +min(md)
+    +py(160px)
+
+  &__content
+    +mb(60px)
+    +min(md)
+      +mb(120px)
+
+  &__row
+    +min(sm)
+      justify-content: space-between
+
+  &__title
+    +ff('bl')
+    +fs(30px)
+    +my(30px, 15px)
+    +lh(1)
+    +min(md)
+      +mt(45px)
+      +fs(80px)
+
+  &__intro
+    +my(45px, 30px)
+    +min(md)
+      +mt(60px)
+
+  &-slider-for
+    +min(sm)
+      +mt(150px)
+    +min(md)
+      +mt(200px)
+
+    img
+      object-fit: cover
+      border-radius: $common-border-radius
+      +min(sm)
+        +h(600px)
+
+  &-slider-nav
+    +pb(100px)
+    +min(sm)
+      +ml(-45px)
+    .slick
+      &-track
+        +min(sm)
+          padding: 15px
+      &-arrow
+        +a(null, null, 0)
+        +size(50px)
+        border-radius: 100%
+        +bgc($color-brand-1)
+        border: none
+        font-size: 0
+        +tr()
+        outline: none
+        &:hover
+          +bgc(darken($color-brand-1, 5%))
+          transform: scale(1.05)
+        &:before
+          content: ''
+          +a(19px, null, null)
+          +d(inline-block)
+          border: solid $color-white
+          border-width: 0 2px 2px 0
+          padding: 5px
+          z-index: 1
+      &-prev
+        left: 0
+        &:before
+          left: 21px
+          transform: rotate(135deg)
+      &-next
+        left: 75px
+        &:before
+          left: 19px
+          transform: rotate(-45deg)
+    img
+      object-fit: cover
+      border-radius: $common-border-radius
+      cursor: pointer
+      +tr()
+      &:hover
+        transform: scale(1.05)
+      +min(sm)
+        +h(150px)
+        +mr(15px)
+      +min(md)
+        +h(200px)
+
+  &__body
+    &-row
+      +min(sm)
+        justify-content: center
+
+  &-form
+    &__row
+      +offset('b', 30px)
+    &__footer
+      +ta(center)
+      +mt(45px)
+    &__input
+      +bgc($color-white)
+      border-radius: 30px
+      +c(#939ea4)
+      +ff('r')
+      padding: 15px 20px
+      +fs(14px)
+      +w(100%)
+      border: none
+      outline: none
+      +tr()
+      +min(md)
+        +fs(16px)
+      +placeholder()
+        +c(#939ea4)
+        +tr()
+      &:focus
+        +placeholder()
+          opacity: 0
+    &__submit
+      min-width: 250px

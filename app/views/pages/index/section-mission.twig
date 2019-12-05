@@ -1,0 +1,66 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="mission" id="section-mission">
+    <div class="container mission__content">
+            <div class="row mission__row">
+                <div class="col-12 col-sm-5">
+                    <div class="slider-for mission-slider-for">
+                        {% include 'pages/index/components/mission-slider.twig' %}
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p>Сегодня нас более</p>
+                    <p class="mission__title">13.000</p>
+                    <p>в 151 в стране мира<br>Возможно ты один из нас</p>
+                    <div class="mission__intro">
+                        Миссия GRONO — объединять тех, кто имеет смелость и решимость жить жизнью мечты.
+                        Путешествовать, развиваться, зарабатывать, открывать новые горизонты и стирать все шаблоны и границы.
+                    </div>
+                    <div class="slider-nav mission-slider-nav">
+                        {% include 'pages/index/components/mission-slider.twig' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container mission__body">
+        {% include 'components/common/section-header.twig' with {
+            class: 'section-header_white',
+            background: 'знать больше',
+            title: 'Узнай больше о возможностях<br>бизнеса на путешествиях в<br>сообществе Grono'
+        } %}
+        <div class="row mission__body-row">
+            <div class="col-12 col-md-8">
+                <form action="#" method="POST" class="mission-form">
+                    <div class="row mission-form__row">
+                        <div class="col-12 col-sm-6">
+                            <input type="text" name="name" placeholder="Имя" class="mission-form__input">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="text" name="surname" placeholder="Фамилия" class="mission-form__input">
+                        </div>
+                    </div>
+                    <div class="row mission-form__row">
+                        <div class="col-12 col-sm-6">
+                            <input type="tel" name="phone" placeholder="Телефон" class="mission-form__input">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="email" name="email" placeholder="Email" class="mission-form__input">
+                        </div>
+                    </div>
+                    <div class="mission-form__footer">
+                        <button type="submit" class="btn btn_brand-1 mission-form__submit">Узнать о GRONO</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{ landing.image({
+        src: 'img/rectangle-top-section.png',
+        alt: 'Мы строим',
+        class: 'rectangle rectangle_top'
+    }) }}
+    {{ landing.image({
+        src: 'img/rectangle-bottom-section.png',
+        alt: 'Мы строим',
+        class: 'rectangle rectangle_bottom'
+    }) }}
+</section>

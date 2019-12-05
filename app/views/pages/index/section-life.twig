@@ -1,0 +1,56 @@
+{% import 'macros/landing.twig' as landing %}
+{%
+set items = [
+{
+    image: 'img/life-1.png',
+    number: '1',
+    title: 'Путешествуй',
+    body: 'Ты получишь доступ к 5000 вариантов круизов от 16 лучших круизных линий мира.
+    Будь с нами — и путешествуй бесплатно.'
+},
+{
+    image: 'img/life-2.png',
+    number: '2',
+    title: 'Зарабатывай',
+    body: 'Начни свой онлайн-бизнес с крупнейшим Круизным клубом мира. Мы обучим тебя
+и поможем достичь результата.'
+},
+{
+    image: 'img/life-3.png',
+    number: '3',
+    title: 'Обучайся',
+    body: 'Мы пригласим тебя на тренинги спикеров мирового масштаба,обучим маркетингу и управлению людьми. Строй успешный бизнес даже без опыта!'
+},
+{
+    image: 'img/life-4.png',
+    number: '4',
+    title: 'Будь частью сообщества<br>счастливых людей',
+    body: 'Наша сила — в единстве, дружбе и поддержке. Позволь себе жить жизнью мечты: это так просто!'
+},
+{
+    image: 'img/life-5.png',
+    number: '5',
+    title: 'Стань частью<br>семьи',
+    body: 'Мы всегда придем тебе на помощь  и поможем советом. Чем сильнее ты, тем сильнее GRONO.'
+}
+]
+%}
+<section class="life" id="section-life">
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: '',
+            background: 'жизнь c grono',
+            title: 'Создай жизнь мечты<br>в сообществе GRONO'
+        } %}
+        <div class="life__content">
+            {% for item in items %}
+                {% include 'pages/index/components/life-item.twig' with {
+                    image: item.image,
+                    number: item.number,
+                    title: item.title,
+                    body: item.body
+                } %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,12 +1,17 @@
 $(document).ready(function(){
 
-	function scroll(scrollLink, speed){
+	function scroll(scrollLink, speed, negativeOffset){
 		$('html, body').animate({
-			scrollTop: scrollLink.offset().top
+			scrollTop: scrollLink.offset().top - $('.nav__fixed').height()
 		}, speed);
 		return false;
 	}
 	$('.anchor').click(function(e){
+		e.preventDefault();
+		scroll($( $(this).attr('href') ), 1500);
+	});
+
+	$('.nav__menu-item-link').click(function(e){
 		e.preventDefault();
 		scroll($( $(this).attr('href') ), 1500);
 	});
@@ -74,4 +79,32 @@ $(document).ready(function(){
 	$(window).scroll( throttle(highlightNavigation,100) );
 	
 	// Develope
+	const navigation = $('#js-navigation');
+	function checkScrollY() {
+		if (window.scrollY > 0) {
+			navigation.addClass('nav_scrolled')
+		} else {
+			navigation.removeClass('nav_scrolled')
+		}
+	}
+	checkScrollY();
+	$(window).scroll(function () {
+		checkScrollY();
+	});
+
+	$('.slider-for').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider-nav'
+	});
+	$('.slider-nav').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
+		dots: false,
+		centerMode: false,
+		focusOnSelect: true
+	});
 });	

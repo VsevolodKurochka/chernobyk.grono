@@ -1,0 +1,58 @@
+.life
+  overflow: hidden
+  +py(60px)
+  &-item
+    +max(sm)
+      +offset('b', 45px)
+    +min(sm)
+      +ai(center)
+    &:nth-child(odd) &__image
+      +max(sm)
+        +ml(-15px)
+      +min(md)
+        +ml(-220px)
+      +min(xlg)
+        +ml(-75%)
+    &:nth-child(even)
+      +min(sm)
+        flex-direction: row-reverse
+    &:nth-child(even) &
+      &__image
+        +max(sm)
+          +mr(-15px)
+        +min(md)
+          +ml(220px)
+        +min(xlg)
+          +ml(75%)
+        &-column
+          +max(sm)
+            +ta(right)
+    &:nth-child(5) &__image-column
+      +max(sm)
+        +mb(-5px)
+    &__image
+      +max(sm)
+        max-width: 250px
+        &-column
+          +mb(-70px)
+    &__content
+      +r()
+      z-index: 1
+    &__number
+      +fs(150px)
+      +lh(1)
+      +c($color-black)
+      opacity: 0.1
+      +ff('b')
+      +mb(-45px)
+      +min(sm)
+        +fs(300px)
+        +mb(-90px)
+    &__title
+      +ff('bl')
+      +c(#006bae)
+      +mb(30px)
+      +min(md)
+        +mb(45px)
+    &__body
+      +c(#939ea4)

@@ -1,5 +1,5 @@
 {% import 'macros/landing.twig' as landing %}
-<section class="education">
+<section class="education" id="section-education">
     <div class="container">
         {% include 'components/common/section-header.twig' with {
             class: 'section-header_white',
@@ -20,13 +20,13 @@
             </div>
             <div class="col-12 col-sm-6 education__speakers">
                 {% include 'pages/index/components/education-item.twig' with {
-                    class: 'education-item_large education-item_reverse',
+                    class: 'education-item_reverse',
                     title: 'Лера Бородина',
                     subtitle: 'основательница сервиса аренды<br>платьев Oh My Look! и <br>соосновательница бьюти-<br>пространства G.Bar',
                     image: 'img/borodina.jpg'
                 } %}
                 {% include 'pages/index/components/education-item.twig' with {
-                    class: 'education-item_small',
+                    class: 'education-item_oles',
                     title: 'Олесь Тимофеев',
                     subtitle: 'Основатель GeniusMarketing,<br>Организатор конференции–<br>Лаборатория Онлайн Бизнеса<br>(ЛОБ)',
                     image: 'img/oles.jpg'

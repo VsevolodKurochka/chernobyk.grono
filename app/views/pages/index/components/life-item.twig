@@ -1,0 +1,15 @@
+{% import 'macros/landing.twig' as landing %}
+<div class="row life-item">
+    <div class="col-12 col-sm-6 col-md-6 life-item__image-column">
+        {{ landing.image({
+            src: image,
+            alt: title|striptags,
+            class: 'life-item__image'
+        }) }}
+    </div>
+    <div class="col-12 col-sm-6 col-md-5 life-item__content">
+        <p class="life-item__number">{{ number }}</p>
+        <p class="life-item__title">{{ title|raw }}</p>
+        <div class="life-item__body">{{ body }}</div>
+    </div>
+</div>

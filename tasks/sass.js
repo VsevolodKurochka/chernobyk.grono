@@ -24,3 +24,12 @@ gulp.task('sass', () => gulp
 gulp.task('sass:watch', () => {
 	gulp.watch(`${folders.assetsSrc}/sass/**/*.+(sass|scss)`, gulp.series('sass', reload));
 });
+
+gulp.task('css', () => gulp
+	.src(`${folders.assetsSrc}/sass/**/*.css`)
+	.pipe(gulp.dest(`${folders.assetsBuild}/css`))
+);
+
+gulp.task('css:watch', () => {
+	gulp.watch(`${folders.assetsSrc}/sass/**/*.css`, gulp.series('css', reload));
+});
