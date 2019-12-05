@@ -2,17 +2,25 @@
   .nav__addition
     font-size: 0
     text-align: right
+    +max(md)
+      +h(100%)
+      +pr(0)
 
     &-link
       text-decoration: none
-      +c($color-white)
+      +c($color-general)
       +fs(14px)
       padding: 10px
       +ff('r')
       +bgc($color-white)
 
+      +max(md)
+        border-radius: 0
+        +fs(12px)
+        padding: 5px 10px
+        +h(100%)
+
       +min(md)
         +d('block')
         +mr(0)
         +px(20px)
-        +c($color-general)
