@@ -1,0 +1,70 @@
+.education
+  +r()
+  +bgc($color-brand-2)
+  +c($color-white)
+  +py(60px)
+  +min(sm)
+    +pt(160px)
+
+  &__speakers
+    +max(sm)
+      +my(30px)
+    +min(sm)
+      display: flex
+      +mx(-15px)
+      .education-item
+        +px(15px)
+
+  &-item
+    display: flex
+    flex-direction: column
+    +max(sm)
+      +offset('b', 30px)
+    &_reverse
+      +min(sm)
+        flex-direction: column-reverse
+    &__header
+      +c(#419bd7)
+    &_reverse &__header
+      +mb(15px)
+    &__image
+      border-radius: 10px
+      box-shadow: 0px 16px 86.64px 65.36px rgba(5, 76, 115, 0.11)
+    &__title
+      +mb(15px)
+      +ff('b')
+    &__subtitle
+      +fs(14px)
+    &__image
+      max-width: 250px
+  &-number
+    &__title
+      +ff('bl')
+      +fs(100px)
+      +lh(1)
+      +c(#f2f3f7)
+      opacity: 0.12
+      +mb(-45px)
+      +min(sm)
+        +fs(150px)
+        +mb(-75px)
+    &__content
+      +pl(30px)
+      +min(md)
+        +pl(45px)
+  &-footer
+    +min(sm)
+      +mt(-100px)
+    &__item
+      +max(sm)
+        +offset('b', 15px)
+      +min(sm)
+        &-1
+          +mt(200px)
+        &-3
+          +mt(120px)
+
+  &__next
+    +mt(60px)
+    +min(md)
+      +mt(150px)

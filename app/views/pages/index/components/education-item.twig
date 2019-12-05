@@ -1,0 +1,14 @@
+{% import 'macros/landing.twig' as landing %}
+<div class="education-item {{ class }}">
+    <div class="education-item__body">
+        {{ landing.image({
+            src: image,
+            alt: title|striptags,
+            class: 'education-item__image'
+        }) }}
+    </div>
+    <div class="education-item__header">
+        <p class="education-item__title">{{ title|raw }}</p>
+        <p class="education-item__subtitle">{{ subtitle|raw }}</p>
+    </div>
+</div>

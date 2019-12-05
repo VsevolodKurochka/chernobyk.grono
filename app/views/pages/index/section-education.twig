@@ -1,0 +1,73 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="education">
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: 'section-header_white',
+            background: 'онлайн технологии',
+            title: 'Обучение'
+        } %}
+        <div class="row education__content">
+            <div class="col-12 col-sm-6">
+                <div class="education-number">
+                    <p class="education-number__title">3</p>
+                    <div class="education-number__content">
+                        <p>Это удобная CRM, шаблоны автоворонок, конструктор лендингов,
+                            корпоративная соц.сеть, скрипты продаж, вебинарная комната, чат-бот.
+                            Это позволяет вести бизнес даже удаленно и привлекать клиентов через
+                            современные онлайн-технологии.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 education__speakers">
+                {% include 'pages/index/components/education-item.twig' with {
+                    class: 'education-item_large education-item_reverse',
+                    title: 'Лера Бородина',
+                    subtitle: 'основательница сервиса аренды<br>платьев Oh My Look! и <br>соосновательница бьюти-<br>пространства G.Bar',
+                    image: 'img/borodina.jpg'
+                } %}
+                {% include 'pages/index/components/education-item.twig' with {
+                    class: 'education-item_small',
+                    title: 'Олесь Тимофеев',
+                    subtitle: 'Основатель GeniusMarketing,<br>Организатор конференции–<br>Лаборатория Онлайн Бизнеса<br>(ЛОБ)',
+                    image: 'img/oles.jpg'
+                } %}
+            </div>
+        </div>
+        <div class="row education-footer">
+            <div class="col-12 col-sm-4 education-footer__item education-footer__item-1">
+                {{ landing.image({
+                    src: 'img/tom-1.jpg',
+                    alt: 'Мы строим'
+                }) }}
+            </div>
+            <div class="col-12 col-sm-4 education-footer__item education-footer__item-2">
+                {% include 'pages/index/components/education-item.twig' with {
+                    class: '',
+                    title: 'Том Шрайтер <br>(Большой Эл)',
+                    subtitle: 'Автор бестселлеров “Секретный язык привлечения”, “Как разбудить ваш спящий бизнес” и др.',
+                    image: 'img/tom.jpg'
+                } %}
+            </div>
+            <div class="col-12 col-sm-4 education-footer__item education-footer__item-3">
+                {{ landing.image({
+                    src: 'img/tom-2.jpg',
+                    alt: 'Мы строим'
+                }) }}
+            </div>
+        </div>
+        {% include 'components/common/next-button.twig' with {
+            class: 'education__next',
+            buttonClass: 'next-button_arrow-white'
+        } %}
+    </div>
+    {{ landing.image({
+        src: 'img/rectangle-top-section.png',
+        alt: 'Мы строим',
+        class: 'rectangle rectangle_top'
+    }) }}
+    {{ landing.image({
+        src: 'img/rectangle-bottom-section.png',
+        alt: 'Мы строим',
+        class: 'rectangle rectangle_bottom'
+    }) }}
+</section>
