@@ -1,0 +1,60 @@
+.map
+  +pt(60px)
+  &-content
+    +mb(45px)
+  &-footer
+    +ta(center)
+    &__title
+      +ff('b')
+  &-control
+    +r()
+    display: flex
+    flex-wrap: wrap
+    +ai(center)
+    &__buttons
+      flex-basis: 55px
+      +mr(15px)
+      +fs(0)
+    &__title
+      +fs(18px)
+      +c($color-brand-1)
+      span
+        display: inline-block
+        border-bottom: 1px solid $color-brand-1
+    &__subtitle
+      +c(#acb4b8)
+      +fs(16px)
+      +a(calc(100% + 150px), null, null, 25px)
+      transform: rotate(-90deg)
+      transform-origin: left
+    &__button
+      +r()
+      +d(inline-block)
+      +size(50px)
+      border-radius: 100%
+      +bgc(#c9cfd2)
+      border: none
+      +tr()
+      outline: none
+      &:hover
+        transform: scale(1.05)
+        +bgc($color-brand-1)
+      &.active
+        +bgc($color-brand-1)
+      &:after
+        content: ''
+        +tr()
+        +a(null, null, null, 19px)
+        +d(inline-block)
+        border: solid $color-white
+        border-width: 0 2px 2px 0
+        padding: 5px
+        z-index: 1
+      &_top
+        +mb(30px)
+      &_top:after
+        top: 22px
+        transform: rotate(-135deg)
+      &_bottom:after
+        top: 17px
+        transform: rotate(45deg)

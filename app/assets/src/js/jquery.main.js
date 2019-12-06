@@ -141,4 +141,27 @@ $(document).ready(function(){
 			}
 		]
 	});
+
+	var mapData = {
+		mediterranean: {
+			image: 'assets/build/img/map-1.png',
+			title: '<strong><span>Круиз по</span><br><span>Средиземноморью</span></strong><br><span>8 дней</span>'
+		},
+		pacific: {
+			image: 'assets/build/img/map-1.png',
+			title: '<strong><span>Круиз по островам</span><br><span>Тихого океана</span></strong><br><span>15 дней</span>'
+		}
+	};
+	function setActiveMap(variant) {
+		$('.map-image').attr('src', mapData[variant].image);
+		$('.map-control__title').html(mapData[variant].title);
+		$('.map-control__button').removeClass('active');
+		$('.map-control__button[data-variant="' + variant +'"]').addClass('active');
+	}
+	setActiveMap('mediterranean');
+
+	$('.map-control__button').click(function() {
+		var variant = $(this).attr('data-variant');
+		setActiveMap(variant);
+	});
 });	

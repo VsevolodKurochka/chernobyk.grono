@@ -1,5 +1,5 @@
 {% import 'macros/landing.twig' as landing %}
-<section class="section map" id="section-map">
+<section class="map" id="section-map">
     <div class="container">
         {% include 'components/common/section-header.twig' with {
             class: '',
@@ -7,6 +7,36 @@
             title: 'Ты можешь увидеть весь<br>мир своими глазами',
             subtitle: 'и построить бизнес на круизных путешествиях'
         } %}
+        <div class="row map-content">
+            <div class="col-12 col-sm-3">
+                <div class="map-control">
+                    <div class="map-control__buttons">
+                        <button class="map-control__button map-control__button_top" data-variant="pacific"></button>
+                        <button class="map-control__button map-control__button_bottom" data-variant="mediterranean"></button>
+                        <p class="map-control__subtitle">Жми на круиз</p>
+                    </div>
+                    <p class="map-control__title"></p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-9">
+                <div class="map-container">
+                    {{ landing.image({
+                        src: 'img/map-1.png',
+                        alt: 'Карта',
+                        class: 'map-image'
+                    }) }}
+                    {{ landing.image({
+                        src: 'img/ship.png',
+                        alt: 'Корабль',
+                        class: 'map-container__ship'
+                    }) }}
+                </div>
+            </div>
+        </div>
+        <div class="map-footer">
+            <p class="map-footer__title">
+                *тебя ждут <span class="color-brand-1">более 5000 круизов</span> от 16 лучших <br>круизных линий в Мире</p>
+        </div>
         {% include 'components/common/next-button.twig' with {
             class: 'next-button_offset'
         } %}
