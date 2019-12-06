@@ -26,3 +26,12 @@
     a
       +py(7px)
       +linkEffect3()
+
+      &.active
+        &:before
+          +w(100%)
+          transition: width .5s cubic-bezier(.22,.61,.36,1)
+        &:after
+          width: 100%
+          background-color: transparent
+          transition: 0s

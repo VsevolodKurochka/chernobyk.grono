@@ -32,30 +32,39 @@
         } %}
         <div class="row mission__body-row">
             <div class="col-12 col-md-8">
-                <form action="#" method="POST" class="mission-form">
-                    <div class="row mission-form__row">
-                        <div class="col-12 col-sm-6 mission-form__column">
-                            <input type="text" name="name" placeholder="Имя" class="mission-form__input">
+                <form action="#" method="POST" class="form">
+                    <div class="row form__row">
+                        <div class="col-12 col-sm-6 form__column">
+                            <input type="text" name="name" placeholder="Имя" class="form__input">
                         </div>
-                        <div class="col-12 col-sm-6 mission-form__column">
-                            <input type="text" name="surname" placeholder="Фамилия" class="mission-form__input">
-                        </div>
-                    </div>
-                    <div class="row mission-form__row">
-                        <div class="col-12 col-sm-6 mission-form__column">
-                            <input type="tel" name="phone" placeholder="Телефон" class="mission-form__input">
-                        </div>
-                        <div class="col-12 col-sm-6 mission-form__column">
-                            <input type="email" name="email" placeholder="Email" class="mission-form__input">
+                        <div class="col-12 col-sm-6 form__column">
+                            <input type="text" name="surname" placeholder="Фамилия" class="form__input">
                         </div>
                     </div>
-                    <div class="mission-form__footer">
-                        <button type="submit" class="btn btn_brand-1 mission-form__submit">Узнать о GRONO</button>
+                    <div class="row form__row">
+                        <div class="col-12 col-sm-6 form__column">
+                            <input type="tel" name="phone" placeholder="Телефон" class="form__input">
+                        </div>
+                        <div class="col-12 col-sm-6 form__column">
+                            <input type="email" name="email" placeholder="Email" class="form__input">
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn btn_brand-1 form__submit">Узнать о GRONO</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <nav class="mission__menu {{class}}" id="js-navigation-menu">
+        <ul>
+            <li class="mission__menu-item"><a class="mission__menu-item-link" href="#section-greeting">Главная</a></li>
+            <li class="mission__menu-item"><a class="mission__menu-item-link" href="#section-about">О нас</a></li>
+            <li class="mission__menu-item"><a class="mission__menu-item-link" href="#section-trend">Grono</a></li>
+            <li class="mission__menu-item"><a class="mission__menu-item-link" href="#section-video">Бизнес</a></li>
+            <li class="mission__menu-item"><button class="mission__menu-item-link" data-action="modal" data-open="#modal-entry">Вход для членов сообщества</button></li>
+        </ul>
+    </nav>
     {{ landing.image({
         src: 'img/rectangle-top-section.png',
         alt: 'Мы строим',

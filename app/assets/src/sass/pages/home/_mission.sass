@@ -3,7 +3,7 @@ $common-border-radius: 10px
 .mission
   +r()
   +py(60px)
-  +bgi('../img/last-bg.jpg')
+  +bgi('../img/last-bg.jpg', 0 bottom)
   +c($color-white)
   +min(md)
     +py(160px)
@@ -29,7 +29,7 @@ $common-border-radius: 10px
   &__intro
     +my(45px, 30px)
     +min(md)
-      +mt(60px)
+      +my(60px)
 
   &-slider-for
     +min(sm)
@@ -45,11 +45,11 @@ $common-border-radius: 10px
     &_desktop
       display: none !important
       +min(sm)
-        +d(block)
+        display: block !important
     &_mobile
       +mb(15px)
       +min(sm)
-        +d(none)
+        display: none !important
 
   &-slider-nav
     +pb(80px)
@@ -81,11 +81,16 @@ $common-border-radius: 10px
           z-index: 1
       &-prev
         left: 0
+        +min(sm)
+          left: 15px
         &:before
           left: 21px
           transform: rotate(135deg)
       &-next
-        left: 75px
+        right: 0
+        +min(sm)
+          right: auto
+          left: 90px
         &:before
           left: 19px
           transform: rotate(-45deg)
@@ -107,35 +112,23 @@ $common-border-radius: 10px
       +min(sm)
         justify-content: center
 
-  &-form
-    &__row
-      +offset('b', 15px)
-      +min(sm)
-        +offset('b', 30px)
-    &__column
-      +max(sm)
-        +offset('b', 15px)
-    &__footer
-      +ta(center)
-      +mt(45px)
-    &__input
-      +bgc($color-white)
-      border-radius: 30px
-      +c(#939ea4)
-      +ff('r')
-      padding: 15px 20px
-      +fs(14px)
-      +w(100%)
-      border: none
-      outline: none
-      +tr()
-      +min(md)
-        +fs(16px)
-      +placeholder()
-        +c(#939ea4)
+  &__menu
+    +ta(center)
+    +px(15px)
+    +mt(45px)
+    +min(md)
+      +mt(90px)
+    &-item
+      +d(inline-block)
+      vertical-align: middle
+      +offset('r', 15px)
+      &-link
+        border: none
+        background-color: transparent
+        +c($color-white)
+        text-decoration: none
+        +ff('b')
+        +fs(15px)
         +tr()
-      &:focus
-        +placeholder()
-          opacity: 0
-    &__submit
-      min-width: 250px
+        &:hover
+          +c($color-brand-1)

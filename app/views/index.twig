@@ -1,13 +1,14 @@
 {% import 'macros/base.twig' as macros %}
 {% extends 'layouts/mainLayout.twig' %}
 
-{% set title = 'Title' %}
-{% set description = 'description' %}
+{% set title = 'Grono' %}
+{% set description = 'Мы строим сообщество людей, которые мечтают путешествовать и зарабатывать на этом' %}
 {% set image = 'img/logo.png' %}
 {% set url = 'url' %}
 
 {% block meta %}
 {{ macros.meta(title, description, image, url) }}
+<link rel="shortcut icon" href="{{ path }}/img/favicon.png" type="image/png">
 {% endblock %}
 
 {% block css %}
@@ -34,4 +35,5 @@
 {% endblock %}
 
 {% block footer %}
+    {% include 'components/footer/footer.twig' %}
 {% endblock %}

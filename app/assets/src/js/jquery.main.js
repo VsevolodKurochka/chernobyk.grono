@@ -1,23 +1,24 @@
 $(document).ready(function(){
 
-	function scroll(scrollLink, speed, negativeOffset){
+	function scroll(scrollLink, speed){
 		$('html, body').animate({
 			scrollTop: scrollLink.offset().top - $('.nav__fixed').height()
 		}, speed);
 		return false;
 	}
-	$('.anchor').click(function(e){
+	$('.anchor-next').click(function(e){
 		e.preventDefault();
-		scroll($( $(this).attr('href') ), 1500);
+		var el = $(this).closest('section').next();
+		scroll(el, 1500);
 	});
 
-	$('.nav__menu-item-link').click(function(e){
+	$('.js-menu-item-link').click(function(e){
 		e.preventDefault();
 		scroll($( $(this).attr('href') ), 1500);
 		$('#js-navigation-menu').removeClass('nav__menu_active');
 	});
 
-	var $navigationLinks = $('#js-navigation-menu li > a');
+	var $navigationLinks = $('#js-navigation-menu > ul > li > a');
 	// cache (in reversed order) the sections
 	var $sections = $($("section").get().reverse());
 
@@ -25,7 +26,7 @@ $(document).ready(function(){
 	var sectionIdTonavigationLink = {};
 	$sections.each(function() {
 			var id = $(this).attr('id');
-			sectionIdTonavigationLink[id] = $('#js-navigation-menu > li > a[href=\\#' + id + ']');
+			sectionIdTonavigationLink[id] = $('#js-navigation-menu > ul > li > a[href=\\#' + id + ']');
 	});
 
 	// throttle function, enforces a minimum time interval
@@ -96,6 +97,25 @@ $(document).ready(function(){
 	$('#js-nav-hamburger').click(function () {
 		$(this).toggleClass('active');
 		$('#js-navigation-menu').toggleClass('nav__menu_active');
+	});
+
+	$('[data-action="modal"]').click(function () {
+		var modal = $(this).attr('data-open');
+		$(modal).addClass('modal_showing_in');
+		$('body').addClass('modal-open');
+	});
+
+	$('[data-close="modal"]').click(function () {
+		$(this).closest('.modal').removeClass('modal_showing_in');
+		$('body').removeClass('modal-open');
+	});
+
+	$('body').on('click', function(e) {
+		if ($(e.target).hasClass('modal')) {
+			var modal = $(e.target).attr('id');
+			$('#' + modal).removeClass('modal_showing_in');
+			$('body').removeClass('modal-open');
+		}
 	});
 
 	$('.slider-for').slick({
