@@ -5,16 +5,20 @@
   +r()
   user-select: none
   cursor: pointer
+  +fs(0)
 
   &-group
     +r()
     +py(15px)
 
+  &_white
+    +c($color-white)
+
   &__text
     +d('inline-block')
     vertical-align: middle
-    +pl(30px)
-    +fs(18px)
+    +pl(35px)
+    +fs(15px)
 
   &__indicator
     +a(50%, null, null, 0)
@@ -76,3 +80,15 @@
 
     &:before
       border-color: $color-brand-1
+
+  &_white input[type="radio"] + &__indicator
+    border-color: $color-white
+
+    &:before
+      +bgc($color-white)
+
+  &_white input[type="checkbox"] + &__indicator
+    border-color: $color-white
+
+    &:before
+      border-color: $color-white

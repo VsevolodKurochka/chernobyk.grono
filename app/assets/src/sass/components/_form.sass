@@ -1,6 +1,13 @@
 $themeFormDesign: "new"
 
 .form
+  &__label
+    &-title
+      +mb(5px)
+      +d(block)
+      +c($color-white)
+      +fs(14px)
+      +pl(20px)
   &__input
     +bgc($color-white)
     border-radius: 30px
@@ -12,22 +19,36 @@ $themeFormDesign: "new"
     border: none
     outline: none
     +tr()
-    +min(md)
-      +fs(16px)
     +placeholder()
       +c(#939ea4)
       +tr()
     &:focus
       +placeholder()
         opacity: 0
+  &__address
+    +r()
+    +d(block)
+    &-title
+      +a(50%)
+      transform: translateY(-50%)
+      +fs(14px)
+      +c(#939ea4)
+      &_prev
+        left: 20px
+      &_next
+        right: 20px
+    &-input
+      +pl(75px)
   &__submit
     min-width: 250px
   &__row
-    +offset('b', 15px)
+    +offset('b', 10px)
     +min(sm)
-      +offset('b', 30px)
+      +offset('b', 20px)
   &__column
     +max(sm)
+      +offset('b', 15px)
+    &_block
       +offset('b', 15px)
   &__footer
     +ta(center)

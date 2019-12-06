@@ -9,6 +9,20 @@
     +bs("0 12px 15px 0 rgba(0, 0, 0, 0.25)")
     +tr()
 
+    &_form
+      +bgc(transparent)
+      +bgi('../img/form-bg.jpg')
+      border-radius: 10px
+      +min(sm)
+        +w(700px)
+
+    +min(sm)
+      &-header .section-header
+        &__background
+          +fs(50px)
+        &__title
+          +fs(20px)
+
     &_effect-1
       opacity: 0
       transform: scale(0.7)
@@ -54,16 +68,14 @@
       transform: none
 
     +min(xs)
-      padding: 48px 24px
+      padding: 24px
       &_default
         width: 460px
-
 
     +min(sm)
       &_small
         width: 600px
         margin: 30px auto
-
 
     +min(md)
       &_medium

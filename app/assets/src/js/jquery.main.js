@@ -99,10 +99,15 @@ $(document).ready(function(){
 		$('#js-navigation-menu').toggleClass('nav__menu_active');
 	});
 
-	$('[data-action="modal"]').click(function () {
-		var modal = $(this).attr('data-open');
+	function showModal(modal) {
+		$('.modal').removeClass('modal_showing_in');
 		$(modal).addClass('modal_showing_in');
 		$('body').addClass('modal-open');
+	}
+
+	$('[data-action="modal"]').click(function () {
+		var modal = $(this).attr('data-open');
+		showModal(modal);
 	});
 
 	$('[data-close="modal"]').click(function () {
@@ -148,7 +153,7 @@ $(document).ready(function(){
 			title: '<strong><span>Круиз по</span><br><span>Средиземноморью</span></strong><br><span>8 дней</span>'
 		},
 		pacific: {
-			image: 'assets/build/img/map-1.png',
+			image: 'assets/build/img/map-2.png',
 			title: '<strong><span>Круиз по островам</span><br><span>Тихого океана</span></strong><br><span>15 дней</span>'
 		}
 	};
