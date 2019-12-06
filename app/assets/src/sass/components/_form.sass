@@ -38,7 +38,7 @@ $themeFormDesign: "new"
       &_next
         right: 20px
     &-input
-      +pl(75px)
+      +px(75px, 97px)
   &__submit
     min-width: 250px
   &__row
@@ -53,3 +53,17 @@ $themeFormDesign: "new"
   &__footer
     +ta(center)
     +mt(45px)
+
+  &__info
+    +d(flex)
+    +jc(space-between)
+    +mt(30px)
+
+  &__link
+    border: none
+    +bgc(transparent)
+    +ff('b')
+    +c($color-white)
+    +tr()
+    &:hover
+      +c($color-brand-1)

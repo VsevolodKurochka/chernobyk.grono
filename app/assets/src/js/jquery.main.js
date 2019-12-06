@@ -105,12 +105,14 @@ $(document).ready(function(){
 		$('body').addClass('modal-open');
 	}
 
-	$('[data-action="modal"]').click(function () {
+	$('[data-action="modal"]').click(function (e) {
+		e.preventDefault();
 		var modal = $(this).attr('data-open');
 		showModal(modal);
 	});
 
-	$('[data-close="modal"]').click(function () {
+	$('[data-close="modal"]').click(function (e) {
+		e.preventDefault();
 		$(this).closest('.modal').removeClass('modal_showing_in');
 		$('body').removeClass('modal-open');
 	});
