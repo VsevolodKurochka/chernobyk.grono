@@ -2,8 +2,10 @@
   +r()
   +bgc($color-brand-2)
   +c($color-white)
-  +py(60px)
+  +py(60px, 45px)
   +min(sm)
+    +pt(90px)
+  +min(md)
     +pt(160px)
 
   &__speakers
@@ -20,6 +22,7 @@
     flex-direction: column
     +max(sm)
       +offset('b', 30px)
+      +ta(center)
     &_reverse
       +min(sm)
         flex-direction: column-reverse
@@ -61,6 +64,8 @@
       +min(md)
         +pl(45px)
   &-footer
+    +max(sm)
+      +ta(center)
     +min(sm)
       +mt(-100px)
     &__item
@@ -74,5 +79,5 @@
 
   &__next
     +mt(60px)
-    +min(md)
+    +min(lg)
       +mt(150px)

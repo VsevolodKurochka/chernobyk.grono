@@ -18,7 +18,7 @@
                             и путешествуем за счет компании.</strong></p>
                 </div>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 about__image-wrapper">
                 {{ landing.image({
                     src: 'img/about-man-woman.png',
                     alt: 'GRONO — сообщество единомышленников-предпринимателей из 151 страны мира.',
@@ -27,6 +27,7 @@
             </div>
         </div>
         {% include 'components/common/next-button.twig' with {
+            class: 'about__next',
             buttonClass: 'next-button_arrow-white'
         } %}
     </div>

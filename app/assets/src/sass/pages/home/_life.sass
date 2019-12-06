@@ -7,8 +7,9 @@
     +min(sm)
       +ai(center)
     &:nth-child(odd) &__image
-      +max(sm)
-        +ml(-15px)
+      &-column
+        +max(md)
+          +pl(0)
       +min(md)
         +ml(-220px)
       +min(xlg)
@@ -18,17 +19,16 @@
         flex-direction: row-reverse
     &:nth-child(even) &
       &__image
-        +max(sm)
-          +mr(-15px)
         +min(md)
           +ml(220px)
         +min(xlg)
           +ml(75%)
         &-column
-          +max(sm)
+          +max(md)
+            +pr(0)
             +ta(right)
     &:nth-child(5) &__image-column
-      +max(sm)
+      +max(md)
         +mb(-5px)
     &__image
       +max(sm)
@@ -46,6 +46,9 @@
       +ff('b')
       +mb(-45px)
       +min(sm)
+        +fs(250px)
+        +mb(-60px)
+      +min(md)
         +fs(300px)
         +mb(-90px)
     &__title

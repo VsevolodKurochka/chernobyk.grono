@@ -1,12 +1,16 @@
 .about
   +r()
-  +py(90px)
+  +py(60px, 0)
   +c($color-white)
   +bgi('../img/about-bg.jpg')
   z-index: 1
   overflow: hidden
   +mb(0)
+  +min(sm)
+    +py(130px, 70px)
   +min(md)
+    +pb(100px)
+  +min(lg)
     +py(200px, 130px)
   &:after
     content: ''
@@ -35,5 +39,15 @@
   &__image
     +r()
     z-index: -2
+    +max(sm)
+      max-width: 250px
     +min(sm)
       top: 130px
+    &-wrapper
+      +max(sm)
+        +mt(30px)
+        +ta(center)
+  &__next
+    +max(sm)
+      +d(none)
+      +mt(0)

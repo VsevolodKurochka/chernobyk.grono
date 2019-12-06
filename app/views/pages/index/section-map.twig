@@ -1,5 +1,13 @@
 {% import 'macros/landing.twig' as landing %}
+{% set bgImages = ['img/compass.png', 'img/wine.png', 'img/apple.png', 'img/camera.png'] %}
 <section class="map" id="section-map">
+    {% for image in bgImages %}
+        {{ landing.image({
+            src: image,
+            alt: "bg-#{loop.index}",
+            class: "map-bg map-bg_#{loop.index}"
+        }) }}
+    {% endfor %}
     <div class="container">
         {% include 'components/common/section-header.twig' with {
             class: '',
@@ -25,15 +33,15 @@
                         alt: 'Карта',
                         class: 'map-image'
                     }) }}
-                    {{ landing.image({
-                        src: 'img/ship.png',
-                        alt: 'Корабль',
-                        class: 'map-container__ship'
-                    }) }}
                 </div>
             </div>
         </div>
         <div class="map-footer">
+            {{ landing.image({
+                src: 'img/ship.png',
+                alt: 'Корабль',
+                class: 'map-footer__ship'
+            }) }}
             <p class="map-footer__title">
                 *тебя ждут <span class="color-brand-1">более 5000 круизов</span> от 16 лучших <br>круизных линий в Мире</p>
         </div>

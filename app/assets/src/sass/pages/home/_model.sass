@@ -23,11 +23,11 @@
           top: 20%
     &_2
       &:before
-        +max(sm)
+        +max(md)
           top: -100px
           left: 100px
           transform: rotate(90deg)
-        +min(sm)
+        +min(md)
           left: -30%
           top: -15%
           transform: scaleX(-1)
@@ -55,6 +55,8 @@
       +offset('b', 60px)
   &-row-1
     +min(sm)
+      +mb(200px)
+    +min(md)
       +mb(450px)
     &__image
       +max(sm)
@@ -74,7 +76,7 @@
   &-row-2
     +r()
     &__image
-      +max(sm)
+      +max(md)
         max-width: 250px
       +min(sm)
         +a(-25%, null, null, 0)
@@ -101,6 +103,7 @@
 
   &-row
     &__title
+      +d(none)
       +a(null, null, 0, 0)
       +c(#f2f3f7)
       +ff('bl')
@@ -108,6 +111,7 @@
       transform: rotate(-90deg)
       +tt(uppercase)
       +min(md)
+        +d(block)
         +fs(90px)
         bottom: -260px
         left: -130px

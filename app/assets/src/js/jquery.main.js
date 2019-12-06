@@ -164,4 +164,6 @@ $(document).ready(function(){
 		var variant = $(this).attr('data-variant');
 		setActiveMap(variant);
 	});
+
+	$('.current-year').html(new Date().getFullYear());
 });	

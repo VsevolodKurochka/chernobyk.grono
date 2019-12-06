@@ -1,32 +1,83 @@
 .map
+  +r()
   +pt(60px)
+  z-index: 2
+  &-bg
+    +a()
+    z-index: -1
+    max-height: 120px
+    +min(sm)
+      max-height: 200px
+    +min(lg)
+      max-height: none
+    &_1
+      top: -5%
+      left: 0
+      +min(sm)
+        top: 0
+    &_2
+      top: -7%
+      right: 0
+      +min(sm)
+        top: 0
+    &_3
+      bottom: -5%
+      left: -5%
+
+      +min(sm)
+        bottom: 0
+        left: 0
+    &_4
+      bottom: -5%
+      right: 0
+      +min(sm)
+        bottom: -15%
   &-content
     +mb(45px)
   &-footer
     +ta(center)
+    +min(sm)
+      +mt(-60px)
+    +min(md)
+      +mt(-120px)
     &__title
       +ff('b')
+    &__ship
+      max-width: 100px
+      +mb(15px)
+      +min(sm)
+        max-width: none
+        +mb(45px)
   &-control
     +r()
     display: flex
     flex-wrap: wrap
     +ai(center)
+    +pl(45px)
+    +min(sm)
+      +pl(0)
     &__buttons
       flex-basis: 55px
       +mr(15px)
       +fs(0)
     &__title
-      +fs(18px)
+      flex-basis: 0
+      flex-grow: 1
+      +fs(13px)
       +c($color-brand-1)
+      +min(lg)
+        +fs(18px)
       span
         display: inline-block
         border-bottom: 1px solid $color-brand-1
     &__subtitle
       +c(#acb4b8)
       +fs(16px)
-      +a(calc(100% + 150px), null, null, 25px)
+      +a(calc(100% - 15px), null, null, 25px)
       transform: rotate(-90deg)
       transform-origin: left
+      +min(sm)
+        top: calc(100% + 150px)
     &__button
       +r()
       +d(inline-block)
