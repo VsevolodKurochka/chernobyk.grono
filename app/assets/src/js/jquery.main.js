@@ -16,6 +16,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		scroll($( $(this).attr('href') ), 1500);
 		$('#js-navigation-menu').removeClass('nav__menu_active');
+		$('#js-nav-hamburger').removeClass('active');
 	});
 
 	var $navigationLinks = $('#js-navigation-menu > ul > li > a');

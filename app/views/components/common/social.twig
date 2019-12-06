@@ -2,7 +2,7 @@
 <ul class="social {{ class }}">
     {% for item in items %}
         <li class="social__item">
-            <a href="{{ item.link }}" class="social__link">
+            <a href="{{ item.link }}" target="_blank" class="social__link">
                 {{ landing.image({
                     src: item.image,
                     alt: 'social'
