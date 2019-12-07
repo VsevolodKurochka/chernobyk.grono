@@ -155,3 +155,50 @@
     </div>
   </div>
 </div>
+<div class="modal" id="modal-show-more">
+  <div class="modal__box modal__box_form">
+    <div class="modal__header">
+      {% include 'components/common/section-header.twig' with {
+        class: 'modal__box-header section-header_white',
+        background: 'Grono',
+        title: 'Узнать о Grono'
+      } %}
+      <button class="modal__close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal__body">
+      <form action="#" method="POST" class="form">
+        <div class="row form__row">
+          <div class="col-12 col-sm-6 form__column">
+            <label class="form__label">
+              <span class="form__label-title">Имя</span>
+              <input type="text" name="login" placeholder="Введите ваше имя" class="form__input">
+            </label>
+          </div>
+          <div class="col-12 col-sm-6 form__column">
+            <label class="form__label">
+              <span class="form__label-title">Фамилия</span>
+              <input type="password" name="password" placeholder="Введите вашу фамилию" class="form__input">
+            </label>
+          </div>
+        </div>
+        <div class="row form__row">
+          <div class="col-12 col-sm-6 form__column">
+            <label class="form__label">
+              <span class="form__label-title">Телефон</span>
+              <input type="tel" name="phone" placeholder="Введите ваш телефон" class="form__input">
+            </label>
+          </div>
+          <div class="col-12 col-sm-6 form__column">
+            <label class="form__label">
+              <span class="form__label-title">Email</span>
+              <input type="password" name="password" placeholder="Введите свою почту" class="form__input">
+            </label>
+          </div>
+        </div>
+        <div class="form__footer">
+          <button type="submit" class="btn btn_brand-1 form__submit">Узнать о Grono</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

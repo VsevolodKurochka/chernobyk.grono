@@ -28,15 +28,16 @@
         flex-direction: column-reverse
     &_oles
       +min(sm)
+        +mt(30px)
         +max(md)
           flex-direction: column-reverse
           margin-left: -255px
           .education-item__header
-            +mb(15px)
+            +mb(30px)
     &__header
       +c(#419bd7)
     &_reverse &__header
-      +mb(15px)
+      +mb(30px)
     &__image
       border-radius: 10px
       box-shadow: 0px 16px 86.64px 65.36px rgba(5, 76, 115, 0.11)
@@ -45,6 +46,9 @@
       +ff('b')
     &__subtitle
       +fs(14px)
+    &__body
+      +fs(0)
+      +mb(30px)
     &__image
       +max(sm)
         max-width: 250px
@@ -87,5 +91,3 @@
     +mb(30px)
   &__next
     +mt(60px)
-    +min(lg)
-      +mt(150px)
