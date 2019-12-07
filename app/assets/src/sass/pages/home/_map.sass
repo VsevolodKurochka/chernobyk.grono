@@ -14,7 +14,7 @@
       top: -5%
       left: 0
       +min(sm)
-        top: -10%
+        top: 0
     &_2
       top: -7%
       right: 0
@@ -55,6 +55,9 @@
     +pl(45px)
     +min(sm)
       +pl(0)
+      +mt(60px)
+    +min(md)
+      +mt(120px)
     &__buttons
       flex-basis: 55px
       +mr(15px)
@@ -63,12 +66,12 @@
       flex-basis: 0
       flex-grow: 1
       +fs(13px)
-      +c($color-brand-1)
+      +c($color-brand-3)
       +min(lg)
-        +fs(18px)
+        +fs(17px)
       span
         display: inline-block
-        border-bottom: 1px solid $color-brand-1
+        border-bottom: 1px solid transparentize($color-brand-3, 0.2)
     &__subtitle
       +c(#acb4b8)
       +fs(16px)
@@ -88,9 +91,9 @@
       outline: none
       &:hover
         transform: scale(1.05)
-        +bgc($color-brand-1)
+        +bgc($color-brand-3)
       &.active
-        +bgc($color-brand-1)
+        +bgc($color-brand-3)
       &:after
         content: ''
         +tr()

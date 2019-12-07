@@ -5,6 +5,8 @@
   +mb(30px)
   +min(md)
     +mb(45px)
+  &__inner
+    +r()
   &__background
     +a(null, null, calc(100% - 15px), 0)
     +w(100%)
@@ -15,7 +17,8 @@
     +fs(30px)
     +lh(1)
     +min(sm)
-      bottom: calc(100% - 45px)
+      top: -30px
+      bottom: auto
       +fs(55px)
     +min(md)
       +fs(75px)
@@ -39,11 +42,12 @@
       +a(100%, null, null, 50%)
       transform: translateX(-50%)
       +size(40px, 2px)
-      +bgc($color-brand-1)
+      +bgc($color-brand-3)
       +min(md)
         +size(80px, 3px)
   &__subtitle
     +mt(20px)
+    +ff('b')
     +min(sm)
       +fs(20px)
 

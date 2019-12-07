@@ -45,6 +45,7 @@ set items = [
         <div class="life__content">
             {% for item in items %}
                 {% include 'pages/index/components/life-item.twig' with {
+                    class: "life-item_#{loop.index}",
                     image: item.image,
                     number: item.number,
                     title: item.title,
