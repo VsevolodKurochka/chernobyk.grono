@@ -183,4 +183,14 @@ $(document).ready(function(){
 			$('.preloader').hide();
 		}, 1500);
 	});
+	var delimiter = $(window).width() > 768 ? 5 : 15;
+	$(window).on('scroll', function() {
+		var wScroll = $(this).scrollTop() / delimiter;
+		$('.map-bg_1, .map-bg_4').css({
+			'transform': 'translate(0, -' + (wScroll) + 'px)'
+		});
+		$('.map-bg_2, .map-bg_3').css({
+			'transform': 'translate(0, ' + (wScroll) + 'px)'
+		});
+	});
 });	
