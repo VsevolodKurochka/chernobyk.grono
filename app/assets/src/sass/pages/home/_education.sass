@@ -8,9 +8,11 @@
   +min(md)
     +pt(160px)
 
+  &__content
+    +min(sm)
+      +ai(start)
+
   &__speakers
-    +max(sm)
-      +my(30px)
     +min(md)
       display: flex
       +mx(-15px)
@@ -26,14 +28,6 @@
     &_reverse
       +min(sm)
         flex-direction: column-reverse
-    &_oles
-      +min(sm)
-        +mt(30px)
-        +max(md)
-          flex-direction: column-reverse
-          margin-left: -255px
-          .education-item__header
-            +mb(30px)
     &__header
       +c(#419bd7)
     &_reverse &__header
@@ -53,6 +47,7 @@
       +max(sm)
         max-width: 250px
   &-number
+    +mb(30px)
     &__title
       +ff('bl')
       +fs(100px)
@@ -63,30 +58,39 @@
       +min(sm)
         +fs(150px)
         +mb(-75px)
-    &__content
-      +pl(30px)
-      +min(md)
-        +pl(45px)
+        +ml(-30px)
   &-footer
     +max(sm)
       +ta(center)
+    +min(sm)
+      +ai(flex-end)
+    +min(md)
+      +mt(-290px)
     &__item
       +max(sm)
         +offset('b', 15px)
+      &-1
+        +max(sm)
+          +d(none)
       +min(sm)
         &-1
           +mt(200px)
+          img
+            +size(100%, 160px)
+            object-fit: cover
         &-3
           +mt(120px)
         &-2
           +r()
           &:before
             content: ''
-            +a(15%, null, null, -60%)
+            +a(0, -60%, null, null)
             +size(137px, 72px)
             +bgi('../img/arrow-white.png')
-            +min(md)
-              left: -45%
+            transform: scaleX(-1)
+            +min(sm)
+              top: 20%
+              right: -45%
   &__content
     +mb(30px)
   &__next

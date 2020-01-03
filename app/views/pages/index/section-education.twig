@@ -7,7 +7,7 @@
             title: 'Обучение'
         } %}
         <div class="row education__content">
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 col-md-5">
                 <div class="education-number">
                     <p class="education-number__title">3</p>
                     <div class="education-number__content">
@@ -17,6 +17,12 @@
                             современные онлайн-технологии.</p>
                     </div>
                 </div>
+                {% include 'pages/index/components/education-item.twig' with {
+                    class: 'education-item_petrenko',
+                    title: 'Роман Петренко',
+                    subtitle: 'Сертифицированный бизнес-тренер <br>с 1999 года. Автор 6 Профессиональных Курсов<br>Подготовки Коучей',
+                    image: 'img/roma-petrenko.png'
+                } %}
             </div>
             <div class="col-12 col-sm-6 education__speakers">
                 {% include 'pages/index/components/education-item.twig' with {
