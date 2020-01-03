@@ -174,4 +174,13 @@ $(document).ready(function(){
 	});
 
 	$('.current-year').html(new Date().getFullYear());
+
+	$(window).on('load', function() {
+		$('.preloader').css({
+			'transform': 'translateY(-100%)'
+		});
+		setTimeout(function () {
+			$('.preloader').hide();
+		}, 1500);
+	});
 });	
