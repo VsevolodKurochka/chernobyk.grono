@@ -3,7 +3,6 @@
 <head>
   {% block meta %}{% endblock %}
   {% block css %}{% endblock %}
-  {% block js %}{% endblock %}
 </head>
 <body>
 {% include 'components/common/preloader.twig' %}
@@ -18,5 +17,6 @@
 {% block footer %}
     {% include 'components/footer/footer.twig' %}
 {% endblock %}
+{% block js %}{% endblock %}
 </body>
 </html>
