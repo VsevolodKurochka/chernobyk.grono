@@ -14,12 +14,18 @@
             } %}
         </div>
         <div class="video__row">
-            <iframe
+            {{ landing.image({
+                src: 'img/video-section-iframe.jpg',
+                alt: 'Мы строим',
+                class: 'video__bg'
+            }) }}
+            <button data-action="modal" data-open="#modal-video" class="video__play"></button>
+            {#<iframe
                     class="video__iframe"
                     src="https://www.youtube.com/embed/iCuuQ5RRL5U"
                     frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                    allowfullscreen></iframe>#}
         </div>
         {% include 'components/common/next-button.twig' with {
             class: 'video__next',
