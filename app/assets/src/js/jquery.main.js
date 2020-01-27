@@ -191,19 +191,16 @@ $(document).ready(function(){
 
 	$('.current-year').html(new Date().getFullYear());
 
-	$(window).on('load', function() {
-		$('.preloader').css({
-			'transform': 'translateY(-100%)'
-		});
-		setTimeout(function () {
-			$('.preloader').hide();
-		}, 4500);
+	$(document).ready(function () {
+		$('.lazy').Lazy();
+	});
 
-		$("#js-preloader-video").on("loadstart", function() {
-			setTimeout(function () {
-				$('#js-preloader-video').hide();
-			}, 3000);
-		});
+	$(window).on('load', function() {
+		setTimeout(function () {
+			$('.preloader').css({
+				'transform': 'translateY(-100%)'
+			});
+		}, 3000);
 	});
 	var delimiter = $(window).width() > 768 ? 5 : 15;
 	$(window).on('scroll', function() {

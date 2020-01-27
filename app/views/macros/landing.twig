@@ -1,5 +1,5 @@
 {% macro image(options) %}
-  <img src="{{path}}/{{options.src}}" alt="{{options.alt}}" class="{{ options.class }}">
+  <img data-src="{{path}}/{{options.src}}" alt="{{options.alt}}" class="lazy {{ options.class }}">
 {% endmacro %}
 
 {% macro button(type, class, text, attributes) %}
