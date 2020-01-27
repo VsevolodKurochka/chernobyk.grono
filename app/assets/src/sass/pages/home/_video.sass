@@ -25,12 +25,13 @@
       +size(865px, 500px)
   &__play
     +a(50%, null, null, 50%)
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%) scale(1)
     background-color: transparent
-    +bgi('../img/play-icon.png')
-    +size(125px, 88px)
+    +bgi('../img/youtube-logo.png')
+    +size(125px, 108px)
     border: none
     +tr()
+    transform-origin: left
     &:hover
       transform: scale(0.96) translate(-50%, -50%)
   &__next
