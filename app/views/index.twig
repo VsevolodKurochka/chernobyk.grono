@@ -23,6 +23,17 @@
 {{ macros.js("js/jquery.main.js") }}
 {% endblock %}
 
+{% block nav %}
+    {% include 'components/navigation/navigation.twig' with {
+        items: [
+            {href: '#section-greeting', text: 'Главная'},
+            {href: '#section-about', text: 'О нас'},
+            {href: '#section-trend', text: 'Grono'},
+            {href: '#section-video', text: 'Бизнес'}
+        ]
+    } %}
+{% endblock %}
+
 {% block content %}
 {% include 'pages/index/section-greeting.twig' %}
 {% include 'pages/index/section-map.twig' %}

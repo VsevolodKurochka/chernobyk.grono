@@ -141,30 +141,31 @@ $(document).ready(function(){
 			$('body').removeClass('modal-open');
 		}
 	});
-
-	$('.slider-for').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		fade: true,
-		asNavFor: '.slider-nav'
-	});
-	$('.slider-nav').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		asNavFor: '.slider-for',
-		dots: false,
-		centerMode: false,
-		focusOnSelect: true,
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2
+	if ($().slick) {
+		$('.slider-for').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slider-nav'
+		});
+		$('.slider-nav').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',
+			dots: false,
+			centerMode: false,
+			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2
+					}
 				}
-			}
-		]
-	});
+			]
+		});
+	}
 
 	var mapData = {
 		mediterranean: {

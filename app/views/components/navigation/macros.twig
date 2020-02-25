@@ -19,13 +19,14 @@
   </div>
 {% endmacro %}
 
-{% macro menu(class) %}
+{% macro menu(class, items) %}
   <nav class="nav__menu {{class}}" id="js-navigation-menu">
     <ul>
-      <li class="nav__menu-item"><a class="nav__menu-item-link js-menu-item-link" href="#section-greeting">Главная</a></li>
-      <li class="nav__menu-item"><a class="nav__menu-item-link js-menu-item-link" href="#section-about">О нас</a></li>
-      <li class="nav__menu-item"><a class="nav__menu-item-link js-menu-item-link" href="#section-trend">Grono</a></li>
-      <li class="nav__menu-item"><a class="nav__menu-item-link js-menu-item-link" href="#section-video">Бизнес</a></li>
+      {% for item in items %}
+        <li class="nav__menu-item">
+          <a class="nav__menu-item-link js-menu-item-link" href="{{ item.href }}">{{ item.text }}</a>
+        </li>
+      {% endfor %}
     </ul>
   </nav>
 {% endmacro %}

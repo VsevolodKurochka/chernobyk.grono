@@ -1,0 +1,39 @@
+{% import 'macros/base.twig' as macros %}
+{% extends 'layouts/mainLayout.twig' %}
+
+{% set title = 'Grono' %}
+{% set description = 'IT-платформа Grono - Техническое решение для привлечения клиентов и работы с ними ' %}
+{% set image = 'img/logo.png' %}
+{% set url = 'url' %}
+
+{% block meta %}
+{{ macros.meta(title, description, image, url) }}
+<link rel="shortcut icon" href="{{ path }}/img/favicon.png" type="image/png">
+{% endblock %}
+
+{% block css %}
+{{ macros.css("css/style.min.css") }}
+{% endblock %}
+
+{% block js %}
+{{ macros.js("js/jquery.min.js") }}
+{{ macros.js("js/jquery.lazy.min.js") }}
+{{ macros.js("js/jquery.main.js") }}
+{% endblock %}
+
+{% block nav %}
+    {% include 'components/navigation/navigation.twig' with {
+        items: [
+            {href: '', text: 'IT-платформа'},
+            {href: '', text: 'Grono'}
+        ]
+    } %}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'components/footer/footer.twig' %}
+{% endblock %}
