@@ -1,6 +1,6 @@
 .greeting
   +r()
-  +bgi('../img/first-bg.jpg', 50% 0)
+
   +c($color-white)
   +max(sm)
     +py(45px, 80px)
@@ -9,10 +9,16 @@
     +ai(center)
     +h(100vh)
     min-height: 700px
-  +min(md)
-    background-position-x: 60%
-  +min(lg)
-    background-position-x: 0
+  &_home
+    +bgi('../img/first-bg.jpg', 50% 0)
+    +min(md)
+      background-position-x: 60%
+    +min(lg)
+      background-position-x: 0
+  &_platform
+    +bgi('../img/bg-greeting-platform.jpg', 50% 0)
+    +min(md)
+      background-position-x: 50%
   &__row
     +jc(flex-end)
     +min(sm)

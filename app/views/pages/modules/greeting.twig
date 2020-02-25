@@ -1,0 +1,32 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="greeting {{ mode }}" id="section-greeting">
+    <div class="container">
+        <div class="row greeting__row">
+            <div class="col-9 col-sm-6 greeting__content">
+                <h1 class="greeting__title">{{ title|raw }}</h1>
+                <h2 class="greeting__subtitle">{{ subtitle|raw }}</h2>
+                <button
+                    class="btn btn_brand-1 greeting__button"
+                    data-action="modal"
+                    data-open="#modal-registration">
+                    Присоединяться к сообществу
+                </button>
+            </div>
+            <div class="col-8 col-sm-6 greeting__social">
+                {% include 'components/common/social.twig' with {
+                    class: 'social_block',
+                    items: social
+                } %}
+            </div>
+        </div>
+    </div>
+    {{ landing.image({
+        src: 'img/rectangle-bottom-section.png',
+        alt: title|striptags,
+        class: 'rectangle rectangle_bottom'
+    }) }}
+    {% include 'components/common/next-button.twig' with {
+        class: 'greeting__next',
+        buttonClass: 'next-button_brand-1'
+    } %}
+</section>

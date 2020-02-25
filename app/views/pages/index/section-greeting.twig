@@ -1,40 +1,6 @@
 {% import 'macros/landing.twig' as landing %}
-<section class="greeting" id="section-greeting">
-    <div class="container">
-        <div class="row greeting__row">
-            <div class="col-8 col-sm-6 greeting__content">
-                <h1 class="greeting__title">Мы строим <br>сообщество людей,</h1>
-                <h2 class="greeting__subtitle">которые мечтают путешествовать <br>и зарабатывать на этом</h2>
-                <button class="btn btn_brand-1 greeting__button" data-action="modal" data-open="#modal-registration">Присоединяться к сообществу</button>
-            </div>
-            <div class="col-8 col-sm-6 greeting__social">
-                {% include 'components/common/social.twig' with {
-                    class: 'social_block',
-                    items: [
-                        {
-                            link: 'https://www.youtube.com/channel/UCRGYNea9omEIx07RKWzon7w',
-                            image: 'img/youtube-icon.png'
-                        },
-                        {
-                            link: 'https://www.facebook.com/nataliashevela.grono/',
-                            image: 'img/facebook-icon.png'
-                        },
-                        {
-                            link: 'https://www.instagram.com/vasylyshyn_team/',
-                            image: 'img/instagram-icon.png'
-                        }
-                    ]
-                } %}
-            </div>
-        </div>
-    </div>
-    {{ landing.image({
-        src: 'img/rectangle-bottom-section.png',
-        alt: 'Мы строим',
-        class: 'rectangle rectangle_bottom'
-    }) }}
-    {% include 'components/common/next-button.twig' with {
-        class: 'greeting__next',
-        buttonClass: 'next-button_brand-1'
-    } %}
-</section>
+{% include 'pages/modules/greeting.twig' with {
+    mode: 'greeting_home',
+    title: 'Мы строим <br>сообщество людей,',
+    subtitle: 'которые мечтают путешествовать <br>и зарабатывать на этом'
+} %}
