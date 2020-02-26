@@ -1,0 +1,58 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="about about-connect" id="section-about">
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: 'about__header section-header_white',
+            background: 'свой бизнес',
+            title: 'Как подключиться к IT-платформе?'
+        } %}
+        <div class="row about__row">
+            <div class="col-12 col-sm-6 col-md-5 about-connect-content ">
+                <div class="about__content">
+                    <p>
+                        Платформа Grono — это уникальное
+                        IT-решение, созданное специально для
+                        Сообщества Grono с целью достижения ими
+                        быстрых результатов в бизнесе
+                        на круизных путешествиях.
+                    </p>
+                </div>
+                <div class="about__quote">
+                    <p>
+                        Поэтому, попасть на Платформу можно только
+                        по реферальной ссылке
+                        от участника Сообщества.
+                    </p>
+                </div>
+                <button
+                    class="btn btn_brand-1">
+                    Посмотреть Платформу
+                </button>
+            </div>
+            <div class="col-12 col-sm-6 col-md-5 about-connect-animation">
+                <div class="about-connect-animation__title-wrapper">
+                    <p class="about-connect-animation__title">GRONO</p>
+                </div>
+                {{ landing.image({
+                    src: 'img/wine.png',
+                    alt: 'GRONO — сообщество единомышленников-предпринимателей из 151 страны мира.',
+                    class: 'about-connect-animation__wine'
+                }) }}
+            </div>
+        </div>
+        {% include 'components/common/next-button.twig' with {
+            class: 'about__next',
+            buttonClass: 'next-button_arrow-white'
+        } %}
+    </div>
+    {{ landing.image({
+        src: 'img/rectangle-top-section.png',
+        alt: 'Мы строим',
+        class: 'rectangle rectangle_top'
+    }) }}
+    {{ landing.image({
+        src: 'img/wave.png',
+        alt: 'wave',
+        class: 'wave wave_bottom'
+    }) }}
+</section>

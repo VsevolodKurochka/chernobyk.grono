@@ -68,3 +68,57 @@
       +r(null, null, null, 15%)
       max-width: 75px
       transform: scaleX(-1)
+
+  &-connect
+    +bgi('../img/about-bg.jpg')
+    +pb(100px)
+    &:before
+      opacity: 0.9
+    +min(sm)
+      +pb(200px)
+    @at-root
+      @keyframes aboutWine
+        0%, 100%
+          transform: none
+        50%
+          transform: translateY(45px)
+      @keyframes aboutTitle
+        0%, 100%
+          transform: none
+        50%
+          transform: translateY(-45px)
+    .about__row
+      +min(sm)
+        +jc(space-around)
+    &-content
+      +min(sm)
+        +mt(100px)
+    &-animation
+      +a()
+      +max(sm)
+        +size(100%)
+        opacity: 0.2
+      +min(sm)
+        +r()
+      &__title
+        +ff('bl')
+        +fs(75px)
+        transform: rotate(-90deg)
+        +min(sm)
+          +fs(100px)
+        +min(md)
+          +fs(130px)
+        &-wrapper
+          +a(null, null, 70%, -30%)
+          animation: aboutTitle 15s infinite
+          +min(sm)
+            bottom: 15%
+      &__wine
+        animation: aboutWine 7s infinite
+        +max(sm)
+          +a(null, 0)
+          +w(100px)
+        +min(sm)
+          +r()
+          left: 15%
+          max-width: 70%
