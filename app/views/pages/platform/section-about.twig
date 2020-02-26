@@ -1,0 +1,56 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="about about_start" id="section-about">
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: 'about__header section-header_white',
+            background: 'Grono',
+            title: 'Быстрый старт в бизнесе'
+        } %}
+        <div class="row about__row">
+            <div class="col-12 col-sm-6 col-md-6">
+                <div class="about__quote">
+                    <p>
+                        Вам больше не нужны десятки специалистов,
+                        чтобы настроить авто-воронку и вести
+                        множество бизнес-процессов.
+                    </p>
+                </div>
+                <div class="about__content">
+                    <p>
+                        Встроенные шаблоны материалов по
+                        маркетингу и продажам, <strong class="color-brand-3">обучающие
+                            видео внутри Платформы</strong> дают
+                        возможность быстрых результатов
+                        даже новичку Сообщества.
+                    </p>
+                </div>
+                {{ landing.image({
+                    src: 'img/arrow.png',
+                    alt: 'GRONO — сообщество единомышленников-предпринимателей из 151 страны мира.',
+                    class: 'about__arrow'
+                }) }}
+            </div>
+            <div class="col-12 col-sm-6 about__image-wrapper">
+                {{ landing.image({
+                    src: 'img/about-man-woman.png',
+                    alt: 'GRONO — сообщество единомышленников-предпринимателей из 151 страны мира.',
+                    class: 'about__image'
+                }) }}
+            </div>
+        </div>
+        {% include 'components/common/next-button.twig' with {
+            class: 'about__next',
+            buttonClass: 'next-button_arrow-white'
+        } %}
+    </div>
+    {{ landing.image({
+        src: 'img/rectangle-top-section.png',
+        alt: 'Мы строим',
+        class: 'rectangle rectangle_top'
+    }) }}
+    {{ landing.image({
+        src: 'img/wave.png',
+        alt: 'wave',
+        class: 'wave wave_bottom'
+    }) }}
+</section>
