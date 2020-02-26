@@ -1,0 +1,55 @@
+{% import 'macros/landing.twig' as landing %}
+{% set items = [
+    {image: 'img/pl-1.png', title: 'Конструктор <br>лендингов'},
+    {image: 'img/pl-2.png', title: 'CRM-система'},
+    {image: 'img/pl-3.png', title: 'Чат-бот'},
+    {image: 'img/pl-4.png', title: 'Скрипты <br>продаж'},
+    {image: 'img/pl-5.png', title: 'Генеалогическая<br>бизнес-<br>структура'},
+    {image: 'img/pl-6.png', title: 'Автоворонки'},
+    {image: 'img/pl-7.png', title: 'Сервис <br>рассылки<br>писем'},
+    {image: 'img/pl-8.png', title: 'Корпоративная<br>соц.сеть'},
+    {image: 'img/pl-9.png', title: 'Органайзер<br>задач'},
+    {image: 'img/pl-10.png', title: 'Дневник<br>успеха'},
+    {image: 'img/pl-11.png', title: 'Вебинарная<br>комната'},
+    {image: 'img/pl-12.png', title: 'Платформа<br>для онлайн-<br>обучения'},
+    {image: 'img/pl-13.png', title: 'Центр<br>сообщений'},
+    {image: 'img/pl-14.png', title: 'Командные<br>Игры'},
+] %}
+{% set bgImages = ['img/grono.png', 'img/wine.png'] %}
+<section class="platform-service">
+    {% for image in bgImages %}
+        {{ landing.image({
+            src: image,
+            alt: "bg-#{loop.index}",
+            class: "platform-service__bg platform-service__bg_#{loop.index} scroll-item scroll-item_#{loop.index}"
+        }) }}
+    {% endfor %}
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: 'platform-service__header',
+            background: 'Бизнес',
+            title: '14 сервисов на одной<br>Платформе'
+        } %}
+        <div class="platform-service__content">
+            <div class="row platform-service__row">
+                {% for item in items %}
+                    <div class="col-6 col-sm-3 platform-service__item">
+                        {{ landing.image({
+                            src: item.image,
+                            alt: title|striptags,
+                            class: "platform-service__item-image"
+                        }) }}
+                        <p class="platform-service__item-title">{{ item.title|raw }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <p class="platform-service__footer">
+            С платформой возможны любые интеграции<br>
+            сторонних сервисов
+        </p>
+        {% include 'components/common/next-button.twig' with {
+            class: 'next-button_offset'
+        } %}
+    </div>
+</section>

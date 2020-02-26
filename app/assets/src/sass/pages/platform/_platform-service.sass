@@ -1,0 +1,75 @@
+$platform-service-md-offset: 140px
+
+.platform-service
+  +r()
+  +py(60px)
+  z-index: 2
+  +min(md)
+    +pt($platform-service-md-offset)
+  &__header
+    +min(md)
+      +mb($platform-service-md-offset)
+  &__bg
+    +a()
+    z-index: -1
+    max-height: 120px
+    +min(sm)
+      max-height: 200px
+    +min(lg)
+      max-height: none
+    &_1
+      top: 0
+      left: 0
+
+    &_2
+      top: -7%
+      right: 0
+      +min(sm)
+        top: -15%
+  &__content
+    +r()
+    +mb(45px)
+    +min(md)
+      max-width: 800px
+      +mx(auto)
+
+    &:before
+      +min(sm)
+        content: ''
+        +bgi('../img/way.png')
+        +size(740px, 570px)
+        +a(4%, null, null, -3%)
+        z-index: -1
+      +min(md)
+        +size(976px, 751px)
+        +a(5%, null, null, -10%)
+        max-width: none
+
+  &__row
+    +jc(center)
+
+  &__item
+    +ta(center)
+    +max(sm)
+      +mb(30px)
+    +min(sm)
+      min-height: 190px
+    +min(md)
+      min-height: 250px
+    &-image
+      +mb(5px)
+      +size(60px)
+      +min(sm)
+        +mb(15px)
+      +min(md)
+        +size(112px)
+        +mb(25px)
+    &-title
+      +c($color-gray)
+      +fs(14px)
+      +min(sm)
+        +fs(16px)
+      +min(md)
+        +fs(18px)
+  &__footer
+    +ta(center)
