@@ -1,0 +1,22 @@
+.footer-menu
+  +ta(center)
+  +px(15px)
+  +mt(45px)
+  +min(md)
+    +mt(90px)
+  &__item
+    +d(inline-block)
+    vertical-align: middle
+    +offset('r', 15px)
+  &__link
+    border: none
+    background-color: transparent
+    +c($color-white)
+    text-decoration: none
+    +ff('b')
+    +fs(13px)
+    +tr()
+    +min(md)
+      +fs(15px)
+    &:hover
+      +c($color-brand-1)

@@ -116,32 +116,9 @@ $common-border-radius: 10px
       +min(md)
         +h(200px)
 
-  &__body
-    &-row
-      +min(sm)
-        justify-content: center
+  &__body-row
+    +min(sm)
+      justify-content: center
 
-  &__menu
-    +ta(center)
-    +px(15px)
-    +mt(45px)
-    +min(md)
-      +mt(90px)
-    &-item
-      +d(inline-block)
-      vertical-align: middle
-      +offset('r', 15px)
-      &-link
-        border: none
-        background-color: transparent
-        +c($color-white)
-        text-decoration: none
-        +ff('b')
-        +fs(13px)
-        +tr()
-        +min(md)
-          +fs(15px)
-        &:hover
-          +c($color-brand-1)
   &__button
     min-width: 250px
