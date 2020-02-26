@@ -1,0 +1,47 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="platform-tips" id="section-platform-tips">
+    <div class="container">
+        <div class="platform-tips__header">
+            {% include 'components/common/section-header.twig' with {
+                class: '',
+                background: 'платформа',
+                title: 'Несколько подсказок для тех, кто начал <br>работать с платформой'
+            } %}
+        </div>
+        <div class="platform-tips__content">
+            {% include 'pages/platform/components/tip.twig' with {
+                index: 1,
+                image: 'img/tips-1.png',
+                number: 1,
+                stepItemClass: "step-item_arrow",
+                title: 'Хотите первым узнавать <br>о главных новостях?',
+                body: 'Включите Push-уведомления — и система сообщит вам самое важное даже если платформа закрыта.'
+            } %}
+            {% include 'pages/platform/components/tip.twig' with {
+                index: 2,
+                image: 'img/tips-2.png',
+                number: '2',
+                title: 'Ищете дополнительную <br>мотивацию?',
+                body: 'Устройте корпоративные игры! Бросьте вызов члену Сообщества и выиграйте достойный приз.'
+            } %}
+            {% include 'pages/platform/components/tip.twig' with {
+                index: 3,
+                image: 'img/tips-3.png',
+                number: 3,
+                stepItemClass: "step-item_arrow",
+                title: 'Вы новичок и не знаете,<br>как работать с воронкой?',
+                body: 'Пройдите обучение внутри Платформы и посмотрите, как наиболее эффективно использовать уже загруженные материалы'
+            } %}
+            {% include 'pages/platform/components/tip.twig' with {
+                index: 4,
+                image: 'img/tips-4.png',
+                number: 4,
+                title: 'Хотите лучше развивать<br>команду?',
+                body: 'Используйте элементы коучинга. В платформу уже встроены Диаграмма Ганта, Матрица Эйзенхауэра и другие полезные инструменты.'
+            } %}
+        </div>
+        {% include 'components/common/next-button.twig' with {
+            class: 'model__next'
+        } %}
+    </div>
+</section>

@@ -1,0 +1,38 @@
+.step-item
+  +r()
+  &_arrow
+    &:before
+      content: ''
+      +a()
+      +size(143px, 57px)
+      +bgi('../img/model-arrow.png')
+  &__header
+    display: flex
+    align-items: center
+    +r()
+  &__title
+    +r()
+    +fs(20px)
+    +ff('bl')
+    +ml(-20px)
+  &__number
+    +c(#f2f3f7)
+    +ff('bl')
+    +lh(1)
+    +fs(100px)
+    +ml(-15px)
+    +min(md)
+      +fs(150px)
+      +ml(-25px)
+  &_large &
+    &__number
+      +fs(160px)
+      +min(md)
+        +fs(300px)
+    &__title
+      +fs(16px)
+      +min(md)
+        +a(null, null, 30%, 15px)
+        +fs(20px)
+  &__body
+    +c($color-gray)
