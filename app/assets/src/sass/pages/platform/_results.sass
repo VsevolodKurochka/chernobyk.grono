@@ -1,0 +1,41 @@
+.platform-results
+  +r()
+  z-index: 2
+  +my(0)
+  +py(45px)
+  +min(md)
+    +py(90px)
+  &__row
+    +min(sm)
+      +jc(center)
+      flex-direction: row-reverse
+  &__image
+    &-column
+      z-index: -1
+      +max(sm)
+        +d(none)
+      +min(sm)
+        +a(0, null, null, -25%)
+      +min(lg)
+        left: -280px
+      +min(xlg)
+        left: -40%
+  &__list
+    +c($color-gray)
+  &__notebook
+    +a(null, 0, 0)
+    z-index: -1
+    max-width: 150px
+    +max(sm)
+      opacity: 0.5
+    +min(sm)
+      max-width: 300px
+      bottom: 15%
+    +min(lg)
+      max-width: none
+  &__next
+    +mt(60px)
+    +min(sm)
+      +mt(120px)
+    +min(lg)
+      +mt(190px)
