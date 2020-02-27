@@ -1,13 +1,13 @@
 {% import 'macros/landing.twig' as landing %}
-<div class="row platform-tips-item platform-tips-item_{{ index }}">
-    <div class="col-12 col-sm-6 col-md-5 platform-tips-item__wrapper">
+<div class="row step-row step-row_{{ index }}">
+    <div class="col-12 col-sm-6 col-md-5 step-row__wrapper">
         {{ landing.image({
             src: image,
             alt: title|striptags,
-            class: 'platform-tips-item__image'
+            class: 'step-row__image'
         }) }}
     </div>
-    <div class="col-12 col-sm-6 col-md-5 platform-tips-item__content">
+    <div class="col-12 col-sm-6 col-md-5 step-row__content">
         {% include 'pages/components/step-item.twig' with {
             class: "step-item_large #{stepItemClass}",
             number: number,
