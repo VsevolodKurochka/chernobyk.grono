@@ -12,17 +12,20 @@
     +min(xs)
       padding: 24px
       &_default
-        width: 460px
+        +w(460px)
 
     +min(sm)
       &_small
-        width: 600px
+        +w(600px)
         margin: 30px auto
 
-    +min(md)
-      &_medium
-        width: 900px
+
+    &_medium
+      +min(sm)
+        +w(750px)
         margin: 30px auto
+      +min(md)
+        +w(1000px)
 
     &_transparent
       +bgc(transparent)

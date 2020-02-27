@@ -13,3 +13,14 @@
             'image' => 'img/instagram-icon.png'
         )
     );
+
+    $platform_navigation = array(
+        array(
+            'href' => '',
+            'text' => 'IT-платформа'
+        ),
+        array(
+            'href' => '',
+            'text' => 'Grono'
+        )
+    );

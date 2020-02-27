@@ -1,0 +1,51 @@
+.modal-platform
+  &__box
+    border-radius: 10px
+    +bgc($color-brand-2-darken)
+    +c($color-white)
+    +pb(0)
+    box-shadow: 0 0 80.04px 11.96px rgba(0, 65, 145, 0.45)
+    overflow: hidden
+
+  &__title
+    +ta(center)
+    +max(sm)
+      +w(100%)
+      +fs(14px)
+      +mb(15px)
+    +min(md)
+      +fs(30px)
+
+  &__body
+    +r()
+    +row()
+    +ai(center)
+    z-index: 1
+    +max(sm)
+      +jc(center)
+    +min(sm)
+      flex-direction: row-reverse
+  &__bg
+    +a(50%, null, null, 0)
+    transform: translateY(-50%)
+    +w(100%)
+    +ta(center)
+    +tt(uppercase)
+    +c(#e6f1f7)
+    opacity: 0.1
+    +fs(30px)
+    z-index: -1
+    +ff('bl')
+    +lh(1)
+    +min(sm)
+      +fs(45px)
+    +min(md)
+      top: 40%
+      +fs(90px)
+  &__man
+    +h(250px)
+    +mb(-15px)
+    +min(sm)
+      +h(300px)
+    +min(md)
+      +h(450px)

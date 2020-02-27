@@ -6,3 +6,4 @@
 	$twig = new Twig_Environment($loader);
 	$twig->addGlobal('path', 'assets/build');
 	$twig->addGlobal('social', $socials);
+	$twig->addGlobal('platform_navigation', $platform_navigation);

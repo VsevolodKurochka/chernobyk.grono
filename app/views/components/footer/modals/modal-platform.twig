@@ -1,0 +1,16 @@
+{% import 'macros/landing.twig' as landing %}
+<div class="modal modal-platform" id="modal-platform">
+    <div class="modal__box modal__box_effect-1 modal__box_medium modal-platform__box">
+        <button class="modal__close" data-close="modal">&times;</button>
+        <div class="modal-platform__body">
+            <p class="modal-platform__bg">узнать больше</p>
+            <p class="modal-platform__title">Возьмите реферальную ссылку<br>
+                у члена Сообщества</p>
+            {{ landing.image({
+                src: 'img/man-tshirt-grono.png',
+                alt: title,
+                class: 'modal-platform__man'
+            }) }}
+        </div>
+    </div>
+</div>

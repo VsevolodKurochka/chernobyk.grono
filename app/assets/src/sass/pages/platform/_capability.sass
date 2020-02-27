@@ -1,6 +1,6 @@
 .platform-capability
   +r()
-  +py(90px, 30px)
+  padding: 90px 15px 30px 15px
   +c($color-white)
   +bgc($color-brand-2-darken)
   overflow: hidden
@@ -22,6 +22,10 @@
       +mb(-190px)
 
   &__wrapper
+    +tr()
+    cursor: pointer
+    &:hover
+      opacity: 0.7
     +min(sm)
       max-width: 400px
     +min(md)

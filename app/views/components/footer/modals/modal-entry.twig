@@ -1,0 +1,35 @@
+<div class="modal" id="modal-entry">
+    <div class="modal__box modal__box_form modal__box_form_small">
+        <div class="modal__header">
+            {% include 'components/common/section-header.twig' with {
+                class: 'modal__box-header section-header_white',
+                background: 'войти',
+                title: 'Вход'
+            } %}
+            <button class="modal__close" data-close="modal">&times;</button>
+        </div>
+        <div class="modal__body">
+            <form action="#" method="POST" class="form">
+                <div class="form__row">
+                    <label class="form__label">
+                        <span class="form__label-title">Логин</span>
+                        <input type="text" name="login" placeholder="Введите ваш логин" class="form__input">
+                    </label>
+                </div>
+                <div class="form__row">
+                    <label class="form__label">
+                        <span class="form__label-title">Пароль</span>
+                        <input type="password" name="password" placeholder="Введите ваш пароль" class="form__input">
+                    </label>
+                </div>
+                <div class="form__footer">
+                    <button type="submit" class="btn btn_brand-1 form__submit">Войти</button>
+                </div>
+                <div class="form__info">
+                    <button class="form__link" data-action="modal" data-open="#modal-registration">Регистрация</button>
+                    <button class="form__link" data-action="modal" data-open="#modal-forgot-password">Забыли пароль?</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

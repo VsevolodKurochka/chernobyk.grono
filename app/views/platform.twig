@@ -23,10 +23,7 @@
 
 {% block nav %}
     {% include 'components/navigation/navigation.twig' with {
-        items: [
-            {href: '', text: 'IT-платформа'},
-            {href: '', text: 'Grono'}
-        ]
+        items: platform_navigation
     } %}
 {% endblock %}
 
