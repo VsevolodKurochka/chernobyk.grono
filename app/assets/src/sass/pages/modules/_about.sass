@@ -1,11 +1,10 @@
 .about
   +r()
-  +py(60px, 0)
+  +pt(90px)
   +c($color-white)
   z-index: 1
   overflow: hidden
   +mb(0)
-
   +min(sm)
     +py(130px, 70px)
   +min(md)
@@ -33,7 +32,7 @@
 
   &__content
     +offset('b', 30px)
-    +min(sm)
+    +min(md)
       +offset('b', 60px)
 
   &__image
@@ -111,6 +110,7 @@
         opacity: 0.2
       +min(sm)
         +r()
+        min-height: 400px
       &__title
         +ff('bl')
         +fs(65px)
@@ -126,10 +126,14 @@
             bottom: 15%
       &__wine
         animation: aboutWine 7s infinite
+        +a(null, 0)
         +max(sm)
-          +a(null, 0)
           +w(100px)
         +min(sm)
-          +r()
           left: 15%
-          max-width: 70%
+          max-width: 250px
+      &__form
+        animation: aboutTitle 15s ease -10s infinite
+        z-index: -2
+        +w(200px)
+        +a(0, 15px)

@@ -26,22 +26,20 @@ set items = [
 ]
 %}
 <section class="life" id="section-life">
-    <div class="container">
-        {% include 'components/common/section-header.twig' with {
-            class: '',
-            background: 'жизнь c grono',
-            title: 'Создай жизнь мечты<br> в сообществе GRONO'
-        } %}
-        <div class="life__content">
-            {% for item in items %}
-                {% include 'pages/components/step-row.twig' with {
-                    index: loop.index,
-                    image: item.image,
-                    number: item.number,
-                    title: item.title,
-                    body: item.body
-                } %}
-            {% endfor %}
-        </div>
+    {% include 'components/common/section-header.twig' with {
+        class: '',
+        background: 'жизнь c grono',
+        title: 'Создай жизнь мечты<br> в сообществе GRONO'
+    } %}
+    <div class="life__content">
+        {% for item in items %}
+            {% include 'pages/components/step-row.twig' with {
+                index: loop.index,
+                image: item.image,
+                number: item.number,
+                title: item.title,
+                body: item.body
+            } %}
+        {% endfor %}
     </div>
 </section>
