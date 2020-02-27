@@ -2,32 +2,26 @@
   +r()
   z-index: 2
   +my(0)
-  +py(45px)
-  +min(md)
-    +py(90px)
+  +pt(45px)
   &__row
     +min(sm)
-      +jc(center)
-      flex-direction: row-reverse
+      +row()
+      +ai(center)
   &__image
-    &-column
-      z-index: -1
-      +max(sm)
-        +d(none)
-      +min(sm)
-        +a(0, null, null, -25%)
-      +min(lg)
-        left: -280px
-      +min(xlg)
-        left: -40%
+    z-index: -1
+    +r(null, null, null, -15px)
+    +max(sm)
+      +a()
+      max-width: 200px
+      opacity: 0.15
   &__list
     +c($color-gray)
+    +min(sm)
+      max-width: 500px
   &__notebook
     +a(null, 0, 0)
     z-index: -1
-    max-width: 150px
-    +max(sm)
-      opacity: 0.5
+    max-width: 250px
     +min(sm)
       max-width: 300px
       bottom: 15%

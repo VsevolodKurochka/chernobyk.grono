@@ -2,10 +2,10 @@
   +r()
   +py(60px, 0)
   +c($color-white)
-  +bgi('../img/about-bg.jpg')
   z-index: 1
   overflow: hidden
   +mb(0)
+
   +min(sm)
     +py(130px, 70px)
   +min(md)
@@ -20,29 +20,22 @@
     z-index: -1
     filter: blur(25px)
     opacity: 0.5
-  &:before
-    content: ''
-    +a(0, 0)
-    +size(100%)
-    +bgc($color-brand-2)
-    opacity: 0.7
-    z-index: -3
-  &_start
-    +bgi('../img/about-bg.jpg')
-    &:before
-      opacity: 0.9
+
   &__row
     +min(sm)
       flex-direction: row-reverse
       +jc(space-between)
       +ai(center)
+
   &_start &__row
     +min(sm)
       +ai(flex-end)
+
   &__content
     +offset('b', 30px)
     +min(sm)
       +offset('b', 60px)
+
   &__image
     +r()
     z-index: -2
@@ -54,6 +47,7 @@
       +max(sm)
         +mt(30px)
         +ta(center)
+
   &__next
     +max(sm)
       +d(none)
@@ -69,11 +63,28 @@
       max-width: 75px
       transform: scaleX(-1)
 
-  &-connect
+  &-who
     +bgi('../img/about-bg.jpg')
-    +pb(100px)
     &:before
-      opacity: 0.9
+      content: ''
+      +a(0, 0)
+      +size(100%)
+      +bgc($color-brand-2)
+      opacity: 0.7
+      z-index: -3
+
+  &-start
+    +bgc($color-brand-2-darken)
+    .about__image
+      top: auto
+      +min(sm)
+        +a(null, null, -45px, -10%)
+      +min(md)
+        max-width: none
+
+  &-connect
+    +bgc($color-brand-2-darken)
+    +pb(100px)
     +min(sm)
       +pb(200px)
     @at-root
