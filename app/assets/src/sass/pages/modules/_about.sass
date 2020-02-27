@@ -58,9 +58,9 @@
 
   &__arrow
     +max(sm)
-      +r(null, null, null, 15%)
+      +a(null, null, null, 0)
       max-width: 75px
-      transform: scaleX(-1)
+      transform: rotate(110deg)
 
   &-who
     +bgi('../img/about-bg.jpg')
@@ -120,9 +120,10 @@
         +min(md)
           +fs(130px)
         &-wrapper
-          +a(null, null, 60%, -30%)
+          +a(null, null, 60%, -80px)
           animation: aboutTitle 15s infinite
           +min(sm)
+            left: -30%
             bottom: 15%
       &__wine
         animation: aboutWine 7s infinite

@@ -4,8 +4,10 @@
     &:before
       content: ''
       +a()
-      +size(143px, 57px)
+      +size(110px, 43px)
       +bgi('../img/model-arrow.png')
+      +min(sm)
+        +size(143px, 57px)
   &__header
     display: flex
     align-items: center
