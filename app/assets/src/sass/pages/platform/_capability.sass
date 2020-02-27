@@ -1,7 +1,70 @@
 .platform-capability
   +r()
-  +py(60px)
+  +py(90px, 30px)
   +c($color-white)
   +bgc($color-brand-2-darken)
+  overflow: hidden
+  +min(sm)
+    +py(160px, 60px)
   +min(md)
-    +py(160px)
+    +pb(90px)
+
+  &__row
+    +r()
+    +fs(0)
+    +mb(-45px)
+    +mb(-130px)
+    +min(sm)
+      +row()
+      +jc(center)
+      +ai(center)
+    +min(md)
+      +mb(-190px)
+
+  &__wrapper
+    +min(sm)
+      max-width: 400px
+    +min(md)
+      max-width: none
+
+  &__content
+    +max(sm)
+      +a(null, 0, 50%)
+
+  &__man
+    +max(sm)
+      +r()
+      left: 50%
+      transform: translateX(-50%)
+      max-width: 400px
+
+  &__title
+    @at-root
+      @keyframes capabilityArrow
+        0%, 100%
+          transform: none
+        50%
+          transform: translateY(-10px)
+    +r()
+    +fs(12px)
+    +max(sm)
+      +bgc($color-brand-2-darken)
+      padding: 5px
+    +min(sm)
+      +fs(16px)
+    +min(md)
+      +fs(20px)
+      top: -60px
+    &:before
+      content: ''
+      +a(15px, null, null, -15%)
+      +bgi('../img/model-arrow-white.png')
+      +size(80px, 65px)
+      +max(sm)
+        transform: rotate(-70deg)
+      +min(sm)
+        top: 25px
+        left: -50%
+        animation: capabilityArrow 1s infinite
+      +min(md)
+        +size(122px, 99px)
