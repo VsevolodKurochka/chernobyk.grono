@@ -5,47 +5,43 @@
   +my(0)
   +pt(45px)
   &__row
+    +row()
     +min(sm)
+      +mx(-15px)
       +jc(center)
-      flex-direction: row-reverse
+      justify-content: space-between
   &__title
     +ff('b')
     +mb(30px)
+    +max(sm)
+      +pl(100px)
     +min(lg)
       +mb(60px)
-  &__image
-    &-column
+  &__ship
+    &-image
+      +r()
       z-index: -1
       +max(sm)
-        +d(none)
-      +min(sm)
-        +a(0, null, null, -25%)
-      +min(lg)
-        left: -280px
-      +min(xlg)
-        left: -40%
+        left: -15px
+        max-width: 90px
+        +mb(-75px)
   &__list
     +c($color-gray)
     +min(md)
       +pl(90px)
   &__bag
-    +a(10%, 0)
     z-index: -1
-    max-width: 150px
+    +ta(right)
     +max(sm)
-      opacity: 0.5
-    +min(sm)
-      right: -50px
-      top: 0
-      max-width: 300px
-    +min(md)
-      right: -130px
-    +min(lg)
-      max-width: none
-      right: -170px
+      +a(null, -15px, 0)
+    &-image
+      +r()
+      max-width: 150px
+      +max(sm)
+        opacity: 0.5
+      +min(sm)
+        max-width: 300px
+      +min(lg)
+        max-width: none
   &__next
     +mt(60px)
-    +min(sm)
-      +mt(120px)
-    +min(lg)
-      +mt(190px)

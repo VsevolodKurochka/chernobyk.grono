@@ -1,5 +1,5 @@
 .modal
-  +d(flex)
+  +d(none)
   +ai(center)
   +jc(center)
   +f(0, 0, 0, 0)
@@ -24,7 +24,7 @@
 
     &_in
       overflow-y: visible
-
+      +d(flex)
       @extend %showing_in
 
   &_3d

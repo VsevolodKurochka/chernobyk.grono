@@ -1,40 +1,40 @@
 {% import 'macros/landing.twig' as landing %}
 <section class="trend" id="section-trend">
-    <div class="container">
-        {% include 'components/common/section-header.twig' with {
-            class: 'trend__header',
-            background: 'Круизы',
-            title: 'Круизные путешествия - это трендовая <br>ниша бизнеса в ближайшие 10 лет!'
-        } %}
-        {{ landing.image({
-            src: 'img/trand-2.png',
-            alt: 'bag',
-            class: 'trend__bag'
-        }) }}
-        <div class="row trend__row">
-            <div class="col-12 col-sm-6 col-lg-5">
-                <p class="trend__title">Круизы набирают огромную<br>
-                    популярность среди туристов,<br>
-                    потому что:</p>
-                <ul class="list list_circle trend__list">
-                    <li>это на 30-50% дешевле <br>наземного отдыха</li>
-                    <li>фейерверк впечатлений от <br>посещения за одно путешествие</li>
-                    <li>нескольких стран множество <br>бесплатных развлечений </li>
-                    <li>на борту для любого возраста <br>десятки круглосуточных <br>ресторанов по системе <br>All Inclusive </li>
-                    <li>начало путешествия из любого порта Мира (пару часов на самолете до ближайшего порта и на борт!)</li>
-                </ul>
-            </div>
-            <div class="col-12 col-sm-6 trend__image-column">
-                {{ landing.image({
-                    src: 'img/trand-1.png',
-                    alt: 'ship',
-                    class: 'trend__image'
-                }) }}
-            </div>
+    {% include 'components/common/section-header.twig' with {
+        class: 'trend__header',
+        background: 'Круизы',
+        title: 'Круизные путешествия - это трендовая <br>ниша бизнеса в ближайшие 10 лет!'
+    } %}
+    <div class="trend__row">
+        <div class="col-12 col-sm-4 trend__ship">
+            {{ landing.image({
+                src: 'img/trand-1.png',
+                alt: 'ship',
+                class: 'trend__ship-image'
+            }) }}
         </div>
-        {% include 'components/common/next-button.twig' with {
-            class: 'trend__next',
-            buttonClass: ''
-        } %}
+        <div class="col-12 col-sm-4">
+            <p class="trend__title">Круизы набирают огромную<br>
+                популярность среди туристов,<br>
+                потому что:</p>
+            <ul class="list list_circle trend__list">
+                <li>это на 30-50% дешевле <br>наземного отдыха</li>
+                <li>фейерверк впечатлений от <br>посещения за одно путешествие</li>
+                <li>нескольких стран множество <br>бесплатных развлечений </li>
+                <li>на борту для любого возраста <br>десятки круглосуточных <br>ресторанов по системе <br>All Inclusive </li>
+                <li>начало путешествия из любого порта Мира (пару часов на самолете до ближайшего порта и на борт!)</li>
+            </ul>
+        </div>
+        <div class="col-12 col-sm-4 trend__bag">
+            {{ landing.image({
+                src: 'img/trand-2.png',
+                alt: 'bag',
+                class: 'trend__bag-image'
+            }) }}
+        </div>
     </div>
+    {% include 'components/common/next-button.twig' with {
+        class: 'trend__next',
+        buttonClass: ''
+    } %}
 </section>
