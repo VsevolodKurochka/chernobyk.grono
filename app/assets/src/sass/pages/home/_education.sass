@@ -23,7 +23,7 @@
     display: flex
     flex-direction: column
     +max(sm)
-      +offset('b', 30px)
+      +mb(30px)
       +ta(center)
     &_reverse
       +min(sm)
@@ -31,7 +31,8 @@
     &__header
       +c(#419bd7)
     &_reverse &__header
-      +mb(30px)
+      +min(sm)
+        +mb(30px)
     &__image
       border-radius: 10px
       box-shadow: 0px 16px 86.64px 65.36px rgba(5, 76, 115, 0.11)
@@ -42,7 +43,9 @@
       +fs(14px)
     &__body
       +fs(0)
-      +mb(30px)
+      +mb(15px)
+      +min(sm)
+        +mb(30px)
     &__image
       +max(sm)
         max-width: 250px
@@ -91,7 +94,5 @@
             +min(sm)
               top: 20%
               right: -45%
-  &__content
-    +mb(30px)
   &__next
     +mt(60px)
