@@ -9,18 +9,18 @@
             'image' => 'img/facebook-icon.png'
         ),
         'instagram' => array(
-            'link' => 'https://www.instagram.com/vasylyshyn_team',
+            'link' => 'https://www.instagram.com/grono.team/?igshid=1ukiqw731axab',
             'image' => 'img/instagram-icon.png'
         )
     );
 
     $platform_navigation = array(
         array(
-            'href' => '',
-            'text' => 'IT-платформа'
+            'href' => '/',
+            'text' => 'Grono'
         ),
         array(
             'href' => '',
-            'text' => 'Grono'
+            'text' => 'IT-платформа'
         )
     );
