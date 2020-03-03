@@ -3,47 +3,6 @@
   +max(sm)
     padding: 45px 15px 15px 15px
 
-  &-item
-    +r()
-    &__image
-      +max(sm)
-        max-width: 200px
-      +min(sm)
-        +a(-25%)
-        max-width: 350px
-      +min(md)
-        max-width: none
-    &__wrapper
-      +px(0)
-      +max(sm)
-        +mb(-30px)
-    +offset('b', 60px)
-    +min(sm)
-      +offset('b', 120px)
-    +min(md)
-      +offset('b', 200px)
-    &:nth-child(odd) &
-      &__image
-        +min(sm)
-          left: -125px
-        +min(md)
-          left: -250px
-        +min(xlg)
-          left: -35%
-    &:nth-child(even)
-      flex-direction: row-reverse
-      +jc(space-between)
-    &:nth-child(even) &
-      &__image
-        +min(sm)
-          right: -120px
-        +min(md)
-          right: -250px
-        +min(xlg)
-          right: -35%
-      &__wrapper
-        +ta(right)
-
   &-item_1 .step-item
     &:before
       bottom: -50%

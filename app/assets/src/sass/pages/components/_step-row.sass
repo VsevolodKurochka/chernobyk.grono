@@ -1,12 +1,15 @@
 .step-row
   $self: &
-
   +r()
+
+  +max(sm)
+    +offset('b', 45px)
 
   +min(sm)
     +ai(center)
 
   &__image
+    +r()
     +max(sm)
       max-width: 200px
 
@@ -20,12 +23,19 @@
     +jc(space-between)
     #{$self}__wrapper
       +ta(right)
+    #{$self}__image
+      right: -15px
 
+  &:nth-child(odd)
+    #{$self}__image
+      left: -15px
 
   .step-item
     +min(sm)
       +ml(15%)
       max-width: 500px
+    +min(lg)
+      +ml(40%)
 
   &_1 .step-item
     &:before

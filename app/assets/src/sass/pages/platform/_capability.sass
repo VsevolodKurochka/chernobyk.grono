@@ -33,7 +33,7 @@
 
   &__content
     +max(sm)
-      +a(null, 0, 50%)
+      +ta(center)
 
   &__man
     +max(sm)
@@ -52,8 +52,7 @@
     +r()
     +fs(12px)
     +max(sm)
-      +bgc($color-brand-2-darken)
-      padding: 5px
+      +mb(30px)
     +min(sm)
       +fs(16px)
     +min(md)
@@ -61,7 +60,7 @@
       top: -60px
     &:before
       content: ''
-      +a(15px, null, null, -15%)
+      +a(45px, null, null, 0)
       +bgi('../img/model-arrow-white.png')
       +size(80px, 65px)
       +max(sm)
