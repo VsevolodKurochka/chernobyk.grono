@@ -31,7 +31,7 @@ set items = [
         background: 'жизнь c grono',
         title: 'Создай жизнь мечты<br> в сообществе GRONO'
     } %}
-    <div class="life__content">
+    <div class="container life__content">
         {% for item in items %}
             {% include 'pages/components/step-row.twig' with {
                 index: loop.index,

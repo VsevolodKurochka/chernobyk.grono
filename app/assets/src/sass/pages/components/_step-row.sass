@@ -10,8 +10,9 @@
 
   &__image
     +r()
-    +max(sm)
-      max-width: 200px
+    max-width: 200px
+    +min(sm)
+      max-width: none
 
   &__wrapper
     +px(0)
@@ -25,17 +26,18 @@
       +ta(right)
     #{$self}__image
       right: -15px
+      +min(sm)
+        right: -15%
+      +min(xlg)
+        right: -35%
 
   &:nth-child(odd)
     #{$self}__image
       left: -15px
-
-  .step-item
-    +min(sm)
-      +ml(15%)
-      max-width: 500px
-    +min(lg)
-      +ml(40%)
+      +min(sm)
+        left: -45%
+      +min(xlg)
+        left: -80%
 
   &_1 .step-item
     &:before

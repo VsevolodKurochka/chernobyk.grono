@@ -10,7 +10,14 @@
     +h(100vh)
     min-height: 700px
   &_home
-    +bgi('../img/first-bg.jpg', 50% 0)
+    +bgi('../img/first-bg.jpg', 55% 0)
+    +max(sm)
+      &:before
+        content: ''
+        +a(0, null, null, 0)
+        +size(100%)
+        background-color: $color-brand-2
+        opacity: 0.4
     +min(md)
       background-position-x: 60%
     +min(lg)
