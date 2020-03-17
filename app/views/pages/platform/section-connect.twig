@@ -8,22 +8,10 @@
         } %}
         <div class="row about__row">
             <div class="col-12 col-sm-6 col-md-5 about-connect-content ">
-                <div class="about__content">
-                    <p>
-                        Платформа Grono — это уникальное
-                        IT-решение, созданное специально для
-                        Сообщества Grono с целью достижения ими
-                        быстрых результатов в бизнесе
-                        на круизных путешествиях.
-                    </p>
-                </div>
-                <div class="about__quote">
-                    <p>
-                        Поэтому, попасть на Платформу можно только
-                        по реферальной ссылке
-                        от участника Сообщества.
-                    </p>
-                </div>
+                <p class="about__content">{{ content }}</p>
+                <p class="about__quote">
+                    Поэтому, попасть на Платформу можно только по реферальной ссылке от участника Сообщества.
+                </p>
                 <button
                     class="btn btn_brand-1"
                     data-action="modal"
@@ -32,17 +20,19 @@
                 </button>
             </div>
             <div class="col-12 col-sm-6 col-md-5 about-connect-animation">
-                <div class="about-connect-animation__title-wrapper">
-                    <p class="about-connect-animation__title">GRONO</p>
-                </div>
+                {% if title %}
+                    <div class="about-connect-animation__title-wrapper">
+                        <p class="about-connect-animation__title">{{ title }}</p>
+                    </div>
+                {% endif %}
                 {{ landing.image({
                     src: 'img/wine.png',
-                    alt: 'GRONO — сообщество единомышленников-предпринимателей из 151 страны мира.',
+                    alt: 'Сообщество единомышленников-предпринимателей из 151 страны мира.',
                     class: 'about-connect-animation__wine'
                 }) }}
                 {{ landing.image({
                     src: 'img/form-picture.png',
-                    alt: 'GRONO — сообщество единомышленников-предпринимателей из 151 страны мира.',
+                    alt: 'Сообщество единомышленников-предпринимателей из 151 страны мира.',
                     class: 'about-connect-animation__form'
                 }) }}
             </div>
