@@ -1,5 +1,4 @@
 {% import 'macros/landing.twig' as landing %}
-{% set title = 'Хотите узнать больше о возможностях <br>IT-платформы Grono?' %}
 <section class="platform-capability">
     {% include 'components/common/section-header.twig' with {
         class: 'section-header_white platform-capability-header',
@@ -17,8 +16,8 @@
             data-action="modal"
             data-open="#modal-platform">
             {{ landing.image({
-                src: 'img/man-tshirt-grono.png',
-                alt: title,
+                src: manImage,
+                alt: title|striptags,
                 class: 'platform-capability__man'
             }) }}
         </div>
