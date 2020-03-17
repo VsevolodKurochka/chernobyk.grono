@@ -1,14 +1,15 @@
 {% import 'macros/base.twig' as macros %}
 {% extends 'layouts/mainLayout.twig' %}
 
+{% set logo = 'img/logo.png' %}
+
 {% set title = 'Grono' %}
 {% set description = 'Мы строим сообщество людей, которые мечтают путешествовать и зарабатывать на этом' %}
-{% set image = 'img/logo.png' %}
+{% set image = logo %}
 {% set url = 'url' %}
 
 {% block meta %}
 {{ macros.meta(title, description, image, url) }}
-<link rel="shortcut icon" href="{{ path }}/img/favicon.png" type="image/png">
 {% endblock %}
 
 {% block css %}
@@ -30,7 +31,8 @@
             {href: '#section-about', text: 'О нас'},
             {href: '#section-trend', text: 'Grono'},
             {href: '#section-video', text: 'Бизнес'}
-        ]
+        ],
+        logo: logo
     } %}
 {% endblock %}
 
