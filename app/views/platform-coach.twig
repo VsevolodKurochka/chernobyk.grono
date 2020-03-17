@@ -41,9 +41,16 @@
 } %}
 {% include 'pages/platform/section-about.twig' %}
 {% include 'pages/platform/section-results.twig' %}
-{% include 'pages/platform/section-connect.twig' %}
+{% include 'pages/platform/section-connect.twig' with {
+    title: '',
+    content: 'Платформа — это уникальное IT-решение, созданное специально для Сообщества с целью достижения ими
+    быстрых результатов в бизнесе на круизных путешествиях.'
+} %}
 {% include 'pages/platform/section-tips.twig' %}
-{% include 'pages/platform/section-capability.twig' %}
+{% include 'pages/platform/section-capability.twig' with {
+    title: 'Хотите узнать больше о возможностях <br>IT-платформы?',
+    manImage: 'img/man-tshirt-vip.png'
+} %}
 {% endblock %}
 
 {% block footer %}

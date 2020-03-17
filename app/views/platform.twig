@@ -41,9 +41,17 @@
 } %}
 {% include 'pages/platform/section-about.twig' %}
 {% include 'pages/platform/section-results.twig' %}
-{% include 'pages/platform/section-connect.twig' %}
+{% include 'pages/platform/section-connect.twig' with {
+    title: 'GRONO',
+    content: "Платформа Grono — это уникальное IT-решение,
+    созданное специально для Сообщества Grono с целью достижения ими
+    быстрых результатов в бизнесе на круизных путешествиях."
+} %}
 {% include 'pages/platform/section-tips.twig' %}
-{% include 'pages/platform/section-capability.twig' %}
+{% include 'pages/platform/section-capability.twig' with {
+    title: 'Хотите узнать больше о возможностях <br>IT-платформы Grono?',
+    manImage: 'img/man-tshirt-grono.png'
+} %}
 {% endblock %}
 
 {% block footer %}
