@@ -13,11 +13,7 @@
     +bgi('../img/first-bg.jpg', 55% 0)
     +max(sm)
       &:before
-        content: ''
-        +a(0, null, null, 0)
-        +size(100%)
-        background-color: $color-brand-2
-        opacity: 0.4
+        +pseudo-overlay($color-brand-2, 0.4)
     +min(md)
       background-position-x: 60%
     +min(lg)
