@@ -1,0 +1,120 @@
+.cruises
+  overflow: hidden
+  +r()
+  +pt(60px)
+  z-index: 2
+  &-bg
+    +a()
+    z-index: -1
+    max-height: 120px
+    +min(sm)
+      max-height: 200px
+    +min(lg)
+      max-height: none
+    &_1
+      top: -5%
+      left: 5%
+      +min(sm)
+        top: 0
+    &_2
+      top: -7%
+      right: 5%
+      +min(sm)
+        top: -15%
+      +min(md)
+        top: -25%
+    &__image
+      &_1
+        animation: cruisesImageRotate 30s 0s infinite
+        @at-root
+          @keyframes cruisesImageRotate
+            0%
+              transform: rotate(0deg)
+            100%
+              transform: rotate(360deg)
+
+  &__item
+    $item: &
+    +r()
+
+    +min(sm)
+      +ai(center)
+
+    &-content
+      +r()
+      p
+        +offset('b', 15px)
+
+    &-image
+      +r()
+      max-width: 200px
+      +min(sm)
+        max-width: none
+
+    &-bg
+      +d(none)
+      +a(null, null, 0, 0)
+      +c(#f2f3f7)
+      +ff('bl')
+      +lh(1)
+      transform: rotate(-90deg)
+      +tt(uppercase)
+      +min(md)
+        +d(block)
+        +fs(90px)
+        bottom: -260px
+        left: -130px
+
+    &-arrow
+      &-animation
+        +d(inline-block)
+        +r()
+        animation: cruisesArrowAnimation 1s 0s infinite
+        @at-root
+          @keyframes cruisesArrowAnimation
+            0%, 100%
+              transform: none
+            50%
+              transform: translateY(10px)
+
+    &:nth-child(odd)
+      +min(sm)
+        flex-direction: row-reverse
+        +jc(space-between)
+      #{$item}-outer
+        +ta(right)
+      #{$item}-image
+        right: -15px
+        +min(sm)
+          right: -30%
+        +min(xlg)
+          right: -65%
+
+    &:nth-child(even)
+
+      #{$item}-image
+        left: -15px
+        +min(sm)
+          left: -45%
+        +min(xlg)
+          left: -80%
+
+    &_2 &-arrow
+      +r()
+      transform: scaleX(-1) scaleY(1) rotate(-45deg)
+      +mb(15px)
+      +min(sm)
+        left: -100px
+      +min(md)
+        left: -135px
+
+    &_3 &-arrow
+      +r()
+      transform: scaleY(-1) scaleX(-1)
+      +min(sm)
+        left: 100px
+      +min(md)
+        left: 135px
+      &-outer
+        +min(sm)
+          +ta(right)
