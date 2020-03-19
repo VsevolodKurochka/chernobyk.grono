@@ -1,0 +1,63 @@
+.webinar-greeting
+  +r()
+  +c($color-white)
+  +bgi('../img/webinar-greeting-bg.jpg')
+  +max(sm)
+    +py(45px, 80px)
+  +min(sm)
+    +d(flex)
+    +ai(center)
+    +jc(center)
+    min-height: 700px
+
+  &__row
+    +min(sm)
+      +jc(space-between)
+
+  &__title
+    +greeting-title()
+    span
+      +d(block)
+      padding: 5px 15px
+      +bgc($color-white)
+      +c(#035a89)
+
+  &__subtitle
+    +lh(1.2)
+    +fs(18px)
+    +min(md)
+      +fs(20px)
+
+    span
+      +d(inline-block)
+      border-bottom: 1px solid $color-white
+
+  &__next
+    +greeting-next()
+
+  &__button
+    +min(md)
+      +mr(15px)
+
+  &__footer
+    +mt(30px)
+    +min(sm)
+      +mt(60px)
+    +min(md)
+      +d(flex)
+      +ai(center)
+
+  &__place
+    +r()
+    +min(sm)
+      +pl(10px)
+      &:before
+        content: ''
+        +a(0, null, null, 0)
+        +size(1px, 110px)
+        +bgc($color-white)
+        opacity: 0.5
+    &-outer
+      +min(sm)
+        +d(flex)
+        +jc(center)

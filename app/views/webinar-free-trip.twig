@@ -1,0 +1,38 @@
+{% import 'macros/base.twig' as macros %}
+{% extends 'layouts/mainLayout.twig' %}
+
+{% set logo = 'img/logo.png' %}
+
+{% set title = 'Grono - Как бесплатно путешествовать в морских круизах' %}
+{% set description = 'Как бесплатно путешествовать в морских круизах и зарабатывать на этом' %}
+{% set image = logo %}
+{% set url = 'url' %}
+
+{% block meta %}
+{{ macros.meta(title, description, image, url) }}
+{% endblock %}
+
+{% block css %}
+{{ macros.css("css/style.min.css") }}
+{% endblock %}
+
+{% block js %}
+{{ macros.js("js/jquery.min.js") }}
+{{ macros.js("js/jquery.lazy.min.js") }}
+{{ macros.js("js/jquery.main.js") }}
+{% endblock %}
+
+{% block nav %}
+    {% include 'components/navigation/navigation.twig' with {
+        items: platform_navigation,
+        logo: logo
+    } %}
+{% endblock %}
+
+{% block content %}
+{% include 'pages/webinar-free-trip/greeting.twig' %}
+{% endblock %}
+
+{% block footer %}
+    {% include 'components/footer/footer.twig' %}
+{% endblock %}

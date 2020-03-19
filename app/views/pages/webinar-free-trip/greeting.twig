@@ -1,0 +1,43 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="webinar-greeting" id="section-webinar-greeting">
+    <div class="container">
+        <div class="row webinar-greeting__row">
+            <div class="col-8 col-sm-6 col-md-5 webinar-greeting__place-outer">
+                <p class="webinar-greeting__place webinar-greeting__subtitle">Участие из любой <br>точки мира</p>
+            </div>
+            <div class="col-9 col-sm-6 col-md-7 webinar-greeting__content">
+                <h1 class="webinar-greeting__title">
+                    Как бесплатно<br>
+                    путешествовать<br>
+                    в морских круизах и<br>
+                    <span>зарабатывать на этом</span>
+                </h1>
+                <h2 class="webinar-greeting__subtitle">
+                    Реальный опыт предпринимателя<br>
+                    с доходом от <span>$50,000 в месяц</span>
+                </h2>
+                <div class="webinar-greeting__footer">
+                    <button
+                            class="btn btn_brand-1 webinar-greeting__button"
+                            data-action="modal"
+                            data-open="#modal-">
+                        Зарегистрироваться
+                    </button>
+                    <p class="webinar-greeting__subtitle">
+                        Бесплатный<br>
+                        онлайн-вебинар
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ landing.image({
+        src: 'img/rectangle-bottom-section.png',
+        alt: title|striptags,
+        class: 'rectangle rectangle_bottom'
+    }) }}
+    {% include 'components/common/next-button.twig' with {
+        class: 'webinar-greeting__next',
+        buttonClass: 'next-button_brand-1'
+    } %}
+</section>

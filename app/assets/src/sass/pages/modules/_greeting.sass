@@ -33,15 +33,7 @@
       flex-direction: row-reverse
   &__title
     +ff('bl')
-    +lh(1.1)
-    +fs(25px)
-    +mb(15px)
-    +min(xs)
-      +fs(29px)
-    +min(sm)
-      +fs(30px)
-    +min(md)
-      +fs(50px)
+    +greeting-title()
 
   &__subtitle
     +mb(15px)
@@ -57,11 +49,7 @@
       align-self: flex-end
 
   &__next
-    +a(null, null, -15px, null)
-    +min(sm)
-      bottom: 0
-    +min(lg)
-      bottom: 15px
+    +greeting-next()
 
   &__content
     +max(sm)
