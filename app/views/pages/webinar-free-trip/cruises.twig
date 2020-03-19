@@ -10,75 +10,77 @@
             }) }}
         </div>
     {% endfor %}
-    <div class="container">
-        {% include 'components/common/section-header.twig' with {
-            class: '',
-            background: 'круизы',
-            title: 'Что вы знаете о морских<br>круизах?..',
-            subtitle: 'Наверняка очень мало. Вокруг этой <br>темы ходит много мифов:'
-        } %}
-        <div class="cruises__content">
-            <div class="row cruises__item cruises__item_1">
-                <div class="col-12 col-sm-6 cruises__item-outer">
-                    {{ landing.image({
-                        src: 'img/webinar-cruises-1.png',
-                        alt: "cruise 1",
-                        class: "cruises__item-image"
-                    }) }}
-                </div>
-                <div class="col-12 col-sm-6 col-md-5 cruises__item-content">
-                    <p class="color-brand-2 bold">Это неудобно. Что делать на <br>этом корабле целую неделю?</p>
-                    <p class="color-brand-3">Типичное заблуждение. Современный лайнер — это плавучий мини-город.</p>
-                    <p>На нем есть все возможные (и невозможные) виды развлечений и отдыха: аквапарк, рестораны,
-                        бутики, парк для прогулок, скалодромы, кинотеатры, картинги, пару десятков самых разных
-                        бассейнов и даже поле для гольфа</p>
-                </div>
-            </div>
-            <div class="row cruises__item cruises__item_2">
-                <div class="col-12 col-sm-6 cruises__item-outer">
-                    {{ landing.image({
-                        src: 'img/webinar-cruises-2.png',
-                        alt: "cruise 2",
-                        class: "cruises__item-image"
-                    }) }}
-                </div>
-                <div class="col-12 col-sm-6 col-md-5 cruises__item-content">
-                    <div class="cruises__item-arrow-animation">
+    <div class="cruises__body">
+        <div class="container">
+            {% include 'components/common/section-header.twig' with {
+                class: '',
+                background: 'круизы',
+                title: 'Что вы знаете о морских<br>круизах?..',
+                subtitle: 'Наверняка очень мало. Вокруг этой <br>темы ходит много мифов:'
+            } %}
+            <div class="cruises__content">
+                <div class="row cruises__item cruises__item_1">
+                    <div class="col-12 col-sm-6 cruises__item-outer">
                         {{ landing.image({
-                            src: 'img/model-arrow.png',
-                            alt: "arrow 2",
-                            class: "cruises__item-arrow"
+                            src: 'img/webinar-cruises-1.png',
+                            alt: "cruise 1",
+                            class: "cruises__item-image"
                         }) }}
                     </div>
-                    <p class="color-brand-2 bold">Хочется увидеть мир. <br>А в круизе что? Одна вода вокруг…</p>
-                    <p class="color-brand-3">За 7-10 дней круиза лайнер останавливается
-                        в 5-7 городах, в разных странах. Это в разы удобнее, чем путешествовать автобусом
-                        или даже самолетом
-                    </p>
-                    <p class="cruises__item-bg">GRONO</p>
+                    <div class="col-12 col-sm-6 col-md-5 cruises__item-content">
+                        <p class="color-brand-2 bold">Это неудобно. Что делать на <br>этом корабле целую неделю?</p>
+                        <p class="color-brand-3">Типичное заблуждение. Современный лайнер — это плавучий мини-город.</p>
+                        <p>На нем есть все возможные (и невозможные) виды развлечений и отдыха: аквапарк, рестораны,
+                            бутики, парк для прогулок, скалодромы, кинотеатры, картинги, пару десятков самых разных
+                            бассейнов и даже поле для гольфа</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row cruises__item cruises__item_3">
-                <div class="col-12 col-sm-6 cruises__item-outer">
-                    {{ landing.image({
-                        src: 'img/webinar-cruises-3.png',
-                        alt: "cruise 3",
-                        class: "cruises__item-image"
-                    }) }}
-                </div>
-                <div class="col-12 col-sm-6 col-md-5 cruises__item-content">
-                    <p class="color-brand-2 bold">Это дорого. Круизы — <br>отдых для богатых</p>
-                    <p class="color-brand-3">
-                        <strong class="color-brand-3">Так было лет 80-100 назад, но времена изменились.</strong>
-                        Сейчас недельный круиз на шикарном лайнере стоит на уровне 4-звездочной Турции.</p>
-                    <p>Плюс, это на 100% безопасно — не зря UNESCO назвал морские круизы самым безопасным видом отдыха</p>
-                    <div class="cruises__item-arrow-outer">
+                <div class="row cruises__item cruises__item_2">
+                    <div class="col-12 col-sm-6 cruises__item-outer">
+                        {{ landing.image({
+                            src: 'img/webinar-cruises-2.png',
+                            alt: "cruise 2",
+                            class: "cruises__item-image"
+                        }) }}
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-5 cruises__item-content">
                         <div class="cruises__item-arrow-animation">
                             {{ landing.image({
                                 src: 'img/model-arrow.png',
-                                alt: "arrow 3",
+                                alt: "arrow 2",
                                 class: "cruises__item-arrow"
                             }) }}
+                        </div>
+                        <p class="color-brand-2 bold">Хочется увидеть мир. <br>А в круизе что? Одна вода вокруг…</p>
+                        <p class="color-brand-3">За 7-10 дней круиза лайнер останавливается
+                            в 5-7 городах, в разных странах. Это в разы удобнее, чем путешествовать автобусом
+                            или даже самолетом
+                        </p>
+                        <p class="cruises__item-bg">GRONO</p>
+                    </div>
+                </div>
+                <div class="row cruises__item cruises__item_3">
+                    <div class="col-12 col-sm-6 cruises__item-outer">
+                        {{ landing.image({
+                            src: 'img/webinar-cruises-3.png',
+                            alt: "cruise 3",
+                            class: "cruises__item-image"
+                        }) }}
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-5 cruises__item-content">
+                        <p class="color-brand-2 bold">Это дорого. Круизы — <br>отдых для богатых</p>
+                        <p class="color-brand-3">
+                            <strong class="color-brand-3">Так было лет 80-100 назад, но времена изменились.</strong>
+                            Сейчас недельный круиз на шикарном лайнере стоит на уровне 4-звездочной Турции.</p>
+                        <p>Плюс, это на 100% безопасно — не зря UNESCO назвал морские круизы самым безопасным видом отдыха</p>
+                        <div class="cruises__item-arrow-outer">
+                            <div class="cruises__item-arrow-animation">
+                                {{ landing.image({
+                                    src: 'img/model-arrow.png',
+                                    alt: "arrow 3",
+                                    class: "cruises__item-arrow"
+                                }) }}
+                            </div>
                         </div>
                     </div>
                 </div>

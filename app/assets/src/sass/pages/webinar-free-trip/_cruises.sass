@@ -1,16 +1,11 @@
 .cruises
-  overflow: hidden
   +r()
-  +pt(60px)
+  +pt(30px)
   z-index: 2
   &-bg
     +a()
-    z-index: -1
-    max-height: 120px
-    +min(sm)
-      max-height: 200px
-    +min(lg)
-      max-height: none
+    z-index: 1
+
     &_1
       top: -5%
       left: 5%
@@ -19,11 +14,14 @@
     &_2
       top: -7%
       right: 5%
-      +min(sm)
-        top: -15%
       +min(md)
         top: -25%
     &__image
+      max-height: 120px
+      +min(sm)
+        max-height: 200px
+      +min(lg)
+        max-height: none
       &_1
         animation: cruisesImageRotate 30s 0s infinite
         @at-root
@@ -33,9 +31,16 @@
             100%
               transform: rotate(360deg)
 
+  &__body
+    overflow: hidden
+    +pt(30px)
+
   &__item
     $item: &
     +r()
+
+    +max(sm)
+      +mb(30px)
 
     +min(sm)
       +ai(center)
@@ -49,6 +54,8 @@
       +r()
       max-width: 200px
       +min(sm)
+        max-width: 400px
+      +min(md)
         max-width: none
 
     &-bg
@@ -66,6 +73,8 @@
         left: -130px
 
     &-arrow
+      +max(sm)
+        max-width: 50px
       &-animation
         +d(inline-block)
         +r()
@@ -91,30 +100,35 @@
           right: -65%
 
     &:nth-child(even)
-
       #{$item}-image
         left: -15px
         +min(sm)
+          left: -30%
+        +min(md)
           left: -45%
         +min(xlg)
           left: -80%
 
     &_2 &-arrow
       +r()
-      transform: scaleX(-1) scaleY(1) rotate(-45deg)
+      transform: scaleX(-1) scaleY(-1) rotate(0deg)
       +mb(15px)
       +min(sm)
         left: -100px
+        transform: scaleX(-1) scaleY(1) rotate(-45deg)
       +min(md)
         left: -135px
 
     &_3 &-arrow
       +r()
-      transform: scaleY(-1) scaleX(-1)
+      transform: scaleY(1) scaleX(-1)
       +min(sm)
+        transform: scaleY(-1) scaleX(-1)
         left: 100px
       +min(md)
         left: 135px
       &-outer
+        +max(sm)
+          +a(-45px, null, null, 45px)
         +min(sm)
           +ta(right)
