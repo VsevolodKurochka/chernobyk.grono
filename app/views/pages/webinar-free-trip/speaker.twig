@@ -1,0 +1,99 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="speaker" id="section-speaker">
+    {{ landing.image({
+        src: 'img/webinar-full.png',
+        alt: title|striptags,
+        class: 'speaker__full'
+    }) }}
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: '',
+            background: 'Наталия Шевела',
+            title: 'Занятие ведет'
+        } %}
+        <div class="speaker__body">
+            <div class="row speaker-item speaker-item_1">
+                <div class="col-12 col-sm-7 speaker-item__image-outer">
+                    {{ landing.image({
+                        src: 'img/webinar-shavela.png',
+                        alt: title|striptags,
+                        class: 'speaker-item__image'
+                    }) }}
+                    {{ landing.image({
+                        src: 'img/wine.png',
+                        alt: title|striptags,
+                        class: 'speaker-item__wine'
+                    }) }}
+                </div>
+                <div class="col-12 col-sm-5">
+                    <div class="speaker-item__arrow-outer">
+                        {{ landing.image({
+                            src: 'img/model-arrow.png',
+                            alt: title|striptags,
+                            class: 'speaker-item__arrow'
+                        }) }}
+                    </div>
+                    <div class="speaker-item__content">
+                        <p class="bold color-brand-2">Путешествует ХХХ дней в году.<br>
+                            Личный доход в бизнесе на морских
+                            круизах составляет от 50,000$/месяц</p>
+                        <p><strong class="color-brand-3">Предприниматель, которая создала себя
+                            с нуля за 2 года</strong> (до этого 30 лет проработала школьным учителем)</p>
+                        <p><strong class="color-brand-3">Создатель сообщества</strong> предпринимателей-путешественников
+                            Grono (более 15,000 чел из 160 стран)</p>
+                        <p><strong class="color-brand-3">Создатель уникальной IT-платформы Grono</strong>,
+                            которая помогает людям со всего мира быстро и эффективно начать
+                            свой бизнес на круизных путешествиях</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row speaker-item speaker-item_2">
+                <div class="speaker-item__amount">
+                    <p class="speaker-item__amount-number">50,000$</p>
+                    <p class="speaker-item__amount-title">Личный доход</p>
+                </div>
+            </div>
+            <div class="speaker-item speaker-item_3">
+                {% include 'components/common/section-header.twig' with {
+                    class: 'speaker-item-header',
+                    background: 'Наталия Шевела',
+                    title: 'Путешествовать + зарабатывать:<br>кто сказал что это нереально?..'
+                } %}
+            </div>
+            <div class="row speaker-item speaker-item_4">
+                <div class="col-12 col-sm-7 speaker-item__image-outer">
+                    {{ landing.image({
+                        src: 'img/webinar-man.png',
+                        alt: title|striptags,
+                        class: 'speaker-item__image'
+                    }) }}
+                </div>
+                <div class="col-12 col-sm-5 speaker-item__content-outer">
+                    <div class="speaker-item__arrow-outer">
+                        {{ landing.image({
+                            src: 'img/model-arrow.png',
+                            alt: title|striptags,
+                            class: 'speaker-item__arrow'
+                        }) }}
+                    </div>
+                    <div class="speaker-item__content">
+                        <p><strong class="color-brand-3">Приходите на бесплатный вебинар</strong> и в числе первых
+                            В МИРЕ узнайте об уникальной нише морских круизов и получите пошаговый план
+                            как начать путешествовать и зарабатывать</p>
+                    </div>
+                    <div class="speaker-item__books">
+                        {{ landing.image({
+                            src: 'img/webinar-books-shadow.png',
+                            alt: title|striptags,
+                            class: 'speaker-item__books-image'
+                        }) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include 'components/common/next-button.twig' with {
+            class: 'speaker__next',
+            buttonClass: ''
+        } %}
+    </div>
+</section>

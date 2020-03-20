@@ -1,0 +1,120 @@
+@at-root
+  @keyframes speakerVerticalAnimation
+    0%, 100%
+      transform: none
+    50%
+      transform: translateY(10px)
+
+.speaker
+  $self: &
+
+  +r()
+  +py(60px)
+
+  &__body
+    +r()
+
+  &__full
+    display: none !important
+    +min(sm)
+      display: inline-block !important
+      +a(10%, null, null, 0)
+      max-width: 450px
+    +min(md)
+      max-width: none
+
+  &-item
+    +r()
+
+    &__image
+      +max(sm)
+        max-width: 250px
+      +min(sm)
+        display: none !important
+      &-outer
+        +r()
+        +mb(10px)
+        +max(sm)
+          +px(0)
+
+    &__content
+      +c($color-gray)
+      p
+        +offset('b', 15px)
+
+    &__amount
+      +d(inline-block)
+      +r()
+      +min(md)
+        +pr(15%)
+      &-number
+        +ff('bl')
+        +c(#f3f2f6)
+        +fs(65px)
+        +lh(1)
+        +min(sm)
+          +fs(100px)
+        +min(md)
+          +fs(140px)
+      &-title
+        +a(50%, 15%)
+        transform: translateY(-50%)
+        +lh(1)
+        +ff('bl')
+        +c($color-brand-2)
+        +fs(24px)
+        +min(md)
+          +fs(30px)
+
+    &__books
+      +mt(30px)
+      &-image
+        animation: speakerVerticalAnimation 5s -2s infinite
+
+    &__wine
+      +a(40%, 15px)
+      animation: speakerVerticalAnimation 2s 0s infinite
+      max-width: 90px
+      +min(sm)
+        top: -25px
+        right: 25%
+        max-width: 150px
+      +min(md)
+        max-width: none
+
+    &__arrow
+      max-width: 80px
+      +min(md)
+        max-width: none
+      &-outer
+        animation: speakerVerticalAnimation 2s 0s infinite
+
+    &_1
+      +max(sm)
+        +mb(45px)
+      +min(sm)
+        +jc(space-between)
+        +ai(center)
+      +min(md)
+        +mb(15px)
+        min-height: 500px
+
+      #{$self}-item__arrow
+        +r()
+        transform: scaleX(-1)
+        +min(sm)
+          left: -150px
+
+    &_2
+      +mb(45px)
+      +jc(center)
+      +min(sm)
+        +jc(flex-end)
+      +min(md)
+        +mb(90px)
+
+    &_4
+      #{$self}-item__arrow
+        +r()
+        +min(sm)
+          left: -150px
