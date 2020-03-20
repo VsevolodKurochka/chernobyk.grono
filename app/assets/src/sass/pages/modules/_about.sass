@@ -57,6 +57,27 @@
     +min(sm)
       opacity: 0.4
 
+  &__list
+    list-style: none
+    counter-reset: aboutCounter
+    li
+      +r()
+      counter-increment: aboutCounter
+      +mb(25px)
+      +min(md)
+        +mb(45px)
+      &:before
+        content: counter(aboutCounter)
+        +a(-15px, null, null, -15px)
+        +ff('bl')
+        +c(#e6f1f7)
+        +fs(60px)
+        opacity: 0.1
+        +min(md)
+          top: -30px
+          left: -30px
+          +fs(95px)
+
   &__arrow
     +max(sm)
       +a(null, null, null, 0)
@@ -81,6 +102,23 @@
         +a(null, null, -45px, -10%)
       +min(md)
         max-width: none
+
+  &-webinar
+    +bgc($color-brand-2-darken)
+    .about
+      &__image
+        +min(sm)
+          top: 0
+          max-width: 500px
+          left: -100px
+        +min(md)
+          max-width: none
+          left: -320px
+      &__row
+        +min(sm)
+          +mb(-150px)
+          +jc(center)
+          +ai(self-start)
 
   &-connect
     +bgc($color-brand-2-darken)

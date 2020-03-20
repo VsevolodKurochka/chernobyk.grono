@@ -1,0 +1,49 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="about about-webinar" id="section-about">
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: 'about__header section-header_white',
+            background: 'свой бизнес',
+            title: 'На вебинаре вы узнаете:'
+        } %}
+        <div class="row about__row">
+            <div class="col-12 col-sm-6 col-md-4">
+                <ol class="about__list">
+                    <li>
+                        <strong class="color-brand-3">Как присоединиться к круизному бизнесу</strong>,
+                        даже если у вас нет опыта в предпринимательстве
+                    </li>
+                    <li>
+                        Как быстро всему научиться и поехать в свой первый
+                        <strong class="color-brand-3">бесплатный круиз</strong> уже через 8-10 месяцев
+                    </li>
+                    <li>
+                        Как ежемесячно увеличивать свой доход и при этом
+                        <strong class="color-brand-3">работать в удовольствие</strong>, из любой точки мира
+                    </li>
+                </ol>
+            </div>
+            <div class="col-12 col-sm-6 about__image-wrapper">
+                {{ landing.image({
+                    src: 'img/webinar-about-woman.png',
+                    alt: 'Cообщество единомышленников-предпринимателей из 151 страны мира.',
+                    class: 'about__image'
+                }) }}
+            </div>
+        </div>
+        {% include 'components/common/next-button.twig' with {
+            class: 'about__next',
+            buttonClass: 'next-button_arrow-white'
+        } %}
+    </div>
+    {{ landing.image({
+        src: 'img/rectangle-top-section.png',
+        alt: 'Мы строим',
+        class: 'rectangle rectangle_top'
+    }) }}
+    {{ landing.image({
+        src: 'img/wave.png',
+        alt: 'wave',
+        class: 'wave wave_bottom'
+    }) }}
+</section>
