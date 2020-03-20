@@ -25,6 +25,10 @@ $themeFormDesign: "new"
     &:focus
       +placeholder()
         opacity: 0
+    &_large
+      +min(sm)
+        padding: 15px 25px
+        +fs(16px)
   &__address
     +r()
     +d(block)
@@ -43,6 +47,8 @@ $themeFormDesign: "new"
     min-width: 250px
   &__row
     +offset('b', 10px)
+    &_large
+      +offset('b', 25px)
   &__column
     +max(sm)
       +offset('b', 15px)

@@ -19,6 +19,14 @@
     vertical-align: middle
     +pl(30px)
     +fs(12px)
+    +c(inherit)
+    text-decoration: none
+
+  &_text_blue &__text
+    +c(#4b93d3)
+
+  &_text_large &__text
+    +fs(18px)
 
   &__indicator
     +a(50%, null, null, 0)
@@ -92,3 +100,15 @@
 
     &:before
       border-color: $color-white
+
+  &_fluid input[type="radio"] + &__indicator
+    background-color: $color-white
+
+    &:before
+      +bgc($color-white)
+
+  &_fluid input[type="checkbox"] + &__indicator
+    background-color: $color-white
+
+    &:before
+      background-color: $color-white
