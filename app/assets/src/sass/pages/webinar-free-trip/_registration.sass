@@ -1,15 +1,27 @@
 .webinar-registration
   +r()
-  +py(90px, 30px)
+  +py(90px, 45px)
   +bgc($color-brand-2-darken)
   +c($color-white)
+  overflow: hidden
 
   +min(sm)
     +py(160px, 60px)
+
   +min(md)
     +pb(90px)
 
   &__row
+    +mb(-145px)
     +min(sm)
       flex-direction: row-reverse
+    +min(md)
       +mb(-200px)
+
+  &__image
+    +max(sm)
+      +w(250px)
+    &-outer
+      +max(sm)
+        +mt(30px)
+        +ta(center)
