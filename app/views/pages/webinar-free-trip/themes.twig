@@ -1,0 +1,40 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="themes" id="section-themes">
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: '',
+            background: 'круизы',
+            title: 'На бесплатном вебинаре я не просто развею <br>все мифы о круизном отдыхе, но и расскажу:',
+        } %}
+        <div class="row themes__row">
+            {% include 'pages/components/icon-item.twig' with {
+                image: 'img/webinar-themes-1.png',
+                class: 'col-12 col-sm-6 col-md-4 icon-item_large',
+                title: 'Как поехать в свой первый<br> круиз со скидкой до 50%',
+                content: 'Уже спустя 8-10 месяцев'
+            } %}
+            {% include 'pages/components/icon-item.twig' with {
+                image: 'img/webinar-themes-2.png',
+                class: 'col-12 col-sm-6 col-md-4 icon-item_large',
+                title: 'Как зарабатывать <br>на круизах',
+                content: 'Это легальный и доступный каждому вид заработка, с возможностью путешествовать и работать удаленно'
+            } %}
+        </div>
+        <div class="themes__footer">
+            <div class="themes__arrow">
+                <div class="themes__arrow-animation">
+                    {{ landing.image({
+                        src: 'img/model-arrow.png',
+                        alt: "model arrow themes",
+                        class: "themes__arrow-image"
+                    }) }}
+                </div>
+                <button
+                    class="btn btn_brand-1 js-anchor"
+                    data-href="#section-registration">
+                    Участвовать бесплатно
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

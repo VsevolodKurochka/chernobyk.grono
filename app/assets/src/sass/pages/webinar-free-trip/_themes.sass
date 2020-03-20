@@ -1,0 +1,32 @@
+.themes
+  +pt(30px)
+
+  &__row
+    +mb(30px)
+    +min(sm)
+      +mb(60px)
+      +jc(space-around)
+
+  &__footer
+    +ta(center)
+
+  &__arrow
+    +r()
+    +d(inline-block)
+    &-animation
+      +a(0, null, null, -30%)
+      animation: cruisesArrowAnimation 1s 0s infinite
+      +min(sm)
+        top: -65%
+        left: -80%
+      @at-root
+        @keyframes themesArrowAnimation
+          0%, 100%
+            transform: none
+          50%
+            transform: translateY(10px)
+
+    &-image
+      transform: rotate(45deg) scaleX(1) scaleY(-1)
+      +max(sm)
+        max-width: 50px

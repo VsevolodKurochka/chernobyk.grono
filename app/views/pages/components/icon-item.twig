@@ -1,0 +1,16 @@
+{% import 'macros/landing.twig' as landing %}
+<div class="icon-item {{ class }}">
+    <div class="icon-item__header">
+        {{ landing.image({
+            src: image,
+            alt: title|striptags,
+            class: 'icon-item__image'
+        }) }}
+    </div>
+    {% if title %}
+        <p class="icon-item__title">{{ title|raw }}</p>
+    {% endif %}
+    {% if content %}
+        <p class="icon-item__content">{{ content |raw}}</p>
+    {% endif %}
+</div>

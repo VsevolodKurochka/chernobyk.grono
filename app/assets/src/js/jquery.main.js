@@ -19,6 +19,12 @@ $(document).ready(function(){
 		$('#js-nav-hamburger').removeClass('active');
 	});
 
+	$('.js-anchor').click(function(e){
+		e.preventDefault();
+		scroll($( $(this).attr('data-href') ), 1500);
+	});
+
+
 	var $navigationLinks = $('#js-navigation-menu > ul > li > a');
 	// cache (in reversed order) the sections
 	var $sections = $($("section").get().reverse());

@@ -1,0 +1,33 @@
+.icon-item
+  +max(sm)
+    +offset('b', 30px)
+
+  &__header
+    +mb(15px)
+    +min(sm)
+      +mb(30px)
+
+  &__image
+    border-radius: 100%
+    box-shadow: 15px 15px 0 0 #f8f9fc
+
+
+  &__title
+    +ff('bl')
+    +c($color-brand-2)
+    +mb(15px)
+    +min(sm)
+      +mb(30px)
+
+  &__content
+    +c($color-gray)
+    +min(sm)
+      +fs(18px)
+
+  &_large &
+    &__header
+      +min(sm)
+        +mb(60px)
+    &__image
+      +max(sm)
+        max-width: 150px
