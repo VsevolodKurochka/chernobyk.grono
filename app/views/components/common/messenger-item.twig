@@ -1,0 +1,9 @@
+{% import 'macros/landing.twig' as landing %}
+<a class="messenger-item" href="{{ href }}">
+    {{ landing.image({
+        src: image,
+        alt: title|striptags,
+        class: 'messenger-item__image'
+    }) }}
+    <span class="messenger-item__title">{{ title }}</span>
+</a>

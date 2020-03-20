@@ -1,5 +1,5 @@
 {% import 'macros/landing.twig' as landing %}
-<section class="webinar-registration">
+<section class="webinar-registration" id="section-registration">
     {% include 'components/common/section-header.twig' with {
         class: 'section-header_white webinar-registration__header',
         background: 'регистрация',
@@ -10,12 +10,22 @@
             <div class="col-12 col-sm-6">
                 <form action="#" method="POST" class="form">
                     <div class="row form__row form__row_large">
-                        <div class="col-12 col-sm-6 form__column">
+                        <div class="col-12 col-sm-6 form__column form__column_block">
                             <label class="form__label">
-                                <input type="email" name="email" placeholder="Введите ваш E-mail" class="form__input form__input_large">
+                                <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="Введите ваш E-mail"
+                                        class="form__input form__input_large">
                             </label>
                         </div>
-                        <div class="col-12 col-sm-6 form__column"></div>
+                        <div class="col-12 col-sm-6 form__column">
+                            {% include 'components/common/messenger-item.twig' with {
+                                image: 'img/telegram-logo.png',
+                                title: 'Messenger',
+                                href: '#'
+                            } %}
+                        </div>
                         <div class="col-12 form__column">
                             <label class="control control_fluid control_text_blue control_text_large">
                                 <input
@@ -28,9 +38,13 @@
                         </div>
                     </div>
                     <div class="row form__row form__row_large">
-                        <div class="col-12 col-sm-6 form__column">
+                        <div class="col-12 col-sm-6 form__column form__column_block">
                             <label class="form__label">
-                                <input type="tel" name="phone" placeholder="Введите ваш телефон" class="form__input form__input_large">
+                                <input
+                                        type="tel"
+                                        name="phone"
+                                        placeholder="Введите ваш телефон"
+                                        class="form__input form__input_large">
                             </label>
                         </div>
                         <div class="col-12 form__column">

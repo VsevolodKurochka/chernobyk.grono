@@ -1,0 +1,20 @@
+.messenger-item
+  +d(flex)
+  +ai(center)
+  text-decoration: none
+  +c(inherit)
+  +tr()
+  &:hover
+    opacity: 0.8
+
+  &__image
+    +size(25px)
+    border-radius: 100%
+    +mr(10px)
+    +min(md)
+      +size(50px)
+
+  &__title
+    +fs(18px)
+    +lh(1)
+    +c(inherit)
