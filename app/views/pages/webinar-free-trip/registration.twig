@@ -1,0 +1,80 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="webinar-registration">
+    {% include 'components/common/section-header.twig' with {
+        class: 'section-header_white webinar-registration__header',
+        background: 'регистрация',
+        title: 'Выберите удобный для вас <br>способ регистрации'
+    } %}
+    <div class="container">
+        <div class="row webinar-registration__row">
+            <div class="col-12 col-sm-6">
+                <form action="#" method="POST" class="form">
+                    <div class="row form__row">
+                        <div class="col-12 col-sm-6 form__column">
+                            <label class="form__label">
+                                <input type="email" name="email" placeholder="Введите ваш E-mail" class="form__input">
+                            </label>
+                        </div>
+                        <div class="col-12 col-sm-6 form__column"></div>
+                        <div class="col-12 form__column">
+                            <label class="control control_white">
+                                <input
+                                    name="smsCheckbox"
+                                    type="checkbox"
+                                />
+                                <div class="control__indicator"></div>
+                                <span class="control__text">Напомнить мне о старте мастер классав sms-сообщении</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row form__row">
+                        <div class="col-12 col-sm-6 form__column">
+                            <label class="form__label">
+                                <input type="tel" name="phone" placeholder="Введите ваш телефон" class="form__input">
+                            </label>
+                        </div>
+                        <div class="col-12 form__column">
+                            <label class="control control_white">
+                                <input
+                                    name="dogovorAferta"
+                                    type="checkbox"
+                                />
+                                <div class="control__indicator"></div>
+                                <a class="control__text" href="#">Согласен с условиями Договора-Аферты</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn btn_brand-1 form__submit">Зарегистрироваться бесплатно</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-sm-6 webinar-registration__image-outer">
+                {{ landing.image({
+                    src: 'img/webinar-woman.png',
+                    alt: title,
+                    class: 'webinar-registration__image'
+                }) }}
+            </div>
+        </div>
+    </div>
+    <nav class="footer-menu">
+        <ul>
+            {% for item in navigation %}
+                <li class="footer-menu__item">
+                    <a class="footer-menu__link" href="{{ item.href }}">{{ item.text }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    {{ landing.image({
+        src: 'img/rectangle-top-section.png',
+        alt: title,
+        class: 'rectangle rectangle_top'
+    }) }}
+    {{ landing.image({
+        src: 'img/rectangle-bottom-section.png',
+        alt: title,
+        class: 'rectangle rectangle_bottom'
+    }) }}
+</section>

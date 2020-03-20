@@ -1,7 +1,7 @@
 <?php
   require_once 'connect.php';
   echo $twig->render('webinar-free-trip.twig', [
-      "platform_navigation" => array(
+      "navigation" => array(
           array(
               'href' => '',
               'text' => 'Программа'
