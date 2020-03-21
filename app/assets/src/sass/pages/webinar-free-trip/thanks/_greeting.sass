@@ -13,6 +13,7 @@
       +jc(flex-end)
 
   &__body
+    +r()
     +max(sm)
       +mb(30px)
 
@@ -37,3 +38,13 @@
     +size(100%, 250px)
     +min(sm)
       +h(100%)
+
+  &__arrow
+    +a(65%, 5%)
+    transform: rotate(25deg) scaleX(-1)
+    opacity: 0.3
+    +fs(0)
+    +min(sm)
+      top: 25%
+      transform: rotate(-25deg) scaleX(-1)
+      opacity: 0.5

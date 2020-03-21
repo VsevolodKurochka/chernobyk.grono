@@ -10,6 +10,11 @@
         } %}
         <div class="row webinar-thanks-greeting__row">
             <div class="col-12 col-sm-6 col-md-5 webinar-thanks-greeting__body">
+                {{ landing.image({
+                    src: 'img/model-arrow-white.png',
+                    alt: title|striptags,
+                    class: 'webinar-thanks-greeting__arrow'
+                }) }}
                 <p class="webinar-thanks-greeting__title">А пока…</p>
                 <div class="webinar-thanks-greeting__content">
                     <p>Обязательно посмотрите это видео.</p>
