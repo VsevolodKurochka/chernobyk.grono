@@ -1,0 +1,12 @@
+{% import 'macros/landing.twig' as landing %}
+<div class="header-only-logo">
+    <div class="container">
+        <div class="header-only-logo__item">
+            {{ landing.image({
+                src: 'img/logo.png',
+                alt: title|striptags,
+                class: 'header-only-logo__logo'
+            }) }}
+        </div>
+    </div>
+</div>
