@@ -25,7 +25,10 @@
 {% block nav %}
 {% include 'components/navigation/navigation.twig' with {
     items: platform_navigation,
-    logo: logo
+    logo: logo,
+    addition: {
+        show: true
+    }
 } %}
 {% endblock %}
 

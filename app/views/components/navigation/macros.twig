@@ -31,8 +31,11 @@
   </nav>
 {% endmacro %}
 
-{% macro addition(type,  class) %}
+{% macro addition(class) %}
   <div class="nav__addition {{class}}">
-    <button class="btn nav__addition-link" data-action="modal" data-open="#modal-entry">Вход для членов сообщества</button>
+    <button
+            class="btn nav__addition-link"
+            data-action="modal"
+            data-open="#modal-entry">Вход для членов сообщества</button>
   </div>
 {% endmacro %}

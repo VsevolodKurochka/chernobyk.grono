@@ -10,12 +10,16 @@
                         "alt": title|striptags
                     })
                 }}
-                {{
-                    nav.menu('', items)
-                }}
-                {{
-                    nav.addition('2', '')
-                }}
+                {% if items %}
+                    {{
+                        nav.menu('', items)
+                    }}
+                {% endif %}
+                {% if addition.show == true %}
+                    {{
+                        nav.addition('')
+                    }}
+                {% endif %}
             </div>
         </div>
     </div>
