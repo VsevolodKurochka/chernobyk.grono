@@ -1,11 +1,23 @@
 .header-only-logo
-  +mb(30px)
+  +mb(45px)
+  +ta(center)
+
+  +min(sm)
+    +ta(left)
+    +mb(30px)
 
   &__item
     +d(inline-block)
     padding: 10px
     +ta(center)
     border-radius: 0 0 5px 5px
+    min-height: 50px
     +bgc($color-white)
+    +fs(0)
     +min(md)
       +px(15px)
+
+  &__logo
+    +max(sm)
+      +w(90px)
+      max-height: 36px
