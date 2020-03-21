@@ -1,0 +1,35 @@
+{% import 'macros/base.twig' as macros %}
+{% extends 'layouts/mainLayout.twig' %}
+
+{% set logo = 'img/logo.png' %}
+
+{% set title = 'Grono - Отлично, вы записались на вебинар!' %}
+{% set description = 'Через пару минут проверьте почту — там будет письмо с важными деталями о нем' %}
+{% set image = logo %}
+{% set url = 'url' %}
+
+{% block meta %}
+{{ macros.meta(title, description, image, url) }}
+{% endblock %}
+
+{% block css %}
+{{ macros.css("css/style.min.css") }}
+{% endblock %}
+
+{% block js %}
+{{ macros.js("js/jquery.min.js") }}
+{{ macros.js("js/jquery.lazy.min.js") }}
+{{ macros.js("js/jquery.main.js") }}
+{% endblock %}
+
+{% block nav %}
+
+{% endblock %}
+
+{% block content %}
+{% include 'pages/webinar-free-trip/thanks/greeting.twig' %}
+{% endblock %}
+
+{% block footer %}
+    {% include 'components/footer/footer.twig' %}
+{% endblock %}

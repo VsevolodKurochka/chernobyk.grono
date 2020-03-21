@@ -1,0 +1,42 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="webinar-thanks-greeting">
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: 'section-header_white',
+            background: 'свой бизнес',
+            title: 'Отлично, вы записались<br>на вебинар!',
+            subtitle: 'Через пару минут проверьте почту — там будет письмо<br> с важными деталями о нем'
+        } %}
+        <div class="row webinar-thanks-greeting__row">
+            <div class="col-12 col-sm-6 col-md-5 webinar-thanks-greeting__content">
+                <p class="webinar-thanks-greeting__content-title">А пока…</p>
+                <p>Обязательно посмотрите это видео.</p>
+                <p>АККУРАТНО!<br>
+                    После просмотра возможны<br>
+                    побочные эффекты:</p>
+                <p class="color-brand-3">“взрыв” мозга от крутости круизного отдыха</p>
+                <p>и НЕжелание больше отдыхать стандартно (Турция, Египет, ходьба из номера на пляж и обратно все 7-10 дней)</p>
+            </div>
+            <div class="col-12 col-sm-6">
+                <iframe
+                        src="https://www.youtube.com/embed/iCuuQ5RRL5U"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="webinar-thanks-greeting__footer">
+            <a
+                class="btn btn_brand-1"
+                href="#">
+                На главную
+            </a>
+        </div>
+    </div>
+    {{ landing.image({
+        src: 'img/rectangle-bottom-section.png',
+        alt: title|striptags,
+        class: 'rectangle rectangle_bottom'
+    }) }}
+</section>
