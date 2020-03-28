@@ -31,6 +31,7 @@
                                 <input
                                     name="smsCheckbox"
                                     type="checkbox"
+                                    class="js-checkbox-phone"
                                 />
                                 <div class="control__indicator"></div>
                                 <span class="control__text">Напомнить мне о старте мастер класса <br>в sms-сообщении</span>
@@ -38,7 +39,7 @@
                         </div>
                     </div>
                     <div class="row form__row form__row_large">
-                        <div class="col-12 col-md-6 form__column form__column_block">
+                        <div class="col-12 col-md-6 form__column form__column_block js-column-phone" style="display: none">
                             <label class="form__label">
                                 <input
                                         type="tel"
@@ -54,7 +55,13 @@
                                     type="checkbox"
                                 />
                                 <div class="control__indicator"></div>
-                                <a class="control__text" href="#">Согласен с условиями Договора-Аферты</a>
+                                <span class="control__custom">
+                                    <button
+                                        type="button"
+                                        data-action="modal"
+                                        class="control__button"
+                                        data-open="#modal-offer">Согласен с условиями Договора-Аферты</button>
+                                </span>
                             </label>
                         </div>
                     </div>
