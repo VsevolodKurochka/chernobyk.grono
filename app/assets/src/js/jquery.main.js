@@ -219,4 +219,14 @@ $(document).ready(function(){
 			'transform': 'translate(0, ' + (wScroll) + 'px)'
 		});
 	});
+
+	$('.js-checkbox-phone').change(function(e) {
+		var columnPhone = $(this).closest('form').find('.js-column-phone');
+
+		if (this.checked) {
+			columnPhone.show();
+		} else {
+			columnPhone.hide();
+		}
+	});
 });	

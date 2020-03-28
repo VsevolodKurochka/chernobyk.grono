@@ -22,7 +22,8 @@
     +c(inherit)
     text-decoration: none
 
-  &_text_blue &__text
+  &_text_blue &__text,
+  &_text_blue &__button
     +c(#4b93d3)
 
   &_text_large &__text
@@ -41,6 +42,18 @@
       transform: scale(0)
 
       @extend %checkbox-transition
+
+  &__custom
+    +pl(30px)
+    +d(inline-block)
+    vertical-align: middle
+
+  &__button
+    +bgc(transparent)
+    border: none
+    +fs(16px)
+    +fw(400)
+    +ff('r')
 
   input[type="checkbox"],
   input[type="radio"]
@@ -89,6 +102,9 @@
 
     &:before
       border-color: $color-brand-1
+
+  &_white &__button
+    +c($color-white)
 
   &_white input[type="radio"] + &__indicator
     border-color: $color-white
