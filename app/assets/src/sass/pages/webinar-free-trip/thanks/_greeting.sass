@@ -1,10 +1,7 @@
 .webinar-thanks-greeting
   +r()
   +bgi('../img/webinar-thx-bg.jpg')
-  +pb(60px)
   +c($color-white)
-  +min(sm)
-    +pb(90px)
 
   &__row
     +mb(30px)
@@ -21,17 +18,16 @@
     +ta(center)
 
   &__content
+    +fs(15px)
     p
       +offset('b', 15px)
-      +min(md)
-        +offset('b', 25px)
+
   &__title
     +ff('bl')
     +mb(5px)
     +fs(30px)
     +lh(1)
-    +min(md)
-      +fs(50px)
+
   &__iframe
     border-radius: 3px
     box-shadow: 0 15px 30px 8px rgba(8, 56, 85, 0.35)
@@ -48,3 +44,12 @@
       top: 25%
       transform: rotate(-25deg) scaleX(-1)
       opacity: 0.5
+
+  +min(md)
+    +h(100vh)
+    &-body
+      overflow: hidden
+    .header-only-logo
+      +mb(-20px)
+    .section-header
+      +mb(20px)
