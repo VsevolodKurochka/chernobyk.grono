@@ -1,0 +1,34 @@
+{% import 'macros/base.twig' as macros %}
+{% extends 'layouts/mainLayout.twig' %}
+
+{% set logo = 'img/logo.png' %}
+{% set title = 'Что такое круизные путешествия на самом деле. Как отдохнуть дешевле чем в Турции' %}
+{% set description = 'Что такое круизные путешествия на самом деле. Как отдохнуть дешевле чем в Турции' %}
+{% set image = logo %}
+{% set url = 'url' %}
+
+{% block meta %}
+{{ macros.meta(title, description, image, url) }}
+{% endblock %}
+
+{% block css %}
+{{ macros.css("css/style.min.css") }}
+{% endblock %}
+
+{% block js %}
+{{ macros.js("js/jquery.min.js") }}
+{{ macros.js("js/jquery.lazy.min.js") }}
+{{ macros.js("js/jquery.main.js") }}
+{% endblock %}
+
+{% block nav %}
+
+{% endblock %}
+
+{% block content %}
+{% include 'pages/webinar-video/section-video.twig' %}
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

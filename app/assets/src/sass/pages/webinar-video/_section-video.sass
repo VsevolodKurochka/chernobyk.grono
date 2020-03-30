@@ -1,0 +1,27 @@
+.webinar-video
+  +r()
+  +py(60px, 45px)
+  +mt(0)
+  +bgi('../img/video-bg.jpg', center bottom)
+  z-index: 1
+  &:before
+    content: ''
+    +a(null, null, 0, 0)
+    +size(100%)
+    +bgc(transparentize($color-brand-2, 0.1))
+    z-index: -1
+  +min(sm)
+    +d(flex)
+    +ai(center)
+    +jc(center)
+    +h(100vh)
+
+  .section-header
+    +mb(30px)
+    &__subtitle
+      +c($color-white)
+
+  &__iframe
+    +size(100%, 250px)
+    +min(sm)
+      +h(65vh)

@@ -1,0 +1,17 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="webinar-video" id="section-video">
+    <div class="container">
+        {% include 'components/common/section-header.twig' with {
+            class: 'section-header_white webinar-video__section-header',
+            background: 'путешествия',
+            title: 'Что такое круизные путешествия на самом деле.',
+            subtitle: 'Как отдохнуть дешевле чем в Турции'
+        } %}
+        <iframe
+            src="https://player.vimeo.com/video/132471949"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            class="webinar-video__iframe"
+            allowfullscreen></iframe>
+    </div>
+</section>
