@@ -1,0 +1,84 @@
+.webinar-cruise-greeting
+  +r()
+  +bgi('../img/bg-webinar-cruises.jpg')
+  +c($color-white)
+  +min(md)
+    +h(100vh)
+    min-height: 615px
+
+  &__row
+    +min(sm)
+      +ai(center)
+
+  &__container
+    +min(sm)
+      +a(50%, null, null, 50%)
+      transform: translate(-50%, -50%)
+
+  &__body
+    +mb(15px)
+    +min(md)
+      +pl(60px)
+    +min(lg)
+      +pl(100px)
+
+  &__title
+    +lh(1.1)
+    +fs(21px)
+    +mb(15px)
+    +ff('bl')
+    +min(xs)
+      +fs(29px)
+    +min(md)
+      +fs(35px)
+    +min(lg)
+      +fs(50px)
+
+  &__bonus
+    border-radius: 10px
+    +bgc($color-white)
+    padding: 10px
+    +c(#015990)
+    +min(md)
+      +d(flex)
+      +ai(center)
+      padding: 15px
+
+    &-title
+      +ff('bl')
+      +lh(1)
+      +fs(35px)
+      +tt(uppercase)
+      +c(#fd9106)
+      +mr(15px)
+      +min(md)
+        +fs(45px)
+
+    &-content
+      +ff('m')
+      span
+        +ff('b')
+      +min(sm)
+        +fs(18px)
+      +min(md)
+        +fs(20px)
+
+  &__speaker
+    +min(sm)
+      +d(flex)
+      +ai(center)
+
+    &-image
+      +max(sm)
+        +mb(10px)
+      +min(sm)
+        +mr(10px)
+    &-title
+      +ff('m')
+
+.webinar-cruise-business-body
+  +min(md)
+    overflow: hidden
+    .footer
+      +a(null, null, 0)
+      +w(100%)

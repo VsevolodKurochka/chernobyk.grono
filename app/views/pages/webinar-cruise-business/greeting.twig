@@ -1,7 +1,7 @@
 {% import 'macros/landing.twig' as landing %}
 <section class="webinar-cruise-greeting">
     {% include 'pages/components/header-only-logo.twig' %}
-    <div class="container">
+    <div class="container webinar-cruise-greeting__container">
         <div class="row webinar-cruise-greeting__row">
             <div class="col-12 col-sm-8 col-md-9">
                 <div class="webinar-cruise-greeting__body">
@@ -10,8 +10,8 @@
                     <div class="webinar-cruise-greeting__bonus">
                         <p class="webinar-cruise-greeting__bonus-title">бонус</p>
                         <p class="webinar-cruise-greeting__bonus-content">
-                            через 6-8 месяцев отправляйтесь бесплатно<br>
-                            в Круизное путешествие всей семьей
+                            через 6-8 месяцев <span>отправляйтесь бесплатно<br>
+                            в Круизное путешествие всей семьей</span>
                         </p>
                     </div>
                 </div>
@@ -28,7 +28,34 @@
                 </div>
             </div>
             <div class="col-12 col-sm-4 col-md-3">
-
+                <div class="request-card">
+                    <div class="request-card__header">
+                        <p class="request-card__header-title">
+                            Оставляйте заявку и получите эксклюзивные условия
+                            участияв Круизном Клубе.
+                        </p>
+                    </div>
+                    <div class="request-card__body">
+                        <p class="request-card__body-title">
+                            Вам позвонит менеджер<br>
+                            и расскажет детали
+                        </p>
+                        <form action="#" method="POST" class="form request-card__form">
+                            <label class="form__label">
+                                <input type="text" name="name" placeholder="* Ваше имя" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <input type="tel" name="phone" placeholder="* Ваш телефон" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <input type="email" name="email" placeholder="* Ваш email" class="form__input">
+                            </label>
+                            <div class="form__footer form__footer_left">
+                                <button type="submit" class="btn btn_brand-1">Оставить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
