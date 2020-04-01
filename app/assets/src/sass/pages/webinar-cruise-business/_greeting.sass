@@ -2,9 +2,16 @@
   +r()
   +bgi('../img/bg-webinar-cruises.jpg')
   +c($color-white)
-  +min(md)
+  +max(sm)
+    +pb(90px)
+  +min(sm)
     +h(100vh)
     min-height: 615px
+
+  &__content
+    +max(sm)
+      +mb(45px)
+      +ta(center)
 
   &__row
     +min(sm)
@@ -24,11 +31,11 @@
 
   &__title
     +lh(1.1)
-    +fs(21px)
+    +fs(27px)
     +mb(15px)
     +ff('bl')
     +min(xs)
-      +fs(29px)
+      +fs(30px)
     +min(md)
       +fs(35px)
     +min(lg)
@@ -58,6 +65,9 @@
       +ff('m')
       span
         +ff('b')
+      +max(sm)
+        br
+          +d(none)
       +min(sm)
         +fs(18px)
       +min(md)
@@ -75,6 +85,11 @@
         +mr(10px)
     &-title
       +ff('m')
+
+  &__request-card
+    +max(sm)
+      max-width: 270px
+      +mx(auto)
 
 .webinar-cruise-business-body
   +min(md)
