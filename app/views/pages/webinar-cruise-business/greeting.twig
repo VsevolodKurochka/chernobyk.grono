@@ -1,0 +1,40 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="webinar-cruise-greeting">
+    {% include 'pages/components/header-only-logo.twig' %}
+    <div class="container">
+        <div class="row webinar-cruise-greeting__row">
+            <div class="col-12 col-sm-8 col-md-9">
+                <div class="webinar-cruise-greeting__body">
+                    <h1 class="webinar-cruise-greeting__title">Постройте свой круизный бизнес
+                        при поддержке Сообщества Гроно</h1>
+                    <div class="webinar-cruise-greeting__bonus">
+                        <p class="webinar-cruise-greeting__bonus-title">бонус</p>
+                        <p class="webinar-cruise-greeting__bonus-content">
+                            через 6-8 месяцев отправляйтесь бесплатно<br>
+                            в Круизное путешествие всей семьей
+                        </p>
+                    </div>
+                </div>
+                <div class="webinar-cruise-greeting__speaker">
+                    {{ landing.image({
+                        src: 'img/shavela-icon.png',
+                        alt: title|striptags,
+                        class: 'webinar-cruise-greeting__speaker-image'
+                    }) }}
+                    <p class="webinar-cruise-greeting__speaker-title">
+                        Я, Натали Шевела, лично гарантирую вам бесплатное членство
+                        в Клубе уже через 2 месяца и бесплатный круиз за счет компании
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3">
+
+            </div>
+        </div>
+    </div>
+    {{ landing.image({
+        src: 'img/rectangle-bottom-section.png',
+        alt: title|striptags,
+        class: 'rectangle rectangle_bottom'
+    }) }}
+</section>
