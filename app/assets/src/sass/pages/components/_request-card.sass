@@ -1,0 +1,28 @@
+$request-card-radius: 10px
+$request-card-md-padding: 25px
+
+.request-card
+  +bgc($color-white)
+  border-radius: $request-card-radius
+  &__header
+    padding: 15px
+    +bgc(#fd9106)
+    +fs(13px)
+    border-radius: $request-card-radius $request-card-radius 0 0
+    +c($color-white)
+    +min(md)
+      padding: $request-card-md-padding
+  &__body
+    &-title
+      +c(#aca7ad)
+      +mb(15px)
+      +fs(13px)
+    +min(md)
+      padding: $request-card-md-padding
+
+  .form
+    &__label
+      +d(block)
+      +mb(10px)
+    &__input
+      +bgc(#f2f3f7)
