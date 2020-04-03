@@ -3,5 +3,5 @@
   echo $twig->render('webinar-video.twig', [
       'videoTitle' => 'Как путешествовать бесплатно',
       'videoSubtitle' => 'и зарабатывать на этом',
-      'videoURL' => 'https://player.vimeo.com/video/402573812'
+      'videoURL' => 'https://player.vimeo.com/video/402581170'
   ]);
