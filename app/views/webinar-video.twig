@@ -2,8 +2,8 @@
 {% extends 'layouts/mainLayout.twig' %}
 
 {% set logo = 'img/logo.png' %}
-{% set title = 'Что такое круизные путешествия на самом деле. Как отдохнуть дешевле чем в Турции' %}
-{% set description = 'Что такое круизные путешествия на самом деле. Как отдохнуть дешевле чем в Турции' %}
+{% set title = videoTitle %}
+{% set description = videoSubtitle %}
 {% set image = logo %}
 {% set url = 'url' %}
 
@@ -26,7 +26,13 @@
 {% endblock %}
 
 {% block content %}
-{% include 'pages/webinar-video/section-video.twig' %}
+{%
+    include 'pages/webinar-video/section-video.twig' with {
+        title: videoTitle,
+        subtitle: videoSubtitle,
+        video: videoURL
+    }
+%}
 {% endblock %}
 
 {% block footer %}
