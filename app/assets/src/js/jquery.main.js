@@ -3,7 +3,15 @@ $(document).ready(function(){
 	function scroll(scrollLink, speed){
 		$('html, body').animate({
 			scrollTop: scrollLink.offset().top - $('.nav__fixed').height()
-		}, speed);
+		}, {
+			duration: speed,
+			step: function( now, fx ) {
+				var newOffset = scrollLink.offset().top;
+				if (fx.end !== newOffset) {
+					fx.end = newOffset;
+				}
+			}
+		});
 		return false;
 	}
 	$('.anchor-next').click(function(e){

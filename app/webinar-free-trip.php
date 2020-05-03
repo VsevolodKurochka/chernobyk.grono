@@ -3,15 +3,15 @@
   echo $twig->render('webinar-free-trip.twig', [
       "navigation" => array(
           array(
-              'href' => '',
+              'href' => '#section-about',
               'text' => 'Программа'
           ),
           array(
-              'href' => '',
+              'href' => '#section-speaker',
               'text' => 'Кто ведет'
           ),
           array(
-              'href' => '',
+              'href' => '#section-registration',
               'text' => 'Участвовать бесплатно'
           )
       )
