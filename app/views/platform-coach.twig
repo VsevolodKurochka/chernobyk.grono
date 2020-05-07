@@ -51,9 +51,15 @@
 {% include 'pages/platform/section-connect.twig' with {
     title: '',
     content: 'Платформа — это уникальное IT-решение, созданное специально для Сообщества с целью достижения ими
-    быстрых результатов в бизнесе на круизных путешествиях.'
+    быстрых результатов в бизнесе на круизных путешествиях.',
+    formPictureSrc: 'img/form-picture-coach.png'
 } %}
-{% include 'pages/platform/section-tips.twig' %}
+    {% include 'pages/platform/section-tips.twig' with {
+        image1: 'img/tips-1.png',
+        image2: 'img/tips-2.png',
+        image3: 'img/tips-3-coach.png',
+        image4: 'img/tips-4-coach.png'
+    } %}
 {% include 'pages/platform/section-capability.twig' with {
     title: 'Хотите узнать больше о возможностях <br>IT-платформы?',
     manImage: 'img/man-tshirt-vip.png'

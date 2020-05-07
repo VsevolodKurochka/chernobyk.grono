@@ -52,9 +52,15 @@
     title: 'GRONO',
     content: "Платформа Grono — это уникальное IT-решение,
     созданное специально для Сообщества Grono с целью достижения ими
-    быстрых результатов в бизнесе на круизных путешествиях."
+    быстрых результатов в бизнесе на круизных путешествиях.",
+    formPictureSrc: 'img/form-picture.png'
 } %}
-{% include 'pages/platform/section-tips.twig' %}
+{% include 'pages/platform/section-tips.twig' with {
+    image1: 'img/tips-1.png',
+    image2: 'img/tips-2.png',
+    image3: 'img/tips-3.png',
+    image4: 'img/tips-4.png'
+} %}
 {% include 'pages/platform/section-capability.twig' with {
     title: 'Хотите узнать больше о возможностях <br>IT-платформы Grono?',
     manImage: 'img/man-tshirt-grono.png'
